@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "https://github.com/kosugitti/kosugitti10/docs/"
+baseurl = "https://kosugitti.github.io/kosugitti10/"
 languageCode = "jp"
 publishDir = "docs"
 hasCJKLanguage = true
