@@ -15,8 +15,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
     author = "Kosugitti"
     title = "Kosugitti Labo 10"
-    # description = "..."
-    authorimage = "/img/hugo.png"
+    description = "ようこそコスギコウジのオンライン研究室へ"
+    authorimage = "/img/omodakatome.png"
     dateformat = "April 3, 2018"
     highlightjs = true
     # highlightjsstyle = "github"
@@ -27,15 +27,24 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     instagram = "kosugitti"
     linkedin = "kosugitti"
     twitter = "kosugitti"
-    facebook = "Koji Kosugi"
     email = "your-email@example.com"
 
 ## Main Menu
 [[menu.main]]
-    name = "Posts"
+    name = "Profile"
     weight = 100
-    identifier = "posts"
-    url = "/posts/"
+    identifier = "Profile"
+    url = "/profile/"
+[[menu.main]]
+    name = "Works"
+    weight = 100
+    identifier = "Works"
+    url = "/works/"
+[[menu.main]]
+    name = "Notes"
+    weight = 100
+    identifier = "Notes"
+    url = "/notes/"
 [[menu.main]]
     name = "About"
     identifier = "about"

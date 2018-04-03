@@ -6,64 +6,9 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kosugitti.github.io/kosugitti10/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Development</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/golang/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Templates</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Themes</title>
-      <link>https://kosugitti.github.io/kosugitti10/tags/themes/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://kosugitti.github.io/kosugitti10/tags/themes/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
