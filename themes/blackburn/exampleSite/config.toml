@@ -1,14 +1,11 @@
-baseurl = "https://github.com/kosugitti10/"
-languageCode = "jp"
-title = "Kosugitti Labo v10"
+baseurl = "https://www.example.com/"
+languageCode = "en-us"
+title = "Blackburn Theme Demo"
 theme = "blackburn"
 author = "Yoshiharu Yamashita"
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
 paginate = 10
-hasCJKLanguage = true
-publishDir = "docs"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [indexes]
   tag = "tags"
