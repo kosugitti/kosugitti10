@@ -3,97 +3,97 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/posts/creating-a-new-theme/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/posts/migrate-from-jekyll/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/about/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/posts/goisforlovers/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/posts/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/posts/hugoisforlovers/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/posts/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/categories/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/categories/development/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/development/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/go/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/categories/golang/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/golang/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/hugo/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/posts/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/posts/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/templates/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://github.com/kosugitti/kosugitti10/tags/themes/</loc>
+    <loc>https://github.com/kosugitti/kosugitti10/docs/tags/themes/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

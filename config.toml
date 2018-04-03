@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "https://github.com/kosugitti/kosugitti10/"
+baseurl = "https://github.com/kosugitti/kosugitti10/docs/"
 languageCode = "jp"
 publishDir = "docs"
 hasCJKLanguage = true
@@ -13,23 +13,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 ## Site Settings
 [params]
-    author = "Author"
-    title = "Title"
+    author = "Kosugitti"
+    title = "Kosugitti Labo 10"
     # description = "..."
     authorimage = "/img/hugo.png"
-    dateformat = "Jan 2, 2006"
+    dateformat = "April 3, 2018"
     highlightjs = true
     # highlightjsstyle = "github"
 
 ## Social Accounts
 [params.social]
-    github = "<username>"
-    instagram = "<username>"
-    xing = "<username>"
-    linkedin = "<username>"
-    twitter = "<username>"
-    facebook = "<username>"
-    stackoverflow = "<username>"
+    github = "kosugitti"
+    instagram = "kosugitti"
+    linkedin = "kosugitti"
+    twitter = "kosugitti"
+    facebook = "Koji Kosugi"
     email = "your-email@example.com"
 
 ## Main Menu
