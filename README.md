@@ -1,1 +1,0 @@
-# kosugitti10
