@@ -24,7 +24,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     author = "小杉考司"
     bio = "専修大学人間科学部"
     location = "神奈川県"
-    site_description = ""
+    site_description = "小杉考司のオンライン研究"
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     avatar = "css/images/avatar2.png"
     # Enter your email address to display your Gravatar icon in the profile. If not set the theme
@@ -66,7 +66,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Enter a link for the follow button on the left
 [params.profile]
-    follow_button = "https://github.com/digitalcraftsman"
+    follow_button = "https://github.com/kosugitti"
 
 
 [social]
@@ -88,8 +88,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     vimeo           = ""
     vine            = ""
     medium          = ""
-    wordpress       = "kosugitti"
-    tumblr          = "kosugitti"
+    wordpress       = ""
+    tumblr          = ""
     xing            = ""
     linkedin        = "kosugitti"
     slideshare      = "kosugitti"
