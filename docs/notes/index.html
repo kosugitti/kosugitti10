@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>Tags &middot; Kosugitti Labo ver.10</title>
+    <title>Notes &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.37.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="../tags/index.xml" rel="alternate" type="application/rss+xml" title="Kosugitti Labo ver.10" />
-      <link href="../tags/index.xml" rel="feed" type="application/rss+xml" title="Kosugitti Labo ver.10" />
-    
-    <link rel="canonical" href="../tags/"/>
+    <link rel="canonical" href="../notes/"/>
     <link rel="icon" href="../favicon.ico">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../css/style.css">
@@ -23,13 +20,16 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/tags/" />
+    <meta property="og:title" content="Notes" />
+<meta property="og:description" content="研究ノートをここに書く予定" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/notes/" />
 
 
 
+<meta property="article:published_time" content="2018-04-08T10:50:20&#43;09:00"/>
+
+<meta property="article:modified_time" content="2018-04-08T10:50:20&#43;09:00"/>
 
 
 
@@ -43,13 +43,21 @@
 
     
     
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Notes">
+<meta itemprop="description" content="研究ノートをここに書く予定">
 
+
+<meta itemprop="datePublished" content="2018-04-08T10:50:20&#43;09:00" />
+<meta itemprop="dateModified" content="2018-04-08T10:50:20&#43;09:00" />
+<meta itemprop="wordCount" content="13">
+
+
+
+<meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Notes"/>
+<meta name="twitter:description" content="研究ノートをここに書く予定"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -270,16 +278,120 @@
 
     <section id="main">
     
-<section class="layout-wrap">
-    <div class="layout-title">
-        <span>Tags</span>
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="../notes/">
+    <h1 class="article-title" itemprop="name">
+        Notes
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-04-08 10:50:20 &#43;0900 JST" itemprop="datePublished">2018-04-08</time>
+            &middot;
+            13
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+
+        
     </div>
-    <div class="layout-wrap-inner list-categories">
-        <ul class="category-list">
-             
-        </ul>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>研究ノートをここに書く予定</p>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="/notes/" data-id="237a42206981b32c17841ced23c0abe0" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
     </div>
-</section>
+
+    
+
+</article>
+
+
 
     </section>
 
