@@ -1,0 +1,3 @@
+library(blogdown)
+new_site(sample = FALSE,
+theme  = "digitalcraftsman/hugo-icarus-theme")
