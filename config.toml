@@ -52,7 +52,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[params.menu]]
     before = true
     label  = "Home"
-    link   = "kosugitti10/"
+    link   = "/"
 
 [[params.menu]]
     before = false
@@ -77,7 +77,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[params.menu]]
     before = false
     label  = "YUEP"
-    link   = "YUEP/"
+    link   = "yuep/"
 
 
 # Enter a link for the follow button on the left
