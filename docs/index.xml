@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kosugitti Labo ver.10</title>
-    <link>/</link>
+    <link>https://kosugitti.github.io/kosugitti10/</link>
     <description>Recent content on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 08 Apr 2018 10:50:20 +0900</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kosugitti.github.io/kosugitti10/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Notes</title>
-      <link>/notes/</link>
+      <link>https://kosugitti.github.io/kosugitti10/notes/</link>
       <pubDate>Sun, 08 Apr 2018 10:50:20 +0900</pubDate>
       
-      <guid>/notes/</guid>
+      <guid>https://kosugitti.github.io/kosugitti10/notes/</guid>
       <description>研究ノートをここに書く予定</description>
     </item>
     
     <item>
       <title>Works</title>
-      <link>/works/</link>
+      <link>https://kosugitti.github.io/kosugitti10/works/</link>
       <pubDate>Sun, 08 Apr 2018 10:50:20 +0900</pubDate>
       
-      <guid>/works/</guid>
+      <guid>https://kosugitti.github.io/kosugitti10/works/</guid>
       <description>業績一覧などをここに書く予定</description>
     </item>
     
     <item>
       <title>こちらにサイトを引っ越しました</title>
-      <link>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <link>https://kosugitti.github.io/kosugitti10/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <guid>https://kosugitti.github.io/kosugitti10/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
       <description>異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート</description>
     </item>
     
