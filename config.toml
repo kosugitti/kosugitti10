@@ -79,6 +79,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     label  = "YUEP"
     link   = "yuep/"
 
+[[params.menu]]
+    before = false
+    label  = "BLOG"
+    link   = "http://kosugitti.net/"
+
 
 # Enter a link for the follow button on the left
 [params.profile]
