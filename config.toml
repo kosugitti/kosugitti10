@@ -1,4 +1,4 @@
-baseurl = "https://kosugitti.github.io/kosugitti10"
+baseurl = "https://kosugitti.github.io/"
 title = "Kosugitti Labo ver.10"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
@@ -52,22 +52,33 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[params.menu]]
     before = true
     label  = "Home"
-    link   = "/"
+    link   = "kosugitti10/"
 
 [[params.menu]]
     before = false
     label  = "About"
-    link   = "about/"
+    link   = "kosugitti10/about/"
 
 [[params.menu]]
     before = false
     label  = "Works"
-    link   = "works/"
+    link   = "kosugitti10/works/"
 
 [[params.menu]]
     before = false
     label  = "Notes"
-    link   = "notes/"
+    link   = "kosugitti10/notes/"
+
+[[params.menu]]
+    before = false
+    label  = "Support"
+    link   = "kosugitti10/support/"
+
+[[params.menu]]
+    before = false
+    label  = "YUEP"
+    link   = "kosugitti10/YUEP/"
+
 
 # Enter a link for the follow button on the left
 [params.profile]
