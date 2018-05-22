@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on Kosugitti Labo ver.10</title>
-    <link>https://kosugitti.github.io/kosugitti10/categories/news/</link>
+    <link>/categories/news/</link>
     <description>Recent content in News on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kosugitti.github.io/kosugitti10/categories/news/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/news/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>論文が公開されました</title>
+      <link>/2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <description>&lt;p&gt;少し前ですが，共著論文がPublishされました。
+&lt;a href=&#34;https://doi.org/10.3389/fpsyg.2018.00699&#34;&gt;https://doi.org/10.3389/fpsyg.2018.00699&lt;/a&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>こちらにサイトを引っ越しました</title>
-      <link>https://kosugitti.github.io/kosugitti10/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <link>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://kosugitti.github.io/kosugitti10/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <guid>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
       <description>異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート</description>
     </item>
     
