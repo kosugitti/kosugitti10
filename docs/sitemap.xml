@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kosugitti.github.io/kosugitti10/2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kosugitti.github.io/kosugitti10/2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
   </url>
@@ -38,30 +43,49 @@
   </url>
   
   <url>
+    <loc>https://kosugitti.github.io/kosugitti10/tags/bayes/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kosugitti.github.io/kosugitti10/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kosugitti.github.io/kosugitti10/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kosugitti.github.io/kosugitti10/categories/news/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kosugitti.github.io/kosugitti10/post/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kosugitti.github.io/kosugitti10/tags/psychology/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kosugitti.github.io/kosugitti10/tags/r/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kosugitti.github.io/kosugitti10/tags/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
