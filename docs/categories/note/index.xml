@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>様々な標準偏差を描く</title>
-      <link>/2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/</link>
+      <title>標準正規分布の描画</title>
+      <link>/2018/06/26/%E6%A8%99%E6%BA%96%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83%E3%81%AE%E6%8F%8F%E7%94%BB/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/</guid>
-      <description>標準偏差の違う正規分布のグラフを描くコード library(ggplot2) library(gridExtra) old = theme_set(theme_gray(base_family = &amp;quot;HiraKakuProN-W3&amp;quot;)) p1 &amp;lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + stat_function(fun = dnorm, args = list(mean = 90, sd = 8), color = &amp;quot;red&amp;quot;) + xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;英語</description>
+      <guid>/2018/06/26/%E6%A8%99%E6%BA%96%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83%E3%81%AE%E6%8F%8F%E7%94%BB/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>標準正規分布の描画</title>
+      <link>/2018/06/26/%E6%A8%99%E6%BA%96%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83%E3%81%AE%E6%8F%8F%E7%94%BB/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/26/%E6%A8%99%E6%BA%96%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83%E3%81%AE%E6%8F%8F%E7%94%BB/</guid>
+      <description>標準正規分布の描画 ；領域ごとの塗り分けを添えて # パッケージの準備 library(ggplot2) library(gridExtra) # 関数の準備 limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } p &amp;lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p +</description>
     </item>
     
   </channel>
