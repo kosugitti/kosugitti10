@@ -17,7 +17,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26c/</guid>
-      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts ─</description>
+      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats</description>
     </item>
     
     <item>
