@@ -3,5 +3,3 @@ title: "Notes"
 date: "2018-04-08T10:50:20+09:00"
 ---
 
-- [様々な標準偏差の正規分布を描くコード](https://kosugitti.github.io/kosugitti10/2018/06/26/様々な標準偏差を描く/)
-- [標準正規分布を描くコード](https://kosugitti.github.io/kosugitti10/2018/06/26/標準正規分布の描画/)

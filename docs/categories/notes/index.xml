@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Kosugitti Labo ver.10</title>
+    <link>/categories/notes/</link>
+    <description>Recent content in Notes on Kosugitti Labo ver.10</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 26 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>正規分布の図を描く</title>
+      <link>/2018/06/26/2018-06-26a/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/26/2018-06-26a/</guid>
+      <description>標準偏差の違う正規分布を色々描いてみる。 library(ggplot2) library(gridExtra) old = theme_set(theme_gray(base_family = &amp;quot;HiraKakuProN-W3&amp;quot;)) p1 &amp;lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + stat_function(fun = dnorm, args = list(mean = 90, sd = 8), color = &amp;quot;red&amp;quot;) + xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;英語&amp;</description>
+    </item>
+    
+  </channel>
+</rss>
