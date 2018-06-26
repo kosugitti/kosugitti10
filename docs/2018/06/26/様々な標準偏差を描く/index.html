@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>Notes &middot; Kosugitti Labo ver.10</title>
+    <title>様々な標準偏差を描く &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.41" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,26 +10,26 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../notes/"/>
-    <link rel="icon" href="../favicon.ico">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/monokai.css">
-    <link rel="stylesheet" href="../fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="../../../../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/"/>
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../css/monokai.css">
+    <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Notes" />
-<meta property="og:description" content="様々な標準偏差の正規分布を描くコード" />
+    <meta property="og:title" content="様々な標準偏差を描く" />
+<meta property="og:description" content="標準偏差の違う正規分布のグラフを描くコード library(ggplot2) library(gridExtra) old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;)) p1 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) &#43; stat_function(fun = dnorm, args = list(mean = 90, sd = 8), color = &quot;red&quot;) &#43; xlab(&quot;&quot;) &#43; ylab(&quot;英語" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/notes/" />
+<meta property="og:url" content="/2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="Notes">
-<meta itemprop="description" content="様々な標準偏差の正規分布を描くコード">
+<meta itemprop="name" content="様々な標準偏差を描く">
+<meta itemprop="description" content="標準偏差の違う正規分布のグラフを描くコード library(ggplot2) library(gridExtra) old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;)) p1 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) &#43; stat_function(fun = dnorm, args = list(mean = 90, sd = 8), color = &quot;red&quot;) &#43; xlab(&quot;&quot;) &#43; ylab(&quot;英語">
 
 
-<meta itemprop="datePublished" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="dateModified" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="wordCount" content="18">
+<meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="245">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Notes"/>
-<meta name="twitter:description" content="様々な標準偏差の正規分布を描くコード"/>
+<meta name="twitter:title" content="様々な標準偏差を描く"/>
+<meta name="twitter:description" content="標準偏差の違う正規分布のグラフを描くコード library(ggplot2) library(gridExtra) old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;)) p1 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) &#43; stat_function(fun = dnorm, args = list(mean = 90, sd = 8), color = &quot;red&quot;) &#43; xlab(&quot;&quot;) &#43; ylab(&quot;英語"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -75,7 +75,7 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="../" id="logo">
+      <a href="../../../../" id="logo">
           
           <i class="logo" style="background-image: url('/css/images/logo2.png')"></i>
           
@@ -84,7 +84,7 @@
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="../">Home</a>
+          <a class="main-nav-link" href="../../../../">Home</a>
           
           
           
@@ -106,23 +106,23 @@
           
           
           
-          <a class="main-nav-link" href="../about/">about</a>
+          <a class="main-nav-link" href="../../../../about/">about</a>
           
           
           
-          <a class="main-nav-link" href="../works/">Works</a>
+          <a class="main-nav-link" href="../../../../works/">Works</a>
           
           
           
-          <a class="main-nav-link" href="../notes/">Notes</a>
+          <a class="main-nav-link" href="../../../../notes/">Notes</a>
           
           
           
-          <a class="main-nav-link" href="../support/">Support</a>
+          <a class="main-nav-link" href="../../../../support/">Support</a>
           
           
           
-          <a class="main-nav-link" href="../yuep/">YUEP</a>
+          <a class="main-nav-link" href="../../../../yuep/">YUEP</a>
           
           
           
@@ -132,7 +132,7 @@
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../../../../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -151,7 +151,7 @@
           <tr>
           
           
-          <td><a class="main-nav-link" href="../">Home</a></td>
+          <td><a class="main-nav-link" href="../../../../">Home</a></td>
           
           
           
@@ -173,23 +173,23 @@
           
           
           
-          <td><a class="main-nav-link" href="../about/">about</a></td>
+          <td><a class="main-nav-link" href="../../../../about/">about</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../works/">Works</a></td>
+          <td><a class="main-nav-link" href="../../../../works/">Works</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../notes/">Notes</a></td>
+          <td><a class="main-nav-link" href="../../../../notes/">Notes</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../support/">Support</a></td>
+          <td><a class="main-nav-link" href="../../../../support/">Support</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../yuep/">YUEP</a></td>
+          <td><a class="main-nav-link" href="../../../../yuep/">YUEP</a></td>
           
           
           
@@ -307,7 +307,7 @@
 <td><a href="//twitter.com/kosugitti" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
-          <td><a href="../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="../../../../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../notes/">
+    <a href="../../../../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/">
     <h1 class="article-title" itemprop="name">
-        Notes
+        様々な標準偏差を描く
     </h1>
     </a>
     <div class="article-meta">
@@ -333,9 +333,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-08 10:50:20 &#43;0900 JST" itemprop="datePublished">2018-04-08</time>
+            <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            18
+            245
             words
             &middot;
             1
@@ -343,19 +343,59 @@
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="../../../../categories/note">note</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="../../../../tags/r">R</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <ul>
-<li><a href="post/2018-06-26-.html">様々な標準偏差の正規分布を描くコード</a></li>
-</ul>
+            <p>標準偏差の違う正規分布のグラフを描くコード</p>
+<pre class="r"><code>library(ggplot2)
+library(gridExtra)
+old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
+p1 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 90, sd = 8), 
+    color = &quot;red&quot;) + xlab(&quot;&quot;) + ylab(&quot;英語&quot;) + geom_segment(aes(x = 86, 
+  xend = 86, y = 0, yend = dnorm(86, 90, 8)), lty = 2)
+p2 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 53, sd = 10), 
+    color = &quot;blue&quot;) + xlab(&quot;&quot;) + ylab(&quot;国語&quot;) + geom_segment(aes(x = 67, 
+  xend = 67, y = 0, yend = dnorm(67, 53, 10)), lty = 2)
+p3 &lt;- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 30, sd = 5), 
+    color = &quot;green&quot;) + xlab(&quot;&quot;) + ylab(&quot;数学&quot;) + geom_segment(aes(x = 44, 
+  xend = 44, y = 0, yend = dnorm(44, 30, 5)), lty = 2)
+# まとめて1枚に出力
+grid.arrange(p1, p2, p3, ncol = 1)</code></pre>
+<p><img src="../../../../post/2018-06-26-_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/notes/" data-id="237a42206981b32c17841ced23c0abe0" class="article-share-link">
+    <a data-url="/2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" data-id="1da82fc275179e30b0f5b7172cc62759" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -430,6 +470,19 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="../../../../2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">基礎心理学会のフォーラムでお話しして来ました</div>
+    </a>
+    
+
+    
+</nav>
+
 
 </article>
 
@@ -449,7 +502,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" class="thumbnail">
+                    <a href="../../../../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -460,13 +513,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/note">
+                        <a class="article-category-link" href="../../../../categories/note">
                         note
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" class="title">様々な標準偏差を描く</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/%E6%A7%98%E3%80%85%E3%81%AA%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E3%82%92%E6%8F%8F%E3%81%8F/" class="title">様々な標準偏差を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -475,7 +528,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
+                    <a href="../../../../2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -486,13 +539,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/news">
+                        <a class="article-category-link" href="../../../../categories/news">
                         news
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" class="title">基礎心理学会のフォーラムでお話しして来ました</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" class="title">基礎心理学会のフォーラムでお話しして来ました</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-04</time>
                     </p>
@@ -501,7 +554,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
+                    <a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -512,13 +565,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/news">
+                        <a class="article-category-link" href="../../../../categories/news">
                         news
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="title">論文が公開されました</a></p>
+                    <p class="item-title"><a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="title">論文が公開されました</a></p>
                     <p class="item-date">
                         <time datetime="2018-05-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-05-23</time>
                     </p>
@@ -527,7 +580,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
+                    <a href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -538,13 +591,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/news">
+                        <a class="article-category-link" href="../../../../categories/news">
                         news
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" class="title">こちらにサイトを引っ越しました</a></p>
+                    <p class="item-title"><a href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" class="title">こちらにサイトを引っ越しました</a></p>
                     <p class="item-date">
                         <time datetime="2018-04-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-04-08</time>
                     </p>
@@ -566,7 +619,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/news">
+                <a class="category-list-link" href="../../../../categories/news">
                     news
                 </a>
                 <span class="category-list-count">3</span>
@@ -574,7 +627,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/note">
+                <a class="category-list-link" href="../../../../categories/note">
                     note
                 </a>
                 <span class="category-list-count">1</span>
@@ -599,7 +652,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/bayes">
+                <a class="category-list-link" href="../../../../tags/bayes">
                     bayes
                 </a>
                 <span class="category-list-count">1</span>
@@ -607,7 +660,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/psychology">
+                <a class="category-list-link" href="../../../../tags/psychology">
                     psychology
                 </a>
                 <span class="category-list-count">1</span>
@@ -615,7 +668,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/r">
+                <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
                 <span class="category-list-count">2</span>
@@ -638,13 +691,13 @@
     <div class="widget tagcloud">
         
         
-        <a href="../tags/bayes" style="font-size: 12px;">bayes</a>
+        <a href="../../../../tags/bayes" style="font-size: 12px;">bayes</a>
         
         
-        <a href="../tags/psychology" style="font-size: 12px;">psychology</a>
+        <a href="../../../../tags/psychology" style="font-size: 12px;">psychology</a>
         
         
-        <a href="../tags/r" style="font-size: 12px;">r</a>
+        <a href="../../../../tags/r" style="font-size: 12px;">r</a>
         
     </div>
 </div>
@@ -683,8 +736,8 @@ if (!doNotTrack) {
 }
 </script>
 
-<script src="../fancybox/jquery.fancybox.pack.js"></script>
-<script src="../js/script.js"></script>
+<script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+<script src="../../../../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
