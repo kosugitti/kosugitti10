@@ -1,0 +1,65 @@
+---
+title: 共分散（相関）の説明に使えそうな図
+author: ''
+date: '2018-06-26'
+slug: 2018-06-26D
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+共分散や相関係数を説明するのに使えそうな図のセットです。
+
+
+<!--more-->
+
+### 準備
+```{r}
+# 準備
+library(tidyverse)
+old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+set.seed(20180524)
+
+# データ
+x <- c(10,20,30,40,50)
+y <- c(20,10,40,30,50)
+df <- transform(cbind(x,y))
+g1 <- ggplot(df,aes(x=x,y=y))+geom_point()
+g1
+```
+
+### 平均偏差のプロット
+```{r}
+g2 <- g1 +  geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color='blue')+
+  geom_segment(x=x[2],xend=30,y=y[2],yend=y[2],lty=2,color='blue')+
+  geom_segment(x=x[3],xend=30,y=y[3],yend=y[3],lty=2,color='blue')+
+  geom_segment(x=x[4],xend=30,y=y[4],yend=y[4],lty=2,color='blue')+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color='blue')
+g2
+
+g3 <- g1 + geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color='brown')+
+  geom_segment(x=x[2],xend=x[2],y=y[2],yend=30,lty=2,color='brown')+
+  geom_segment(x=x[3],xend=x[3],y=y[3],yend=30,lty=2,color='brown')+
+  geom_segment(x=x[4],xend=x[4],y=y[4],yend=30,lty=2,color='brown')+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color='brown')
+g3
+```
+
+### 両方の偏差を重ねて描く
+```{r}
+g4 <- g1 + geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color='blue')+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color='blue') + 
+  geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color='brown')+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color='brown')
+
+g4
+```

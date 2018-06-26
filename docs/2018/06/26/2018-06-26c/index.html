@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="任意の相関係数の散布図を描く" />
-<meta property="og:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats" />
+<meta property="og:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts ──" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2018/06/26/2018-06-26c/" />
 
@@ -44,12 +44,12 @@
     
     
 <meta itemprop="name" content="任意の相関係数の散布図を描く">
-<meta itemprop="description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats">
+<meta itemprop="description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts ──">
 
 
 <meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="341">
+<meta itemprop="wordCount" content="329">
 
 
 
@@ -57,7 +57,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="任意の相関係数の散布図を描く"/>
-<meta name="twitter:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats"/>
+<meta name="twitter:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts ──"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -228,7 +228,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        6
+        7
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -335,7 +335,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            341
+            329
             words
             &middot;
             1
@@ -376,12 +376,12 @@
             <p>任意の相関係数をもつ散布図を描くコード。
 <!--more--></p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ─ Attaching packages ───────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.5
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.5
 ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ──────────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code># マカーの呪文
@@ -493,11 +493,11 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
     
 <nav id="article-nav">
     
-    <a href="../../../../2018/06/26/2018-06-26b/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../../2018/06/26/2018-06-26d/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">標準正規分布を描く</div>
+      <div class="article-nav-title">共分散（相関）の説明に使えそうな図</div>
     </a>
     
 
@@ -541,6 +541,32 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                     
                     
                     <p class="item-title"><a href="../../../../2018/06/26/2018-06-26c/" class="title">任意の相関係数の散布図を描く</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26d/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="../../../../categories/notes">
+                        Notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26d/" class="title">共分散（相関）の説明に使えそうな図</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -625,32 +651,6 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="../../../../categories/news">
-                        news
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" class="title">論文が公開されました</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-05-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-05-23</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -677,7 +677,7 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">3</span>
+                <span class="category-list-count">4</span>
             </li>
             
         </ul>
@@ -718,7 +718,7 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
         </ul>

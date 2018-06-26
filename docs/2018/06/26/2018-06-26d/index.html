@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>こちらにサイトを引っ越しました &middot; Kosugitti Labo ver.10</title>
+    <title>共分散（相関）の説明に使えそうな図 &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.40.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/"/>
+    <link rel="canonical" href="../../../../2018/06/26/2018-06-26d/"/>
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -20,16 +20,16 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="こちらにサイトを引っ越しました" />
-<meta property="og:description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート" />
+    <meta property="og:title" content="共分散（相関）の説明に使えそうな図" />
+<meta property="og:description" content="共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" />
+<meta property="og:url" content="/2018/06/26/2018-06-26d/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="こちらにサイトを引っ越しました">
-<meta itemprop="description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート">
+<meta itemprop="name" content="共分散（相関）の説明に使えそうな図">
+<meta itemprop="description" content="共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr">
 
 
-<meta itemprop="datePublished" content="2018-04-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-04-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="79">
+<meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="188">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="こちらにサイトを引っ越しました"/>
-<meta name="twitter:description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート"/>
+<meta name="twitter:title" content="共分散（相関）の説明に使えそうな図"/>
+<meta name="twitter:description" content="共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ───────── tidyverse 1.2.1 ─ ## ✔ ggplot2 2.2.1 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.5 ## ✔ tidyr 0.8.1 ✔ stringr"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/">
+    <a href="../../../../2018/06/26/2018-06-26d/">
     <h1 class="article-title" itemprop="name">
-        こちらにサイトを引っ越しました
+        共分散（相関）の説明に使えそうな図
     </h1>
     </a>
     <div class="article-meta">
@@ -333,9 +333,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-04-08</time>
+            <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            79
+            188
             words
             &middot;
             1
@@ -349,7 +349,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="../../../../categories/news">news</a>
+                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
                 
                 
             </div>
@@ -359,17 +359,80 @@
         
             
             
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="../../../../tags/r">R</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>異動に伴い，サイトもこちらに引っ越しました。</p>
-<p>以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデートして行く所存です。</p>
+            <p>共分散や相関係数を説明するのに使えそうな図のセットです。</p>
+<!--more-->
+<div class="section level3">
+<h3>準備</h3>
+<pre class="r"><code># 準備
+library(tidyverse)</code></pre>
+<pre><code>## ─ Attaching packages ───────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.5
+## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>## ─ Conflicts ────────── tidyverse_conflicts() ─
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
+set.seed(20180524)
+
+# データ
+x &lt;- c(10,20,30,40,50)
+y &lt;- c(20,10,40,30,50)
+df &lt;- transform(cbind(x,y))
+g1 &lt;- ggplot(df,aes(x=x,y=y))+geom_point()
+g1</code></pre>
+<p><img src="../../../../post/2018-06-26D_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div class="section level3">
+<h3>平均偏差のプロット</h3>
+<pre class="r"><code>g2 &lt;- g1 +  geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[2],xend=30,y=y[2],yend=y[2],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[3],xend=30,y=y[3],yend=y[3],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[4],xend=30,y=y[4],yend=y[4],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color=&#39;blue&#39;)
+g2</code></pre>
+<p><img src="../../../../post/2018-06-26D_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>g3 &lt;- g1 + geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[2],xend=x[2],y=y[2],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[3],xend=x[3],y=y[3],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[4],xend=x[4],y=y[4],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color=&#39;brown&#39;)
+g3</code></pre>
+<p><img src="../../../../post/2018-06-26D_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+</div>
+<div class="section level3">
+<h3>両方の偏差を重ねて描く</h3>
+<pre class="r"><code>g4 &lt;- g1 + geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color=&#39;blue&#39;) + 
+  geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color=&#39;brown&#39;)
+
+g4</code></pre>
+<p><img src="../../../../post/2018-06-26D_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" data-id="44322f87e826fd8eb82c2610bd10b83c" class="article-share-link">
+    <a data-url="/2018/06/26/2018-06-26d/" data-id="73009a1cf807999cf6effc731f8c4ad6" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -446,13 +509,20 @@
     
 <nav id="article-nav">
     
+    <a href="../../../../2018/06/26/2018-06-26b/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">標準正規分布を描く</div>
+    </a>
+    
 
     
-    <a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../../../2018/06/26/2018-06-26c/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
-      <div class="article-nav-title">論文が公開されました</div>
+      <div class="article-nav-title">任意の相関係数の散布図を描く</div>
     </a>
     
 </nav>
