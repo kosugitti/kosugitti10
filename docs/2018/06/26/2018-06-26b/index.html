@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>こちらにサイトを引っ越しました &middot; Kosugitti Labo ver.10</title>
+    <title>標準正規分布を描く &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.40.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/"/>
+    <link rel="canonical" href="../../../../2018/06/26/2018-06-26b/"/>
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -20,16 +20,16 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="こちらにサイトを引っ越しました" />
-<meta property="og:description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート" />
+    <meta property="og:title" content="標準正規分布を描く" />
+<meta property="og:description" content="標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm," />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" />
+<meta property="og:url" content="/2018/06/26/2018-06-26b/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="こちらにサイトを引っ越しました">
-<meta itemprop="description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート">
+<meta itemprop="name" content="標準正規分布を描く">
+<meta itemprop="description" content="標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm,">
 
 
-<meta itemprop="datePublished" content="2018-04-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-04-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="79">
+<meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="141">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="こちらにサイトを引っ越しました"/>
-<meta name="twitter:description" content="異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート"/>
+<meta name="twitter:title" content="標準正規分布を描く"/>
+<meta name="twitter:description" content="標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm,"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../../../../2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/">
+    <a href="../../../../2018/06/26/2018-06-26b/">
     <h1 class="article-title" itemprop="name">
-        こちらにサイトを引っ越しました
+        標準正規分布を描く
     </h1>
     </a>
     <div class="article-meta">
@@ -333,9 +333,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-04-08</time>
+            <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            79
+            141
             words
             &middot;
             1
@@ -349,7 +349,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="../../../../categories/news">news</a>
+                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
                 
                 
             </div>
@@ -359,17 +359,60 @@
         
             
             
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="../../../../tags/r">R</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>異動に伴い，サイトもこちらに引っ越しました。</p>
-<p>以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデートして行く所存です。</p>
+            <p>標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。
+<!--more--></p>
+<pre class="r"><code>library(ggplot2)
+library(gridExtra)
+limitRange &lt;- function(fun, min, max) {
+  function(x) {
+    y &lt;- fun(x)
+    y[x &lt; min  |  x &gt; max] &lt;- NA
+    return(y)
+  }
+}
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1, 1),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -2, 2),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -3, 3),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="../../../../post/2018-06-26B_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># p(x&gt;2)
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, 2, 4),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="../../../../post/2018-06-26B_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>pnorm(2,0,1)</code></pre>
+<pre><code>## [1] 0.9772499</code></pre>
+<pre class="r"><code>1-pnorm(2,0,1)</code></pre>
+<pre><code>## [1] 0.02275013</code></pre>
+<pre class="r"><code># 95%
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1.96, 1.96),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="../../../../post/2018-06-26B_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/" data-id="44322f87e826fd8eb82c2610bd10b83c" class="article-share-link">
+    <a data-url="/2018/06/26/2018-06-26b/" data-id="5f7854c0d800b5e53a3b516b80d5d16b" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -446,14 +489,14 @@
     
 <nav id="article-nav">
     
-
-    
-    <a href="../../../../2018/05/23/%E8%AB%96%E6%96%87%E3%81%8C%E5%85%AC%E9%96%8B%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../../../2018/06/26/2018-06-26a/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Newer
+          Older
       </strong>
-      <div class="article-nav-title">論文が公開されました</div>
+      <div class="article-nav-title">正規分布の図を描く</div>
     </a>
+    
+
     
 </nav>
 

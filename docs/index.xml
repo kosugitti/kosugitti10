@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>標準正規分布を描く</title>
+      <link>/2018/06/26/2018-06-26b/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/26/2018-06-26b/</guid>
+      <description>標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。 library(ggplot2) library(gridExtra) limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } p &amp;lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm,</description>
+    </item>
+    
+    <item>
       <title>正規分布の図を描く</title>
       <link>/2018/06/26/2018-06-26a/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>

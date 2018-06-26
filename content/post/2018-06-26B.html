@@ -1,0 +1,53 @@
+---
+title: 標準正規分布を描く
+author: ''
+date: '2018-06-26'
+slug: 2018-06-26B
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+
+
+<p>標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。
+<!--more--></p>
+<pre class="r"><code>library(ggplot2)
+library(gridExtra)
+limitRange &lt;- function(fun, min, max) {
+  function(x) {
+    y &lt;- fun(x)
+    y[x &lt; min  |  x &gt; max] &lt;- NA
+    return(y)
+  }
+}
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1, 1),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -2, 2),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -3, 3),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="/post/2018-06-26B_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># p(x&gt;2)
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, 2, 4),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="/post/2018-06-26B_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<pre class="r"><code>pnorm(2,0,1)</code></pre>
+<pre><code>## [1] 0.9772499</code></pre>
+<pre class="r"><code>1-pnorm(2,0,1)</code></pre>
+<pre><code>## [1] 0.02275013</code></pre>
+<pre class="r"><code># 95%
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1.96, 1.96),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="/post/2018-06-26B_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
