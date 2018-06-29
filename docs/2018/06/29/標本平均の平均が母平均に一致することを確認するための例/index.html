@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>Notes &middot; Kosugitti Labo ver.10</title>
+    <title>標本平均の平均が母平均に一致することを確認するための例 &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.41" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,26 +10,26 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../notes/"/>
-    <link rel="icon" href="../favicon.ico">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/monokai.css">
-    <link rel="stylesheet" href="../fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="../../../../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/"/>
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../css/monokai.css">
+    <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Notes" />
-<meta property="og:description" content="心理統計の授業で使ったプロットのコード 正規分布のコード 標準正規分布のコード 散布図のコード 共分散を説明するときの図のコード" />
+    <meta property="og:title" content="標本平均の平均が母平均に一致することを確認するための例" />
+<meta property="og:description" content="「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。 100個のデータを作って「これを母集団とする」と" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/notes/" />
+<meta property="og:url" content="/2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:published_time" content="2018-06-29T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:modified_time" content="2018-06-29T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="Notes">
-<meta itemprop="description" content="心理統計の授業で使ったプロットのコード 正規分布のコード 標準正規分布のコード 散布図のコード 共分散を説明するときの図のコード">
+<meta itemprop="name" content="標本平均の平均が母平均に一致することを確認するための例">
+<meta itemprop="description" content="「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。 100個のデータを作って「これを母集団とする」と">
 
 
-<meta itemprop="datePublished" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="dateModified" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="wordCount" content="60">
+<meta itemprop="datePublished" content="2018-06-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="740">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Notes"/>
-<meta name="twitter:description" content="心理統計の授業で使ったプロットのコード 正規分布のコード 標準正規分布のコード 散布図のコード 共分散を説明するときの図のコード"/>
+<meta name="twitter:title" content="標本平均の平均が母平均に一致することを確認するための例"/>
+<meta name="twitter:description" content="「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。 100個のデータを作って「これを母集団とする」と"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -75,7 +75,7 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="../" id="logo">
+      <a href="../../../../" id="logo">
           
           <i class="logo" style="background-image: url('/css/images/logo2.png')"></i>
           
@@ -84,7 +84,7 @@
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="../">Home</a>
+          <a class="main-nav-link" href="../../../../">Home</a>
           
           
           
@@ -106,23 +106,23 @@
           
           
           
-          <a class="main-nav-link" href="../about/">about</a>
+          <a class="main-nav-link" href="../../../../about/">about</a>
           
           
           
-          <a class="main-nav-link" href="../works/">Works</a>
+          <a class="main-nav-link" href="../../../../works/">Works</a>
           
           
           
-          <a class="main-nav-link" href="../notes/">Notes</a>
+          <a class="main-nav-link" href="../../../../notes/">Notes</a>
           
           
           
-          <a class="main-nav-link" href="../support/">Support</a>
+          <a class="main-nav-link" href="../../../../support/">Support</a>
           
           
           
-          <a class="main-nav-link" href="../yuep/">YUEP</a>
+          <a class="main-nav-link" href="../../../../yuep/">YUEP</a>
           
           
           
@@ -132,7 +132,7 @@
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../../../../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -151,7 +151,7 @@
           <tr>
           
           
-          <td><a class="main-nav-link" href="../">Home</a></td>
+          <td><a class="main-nav-link" href="../../../../">Home</a></td>
           
           
           
@@ -173,23 +173,23 @@
           
           
           
-          <td><a class="main-nav-link" href="../about/">about</a></td>
+          <td><a class="main-nav-link" href="../../../../about/">about</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../works/">Works</a></td>
+          <td><a class="main-nav-link" href="../../../../works/">Works</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../notes/">Notes</a></td>
+          <td><a class="main-nav-link" href="../../../../notes/">Notes</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../support/">Support</a></td>
+          <td><a class="main-nav-link" href="../../../../support/">Support</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../yuep/">YUEP</a></td>
+          <td><a class="main-nav-link" href="../../../../yuep/">YUEP</a></td>
           
           
           
@@ -307,7 +307,7 @@
 <td><a href="//twitter.com/kosugitti" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
-          <td><a href="../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="../../../../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../notes/">
+    <a href="../../../../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/">
     <h1 class="article-title" itemprop="name">
-        Notes
+        標本平均の平均が母平均に一致することを確認するための例
     </h1>
     </a>
     <div class="article-meta">
@@ -333,35 +333,150 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-08 10:50:20 &#43;0900 JST" itemprop="datePublished">2018-04-08</time>
+            <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            60
+            740
             words
             &middot;
-            1
+            2
             minute read
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="../../../../tags/r">R</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <div class="section level1">
-<h1>心理統計の授業で使ったプロットのコード</h1>
+            <p>「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。</p>
 <ul>
-<li><a href="../2018/06/26/2018-06-26a/">正規分布のコード</a></li>
-<li><a href="../2018/06/26/2018-06-26b/">標準正規分布のコード</a></li>
-<li><a href="../2018/06/26/2018-06-26c/">散布図のコード</a></li>
-<li><a href="../2018/06/26/2018-06-26d/">共分散を説明するときの図のコード</a></li>
+<li>100個のデータを作って「これを母集団とする」とします。</li>
+<li>その中からランダムに10個取り出して，標本平均を出します。</li>
+<li>標本を何度も取り出し，その度に標本平均を出します。</li>
+<li>標本平均の平均が母平均に近づいていくことを示します。</li>
 </ul>
-</div>
+<p>この説明をするために，100個の母集団を図示し，ランダムに抜き出す10個を色付けして表示，スライドに一枚ずつこの図を貼っていって，標本平均を計算，その平均を計算，というパターンを作ります。</p>
+<p>これって誰得？と思うような図の書き方ですが，参考までに。</p>
+<!--more-->
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ─ Attaching packages ─────────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.5
+## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>## ─ Conflicts ───────────────────── tidyverse_conflicts() ─
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(ggrepel)
+set.seed(20180531)
+N &lt;- 100
+x &lt;- round(rnorm(N, 50, 10))
+matrix(x, ncol = 10)</code></pre>
+<pre><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+##  [1,]   59   64   49   47   46   53   46   46   38    72
+##  [2,]   49   51   63   58   52   59   58   40   64    45
+##  [3,]   54   66   41   52   62   47   41   67   49    54
+##  [4,]   51   67   66   53   62   41   32   76   60    54
+##  [5,]   49   62   48   60   56   55   55   68   49    49
+##  [6,]   42   51   65   47   44   30   54   48   60    41
+##  [7,]   48   60   54   45   45   48   53   64   44    57
+##  [8,]   55   61   44   49   66   33   62   65   32    49
+##  [9,]   49   60   65   51   39   59   50   43   53    55
+## [10,]   47   45   70   44   27   67   64   34   41    50</code></pre>
+<pre class="r"><code>mean((x - mean(x))^2)/10</code></pre>
+<pre><code>## [1] 9.83844</code></pre>
+<pre class="r"><code>mean(x)</code></pre>
+<pre><code>## [1] 52.34</code></pre>
+<pre class="r"><code>dim(x) &lt;- c(10, 10)
+apply(x, 2, mean)</code></pre>
+<pre><code>##  [1] 50.3 58.7 56.5 50.6 49.9 49.2 51.5 55.1 49.0 52.6</code></pre>
+<pre class="r"><code>mean(apply(x,2,mean))</code></pre>
+<pre><code>## [1] 52.34</code></pre>
+<pre class="r"><code>d1 &lt;- rep(1:10,10)
+d2 &lt;- rep(1:10,each=10)
+dat &lt;- transform(list(x=d1,y=d2,val=as.vector(x)))
+ggplot(dat,aes(x=d1,y=d2,label=val))+geom_text(size=10)+xlab(&quot;&quot;)+ylab(&quot;&quot;)+
+  theme(
+    panel.background = element_blank(),
+    panel.grid = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  )+scale_y_continuous(breaks=NULL)+scale_x_continuous(breaks=NULL)</code></pre>
+<p><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code># 何行何列目かを見つける関数
+finds &lt;- function(x,v){
+  result &lt;- c()
+  for(i in 1:length(v)){
+    pos &lt;- which(x==v[i])
+    if(length(pos)&gt;1){pos=sample(pos,1)}
+    result &lt;- c(result,pos)
+  }
+  return(result)
+}
+ 
+
+# 可視化 ---------------------------------------------------------------------
+n &lt;- 10
+X &lt;- 10
+samp.df &lt;- data.frame(id=numeric(),val=numeric())
+for(i in 1:X){
+  dat$col &lt;- 1
+  s &lt;- sample(x,n,replace = F)
+  gr &lt;- finds(x,s)
+  dat[gr,]$col &lt;- 2
+  dat$col &lt;- as.factor(dat$col)
+  g &lt;- ggplot(dat,aes(x=d1,y=d2,label=val,color=col))+geom_text(size=10)+xlab(&quot;&quot;)+ylab(&quot;&quot;)+
+    theme(
+      panel.background = element_blank(),
+      panel.grid = element_blank(),
+      axis.title.x = element_blank(),
+      axis.title.y = element_blank(),
+      legend.position = &#39;none&#39;
+    )+scale_y_continuous(breaks=NULL)+scale_x_continuous(breaks=NULL)+
+    scale_color_manual(values = c(&quot;black&quot;,&quot;red&quot;))
+  plot(g)
+  # 実際はプロットせずに図のファイルとして保存させます。s
+  #ggsave(file = paste0(&quot;sample&quot;,i,&quot;.png&quot;), plot = g, dpi = 100, width = 10,height = 5)
+  samp.df &lt;- rbind(samp.df,cbind(rep(i,n),s))
+}</code></pre>
+<p><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-5.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-6.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-7.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-8.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-9.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-10.png" width="672" /><img src="../../../../post/2018-06-29-_files/figure-html/unnamed-chunk-1-11.png" width="672" /></p>
+<pre class="r"><code>samp.df$V1 &lt;- as.factor(samp.df$V1)
+tapply(samp.df$s,samp.df$V1,mean)</code></pre>
+<pre><code>##    1    2    3    4    5    6    7    8    9   10 
+## 51.1 49.1 45.0 49.7 53.6 50.0 49.4 58.2 50.2 53.4</code></pre>
+<pre class="r"><code>mean(samp.df$s)</code></pre>
+<pre><code>## [1] 50.97</code></pre>
+<pre class="r"><code>mean((tapply(samp.df$s,samp.df$V1,mean)-mean(x))^2)</code></pre>
+<pre><code>## [1] 12.863</code></pre>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/notes/" data-id="237a42206981b32c17841ced23c0abe0" class="article-share-link">
+    <a data-url="/2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" data-id="aee8233b0e8b54416c25dcd3c0833f2f" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -436,6 +551,19 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="../../../../2018/06/26/2018-06-26c/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">任意の相関係数の散布図を描く</div>
+    </a>
+    
+
+    
+</nav>
+
 
 </article>
 
@@ -455,7 +583,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" class="thumbnail">
+                    <a href="../../../../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -466,13 +594,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" class="title">標本平均の平均が母平均に一致することを確認するための例</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/29/%E6%A8%99%E6%9C%AC%E5%B9%B3%E5%9D%87%E3%81%AE%E5%B9%B3%E5%9D%87%E3%81%8C%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AB%E4%B8%80%E8%87%B4%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BE%8B/" class="title">標本平均の平均が母平均に一致することを確認するための例</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
                     </p>
@@ -481,7 +609,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26c/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26c/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -492,13 +620,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26c/" class="title">任意の相関係数の散布図を描く</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26c/" class="title">任意の相関係数の散布図を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -507,7 +635,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26d/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26d/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -518,13 +646,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26d/" class="title">共分散（相関）の説明に使えそうな図</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26d/" class="title">共分散（相関）の説明に使えそうな図</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -533,7 +661,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26b/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26b/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -544,13 +672,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26b/" class="title">標準正規分布を描く</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26b/" class="title">標準正規分布を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -559,7 +687,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26a/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26a/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -570,13 +698,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26a/" class="title">正規分布の図を描く</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26a/" class="title">正規分布の図を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -598,7 +726,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/news">
+                <a class="category-list-link" href="../../../../categories/news">
                     news
                 </a>
                 <span class="category-list-count">3</span>
@@ -606,7 +734,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/notes">
+                <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
                 <span class="category-list-count">5</span>
@@ -631,7 +759,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/bayes">
+                <a class="category-list-link" href="../../../../tags/bayes">
                     bayes
                 </a>
                 <span class="category-list-count">1</span>
@@ -639,7 +767,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/psychology">
+                <a class="category-list-link" href="../../../../tags/psychology">
                     psychology
                 </a>
                 <span class="category-list-count">1</span>
@@ -647,7 +775,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/r">
+                <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
                 <span class="category-list-count">6</span>
@@ -670,13 +798,13 @@
     <div class="widget tagcloud">
         
         
-        <a href="../tags/bayes" style="font-size: 12px;">bayes</a>
+        <a href="../../../../tags/bayes" style="font-size: 12px;">bayes</a>
         
         
-        <a href="../tags/psychology" style="font-size: 12px;">psychology</a>
+        <a href="../../../../tags/psychology" style="font-size: 12px;">psychology</a>
         
         
-        <a href="../tags/r" style="font-size: 12px;">r</a>
+        <a href="../../../../tags/r" style="font-size: 12px;">r</a>
         
     </div>
 </div>
@@ -715,8 +843,8 @@ if (!doNotTrack) {
 }
 </script>
 
-<script src="../fancybox/jquery.fancybox.pack.js"></script>
-<script src="../js/script.js"></script>
+<script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+<script src="../../../../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 
