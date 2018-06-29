@@ -12,7 +12,7 @@ description: ''
 images: []
 menu: ''
 ---
-標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。
+標準正規分布を描くコード。領域を塗りつぶして。
 <!--more-->
 
 ```{r}
@@ -32,19 +32,5 @@ p + stat_function(fun = dnorm) +
   stat_function(fun = limitRange(dnorm, -2, 2),
                 geom="area", fill="blue", alpha=0.2)+
   stat_function(fun = limitRange(dnorm, -3, 3),
-                geom="area", fill="blue", alpha=0.2)
-
-# p(x>2)
-p <- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
-p + stat_function(fun = dnorm) +
-  stat_function(fun = limitRange(dnorm, 2, 4),
-                geom="area", fill="blue", alpha=0.2)
-pnorm(2,0,1)
-1-pnorm(2,0,1)
-
-# 95%
-p <- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
-p + stat_function(fun = dnorm) +
-  stat_function(fun = limitRange(dnorm, -1.96, 1.96),
                 geom="area", fill="blue", alpha=0.2)
 ```

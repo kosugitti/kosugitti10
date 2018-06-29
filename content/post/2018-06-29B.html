@@ -1,0 +1,44 @@
+---
+title: 標準正規分布のテイルを塗りつぶす
+author: ''
+date: '2018-06-29'
+slug: 2018-06-29B
+categories: []
+tags: []
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+
+
+<p>標準正規分布のテイルを塗りつぶす。</p>
+<!--more-->
+<div id="2" class="section level4">
+<h4>標準偏差+2以上のテイル</h4>
+<pre class="r"><code>library(ggplot2)
+library(gridExtra)
+limitRange &lt;- function(fun, min, max) {
+  function(x) {
+    y &lt;- fun(x)
+    y[x &lt; min  |  x &gt; max] &lt;- NA
+    return(y)
+  }
+}
+# p(x&gt;2)
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, 2, 4),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="/post/2018-06-29B_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div class="section level4">
+<h4>1.96の領域</h4>
+<pre class="r"><code># 95%
+p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
+p + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1.96, 1.96),
+                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
+<p><img src="/post/2018-06-29B_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>

@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>標準正規分布のテイルを塗りつぶす</title>
+      <link>/2018/06/29/2018-06-29b/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/29/2018-06-29b/</guid>
+      <description>標準正規分布のテイルを塗りつぶす。 標準偏差+2以上のテイル library(ggplot2) library(gridExtra) limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } # p(x&amp;gt;2) p &amp;lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm,</description>
+    </item>
+    
+    <item>
       <title>任意の相関係数の散布図を描く</title>
       <link>/2018/06/26/2018-06-26c/</link>
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
@@ -53,7 +62,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26b/</guid>
-      <description>標準正規分布を描くコード。領域を塗りつぶすバージョンも添えて。 library(ggplot2) library(gridExtra) limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } p &amp;lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm,</description>
+      <description>標準正規分布を描くコード。領域を塗りつぶして。 library(ggplot2) library(gridExtra) limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } p &amp;lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&amp;quot;area&amp;quot;, fill=&amp;quot;blue&amp;quot;, alpha=0.2)+ stat_function(fun = limitRange(dnorm,</description>
     </item>
     
     <item>
