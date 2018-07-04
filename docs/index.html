@@ -1017,7 +1017,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            83
+            84
             words
             &middot;
             1
@@ -1056,7 +1056,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                標準正規分布を描くコード。領域を塗りつぶして。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+ stat_function(fun = limitRange(dnorm,
+                標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+ stat_function(fun =
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/26/2018-06-26b/">

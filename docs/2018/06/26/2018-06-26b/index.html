@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="標準正規分布を描く" />
-<meta property="og:description" content="標準正規分布を描くコード。領域を塗りつぶして。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm," />
+<meta property="og:description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun =" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2018/06/26/2018-06-26b/" />
 
@@ -44,12 +44,12 @@
     
     
 <meta itemprop="name" content="標準正規分布を描く">
-<meta itemprop="description" content="標準正規分布を描くコード。領域を塗りつぶして。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm,">
+<meta itemprop="description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun =">
 
 
 <meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="83">
+<meta itemprop="wordCount" content="84">
 
 
 
@@ -57,7 +57,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="標準正規分布を描く"/>
-<meta name="twitter:description" content="標準正規分布を描くコード。領域を塗りつぶして。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm,"/>
+<meta name="twitter:description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun ="/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -335,7 +335,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            83
+            84
             words
             &middot;
             1
@@ -373,7 +373,7 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>標準正規分布を描くコード。領域を塗りつぶして。
+            <p>標準正規分布を描くコード。領域を塗りつぶします。
 <!--more--></p>
 <pre class="r"><code>library(ggplot2)
 library(gridExtra)
