@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>About &middot; Kosugitti Labo ver.10</title>
+    <title>不偏分散と標本分散の比較 &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.42.2" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,26 +10,26 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../about/"/>
-    <link rel="icon" href="../favicon.ico">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/monokai.css">
-    <link rel="stylesheet" href="../fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="../../../../2018/07/04/2018-07-04/"/>
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../css/monokai.css">
+    <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="About" />
-<meta property="og:description" content="ようこそコスギコウジのオンライン研究室へ 基本情報 氏名 小杉考司 KOSUGI，Koji 所属・職名 専修大学人間科学部 准教授 学位・資格 博士（社会学）" />
+    <meta property="og:title" content="不偏分散と標本分散の比較" />
+<meta property="og:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/about/" />
+<meta property="og:url" content="/2018/07/04/2018-07-04/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:published_time" content="2018-07-04T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T10:50:20&#43;09:00"/>
+<meta property="article:modified_time" content="2018-07-04T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="About">
-<meta itemprop="description" content="ようこそコスギコウジのオンライン研究室へ 基本情報 氏名 小杉考司 KOSUGI，Koji 所属・職名 専修大学人間科学部 准教授 学位・資格 博士（社会学）">
+<meta itemprop="name" content="不偏分散と標本分散の比較">
+<meta itemprop="description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔">
 
 
-<meta itemprop="datePublished" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="dateModified" content="2018-04-08T10:50:20&#43;09:00" />
-<meta itemprop="wordCount" content="845">
+<meta itemprop="datePublished" content="2018-07-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-07-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="404">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="ようこそコスギコウジのオンライン研究室へ 基本情報 氏名 小杉考司 KOSUGI，Koji 所属・職名 専修大学人間科学部 准教授 学位・資格 博士（社会学）"/>
+<meta name="twitter:title" content="不偏分散と標本分散の比較"/>
+<meta name="twitter:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -75,7 +75,7 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="../" id="logo">
+      <a href="../../../../" id="logo">
           
           <i class="logo" style="background-image: url('/css/images/logo2.png')"></i>
           
@@ -84,7 +84,7 @@
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="../">Home</a>
+          <a class="main-nav-link" href="../../../../">Home</a>
           
           
           
@@ -106,23 +106,23 @@
           
           
           
-          <a class="main-nav-link" href="../about/">about</a>
+          <a class="main-nav-link" href="../../../../about/">about</a>
           
           
           
-          <a class="main-nav-link" href="../works/">Works</a>
+          <a class="main-nav-link" href="../../../../works/">Works</a>
           
           
           
-          <a class="main-nav-link" href="../notes/">Notes</a>
+          <a class="main-nav-link" href="../../../../notes/">Notes</a>
           
           
           
-          <a class="main-nav-link" href="../support/">Support</a>
+          <a class="main-nav-link" href="../../../../support/">Support</a>
           
           
           
-          <a class="main-nav-link" href="../yuep/">YUEP</a>
+          <a class="main-nav-link" href="../../../../yuep/">YUEP</a>
           
           
           
@@ -132,7 +132,7 @@
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="../../../../css/images/avatar2.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -151,7 +151,7 @@
           <tr>
           
           
-          <td><a class="main-nav-link" href="../">Home</a></td>
+          <td><a class="main-nav-link" href="../../../../">Home</a></td>
           
           
           
@@ -173,23 +173,23 @@
           
           
           
-          <td><a class="main-nav-link" href="../about/">about</a></td>
+          <td><a class="main-nav-link" href="../../../../about/">about</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../works/">Works</a></td>
+          <td><a class="main-nav-link" href="../../../../works/">Works</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../notes/">Notes</a></td>
+          <td><a class="main-nav-link" href="../../../../notes/">Notes</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../support/">Support</a></td>
+          <td><a class="main-nav-link" href="../../../../support/">Support</a></td>
           
           
           
-          <td><a class="main-nav-link" href="../yuep/">YUEP</a></td>
+          <td><a class="main-nav-link" href="../../../../yuep/">YUEP</a></td>
           
           
           
@@ -307,7 +307,7 @@
 <td><a href="//twitter.com/kosugitti" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
 
 
-          <td><a href="../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="../../../../index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../about/">
+    <a href="../../../../2018/07/04/2018-07-04/">
     <h1 class="article-title" itemprop="name">
-        About
+        不偏分散と標本分散の比較
     </h1>
     </a>
     <div class="article-meta">
@@ -333,88 +333,111 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-04-08 10:50:20 &#43;0900 JST" itemprop="datePublished">2018-04-08</time>
+            <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
             &middot;
-            845
+            404
             words
             &middot;
-            2
+            1
             minute read
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="../../../../tags/r">R</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <div class="section level1">
-<h1>ようこそコスギコウジのオンライン研究室へ</h1>
-<div class="section level2">
-<h2>基本情報</h2>
-<ul>
-<li>氏名　小杉考司 KOSUGI，Koji</li>
-<li>所属・職名　専修大学人間科学部 准教授</li>
-<li>学位・資格　博士（社会学），専門社会調査士</li>
-<li>研究テーマ　数理社会心理学，統計モデリング</li>
-<li>ORCID : <a href="https://orcid.org/0000-0001-5816-0099" class="uri">https://orcid.org/0000-0001-5816-0099</a></li>
-<li>Researchmap : <a href="https://researchmap.jp/kosugitti/" class="uri">https://researchmap.jp/kosugitti/</a></li>
-</ul>
-</div>
-</div>
-<div class="section level1">
-<h1>略歴</h1>
-<div class="section level2">
-<h2>所属学会</h2>
-<ul>
-<li>行動計量学会</li>
-<li>日本心理学会</li>
-<li>日本社会心理学会</li>
-<li>日本グループダイナミックス学会</li>
-<li>数理社会学会</li>
-<li>中国四国心理学会</li>
-<li>九州心理学会</li>
-</ul>
-</div>
-<div id="-1" class="section level2">
-<h2>略歴</h2>
-<ul>
-<li>1976.01.17 大阪府大阪市生まれ</li>
-<li>1994.04　関西大学社会学部産業心理学専攻　入学</li>
-<li>1998.03　同　卒業</li>
-<li>1998.04　関西学院大学社会学研究科博士前期課程　入学</li>
-<li>2000.03　同　修了</li>
-<li>2000.04　同　後期課程　入学</li>
-<li>2003.03　同　単位取得退学</li>
-<li>2003.04～2004.5　関西学院大学大学院研究員（社会学研究科）として在籍</li>
-<li>2004.05～2005.3　関西学院大学研究科研究員（社会学研究科）として在籍</li>
-<li>2005.04～2007.3　日本学術振興会特別研究員PDとして関西学院大学（社会学研究科）に在籍</li>
-<li>2007.04～　山口大学教育学部に講師として奉職</li>
-<li>2011.04～　山口大学教育学部　准教授</li>
-</ul>
-</div>
-<div class="section level2">
-<h2>職歴</h2>
-<ul>
-<li>2001.2002年度　星ヶ丘厚生年金保健看護専門学校にて「一般システム論」「疫学統計III」担当</li>
-<li>2001.2002年度　関西学院大学社会学部にて「コンピュータ基礎演習」担当</li>
-<li>2002.2003年度　夙川女子短期大学にて「社会心理学」担当</li>
-<li>2002～2004年度 神戸松蔭女子学院短期大学にて「人間関係論」担当</li>
-<li>2003～2004年度　神戸松蔭女子学院短期大学にて「心理学I/II」「社会心理学」担当</li>
-<li>2003～2004年度　大阪国際大学にて「集団コミュニケーションI/II」「心理学研究法I/II」「心理学実験実習I/II」担当</li>
-<li>2004年度　大阪国際大学にて「データ解析演習」担当</li>
-<li>2003～2006年度　関西学院大学社会学部にて「心理学実験A/B」担当</li>
-<li>2005～2006年度　関西学院大学社会学部にて「多変量解析法」担当</li>
-<li>2007年〜2018年度　山口大学教育学部教育心理学コースにて，「心理学統計法」「社会心理学」他，担当</li>
-<li>2018年度〜至現在 専修大学人間科学部にて「心理学データ解析基礎」 他担当</li>
-</ul>
-</div>
-</div>
+            <p>不偏分散(<span class="math inline">\(N-1\)</span>で割る方)が標本分散よりも分散の推定値として良いことを可視化します。</p>
+<!--more-->
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ─ Attaching packages ────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
+## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>## ─ Conflicts ─────────────── tidyverse_conflicts() ─
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code># 母集団のサイズ
+N &lt;- 100
+# 乱数生成
+x &lt;- round(rnorm(N, 50, 10))
+# 標本のサイズ
+n &lt;- 10
+# 反復回数
+X &lt;- 100
+samp.df &lt;- data.frame(id=numeric(),val=numeric())
+# サンプリングを繰り返す
+for(i in 1:X){
+  s &lt;- sample(x,n,replace = F)
+  samp.df &lt;- rbind(samp.df,cbind(rep(i,n),s))
+}
+samp.df$V1 &lt;- as.factor(samp.df$V1)
+
+# 標本分散
+bV &lt;- function(x){
+  mx &lt;- mean(x)
+  v &lt;- mean((x-mx)^2)
+  return(v)
+}
+
+# サンプリングごとの標本分散
+mv &lt;- tapply(samp.df$s,samp.df$V1,bV)
+
+# 標本分散の平均ベクトル
+mm &lt;- c()
+for(i in 1:length(mv)){
+  tmp &lt;- mean(mv[1:i])
+  mm &lt;- c(mm,tmp)
+}
+
+# サンプリングごとの不偏分散
+mv2 &lt;- tapply(samp.df$s,samp.df$V1,var)
+
+# 不偏分散の平均ベクトル
+mm2 &lt;- c()
+for(i in 1:length(mv2)){
+  tmp &lt;- mean(mv2[1:i])
+  mm2 &lt;- c(mm2,tmp)
+}
+
+
+# 可視化
+cbind(mm,mm2) %&gt;% transform() %&gt;% mutate(rep=as.numeric(rownames(.))) %&gt;% tidyr::gather(key,val,-rep,factor_key=T) %&gt;%
+  ggplot(aes(x=rep,y=val,color=key))+ geom_point()+geom_line()+geom_hline(yintercept=bV(x),color=&quot;red&quot;)+
+  ylab(&#39;means of sample variance&#39;)+xlab(&#39;number of samples&#39;)+theme_grey(base_family = &quot;HiraKakuProN-W3&quot;)+
+  scale_colour_discrete(name=&#39;分散の種類&#39;,labels=c(&quot;標本分散&quot;,&quot;不偏分散&quot;))</code></pre>
+<p><img src="../../../../post/2018-07-04_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/about/" data-id="a7224db13f3a49096aa27c1876d1a947" class="article-share-link">
+    <a data-url="/2018/07/04/2018-07-04/" data-id="9d25c6dd47dcb08db7155413fb240659" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -489,6 +512,19 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="../../../../2018/06/29/2018-06-29a/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">標本平均の平均が母平均に一致することを表す例</div>
+    </a>
+    
+
+    
+</nav>
+
 
 </article>
 
@@ -508,7 +544,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/07/04/2018-07-04/" class="thumbnail">
+                    <a href="../../../../2018/07/04/2018-07-04/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -519,13 +555,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
+                    <p class="item-title"><a href="../../../../2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
                     <p class="item-date">
                         <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
                     </p>
@@ -534,7 +570,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/29/2018-06-29a/" class="thumbnail">
+                    <a href="../../../../2018/06/29/2018-06-29a/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -545,13 +581,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/29/2018-06-29a/" class="title">標本平均の平均が母平均に一致することを表す例</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/29/2018-06-29a/" class="title">標本平均の平均が母平均に一致することを表す例</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
                     </p>
@@ -560,7 +596,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/29/2018-06-29b/" class="thumbnail">
+                    <a href="../../../../2018/06/29/2018-06-29b/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -570,7 +606,7 @@
                     
                     
                     
-                    <p class="item-title"><a href="../2018/06/29/2018-06-29b/" class="title">標準正規分布のテイルを塗りつぶす</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/29/2018-06-29b/" class="title">標準正規分布のテイルを塗りつぶす</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
                     </p>
@@ -579,7 +615,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26c/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26c/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -590,13 +626,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26c/" class="title">任意の相関係数の散布図を描く</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26c/" class="title">任意の相関係数の散布図を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -605,7 +641,7 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="../2018/06/26/2018-06-26d/" class="thumbnail">
+                    <a href="../../../../2018/06/26/2018-06-26d/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -616,13 +652,13 @@
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="../categories/notes">
+                        <a class="article-category-link" href="../../../../categories/notes">
                         Notes
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="../2018/06/26/2018-06-26d/" class="title">共分散（相関）の説明に使えそうな図</a></p>
+                    <p class="item-title"><a href="../../../../2018/06/26/2018-06-26d/" class="title">共分散（相関）の説明に使えそうな図</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
                     </p>
@@ -644,7 +680,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/news">
+                <a class="category-list-link" href="../../../../categories/news">
                     news
                 </a>
                 <span class="category-list-count">3</span>
@@ -652,7 +688,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../categories/notes">
+                <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
                 <span class="category-list-count">6</span>
@@ -677,7 +713,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/bayes">
+                <a class="category-list-link" href="../../../../tags/bayes">
                     bayes
                 </a>
                 <span class="category-list-count">1</span>
@@ -685,7 +721,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/psychology">
+                <a class="category-list-link" href="../../../../tags/psychology">
                     psychology
                 </a>
                 <span class="category-list-count">1</span>
@@ -693,7 +729,7 @@
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="../tags/r">
+                <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
                 <span class="category-list-count">7</span>
@@ -716,13 +752,13 @@
     <div class="widget tagcloud">
         
         
-        <a href="../tags/bayes" style="font-size: 12px;">bayes</a>
+        <a href="../../../../tags/bayes" style="font-size: 12px;">bayes</a>
         
         
-        <a href="../tags/psychology" style="font-size: 12px;">psychology</a>
+        <a href="../../../../tags/psychology" style="font-size: 12px;">psychology</a>
         
         
-        <a href="../tags/r" style="font-size: 12px;">r</a>
+        <a href="../../../../tags/r" style="font-size: 12px;">r</a>
         
     </div>
 </div>
@@ -761,8 +797,8 @@ if (!doNotTrack) {
 }
 </script>
 
-<script src="../fancybox/jquery.fancybox.pack.js"></script>
-<script src="../js/script.js"></script>
+<script src="../../../../fancybox/jquery.fancybox.pack.js"></script>
+<script src="../../../../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 

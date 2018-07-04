@@ -1,0 +1,71 @@
+---
+title: 不偏分散と標本分散の比較
+author: ''
+date: '2018-07-04'
+slug: '2018-07-04'
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+不偏分散($N-1$で割る方)が標本分散よりも分散の推定値として良いことを可視化します。
+
+<!--more-->
+
+```{r}
+library(tidyverse)
+# 母集団のサイズ
+N <- 100
+# 乱数生成
+x <- round(rnorm(N, 50, 10))
+# 標本のサイズ
+n <- 10
+# 反復回数
+X <- 100
+samp.df <- data.frame(id=numeric(),val=numeric())
+# サンプリングを繰り返す
+for(i in 1:X){
+  s <- sample(x,n,replace = F)
+  samp.df <- rbind(samp.df,cbind(rep(i,n),s))
+}
+samp.df$V1 <- as.factor(samp.df$V1)
+
+# 標本分散
+bV <- function(x){
+  mx <- mean(x)
+  v <- mean((x-mx)^2)
+  return(v)
+}
+
+# サンプリングごとの標本分散
+mv <- tapply(samp.df$s,samp.df$V1,bV)
+
+# 標本分散の平均ベクトル
+mm <- c()
+for(i in 1:length(mv)){
+  tmp <- mean(mv[1:i])
+  mm <- c(mm,tmp)
+}
+
+# サンプリングごとの不偏分散
+mv2 <- tapply(samp.df$s,samp.df$V1,var)
+
+# 不偏分散の平均ベクトル
+mm2 <- c()
+for(i in 1:length(mv2)){
+  tmp <- mean(mv2[1:i])
+  mm2 <- c(mm2,tmp)
+}
+
+
+# 可視化
+cbind(mm,mm2) %>% transform() %>% mutate(rep=as.numeric(rownames(.))) %>% tidyr::gather(key,val,-rep,factor_key=T) %>%
+  ggplot(aes(x=rep,y=val,color=key))+ geom_point()+geom_line()+geom_hline(yintercept=bV(x),color="red")+
+  ylab('means of sample variance')+xlab('number of samples')+theme_grey(base_family = "HiraKakuProN-W3")+
+  scale_colour_discrete(name='分散の種類',labels=c("標本分散","不偏分散"))
+```
