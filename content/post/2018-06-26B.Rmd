@@ -17,7 +17,6 @@ menu: ''
 
 ```{r}
 library(ggplot2)
-library(gridExtra)
 limitRange <- function(fun, min, max) {
   function(x) {
     y <- fun(x)
@@ -25,8 +24,8 @@ limitRange <- function(fun, min, max) {
     return(y)
   }
 }
-p <- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
-p + stat_function(fun = dnorm) +
+
+ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) +
   stat_function(fun = limitRange(dnorm, -1, 1),
                 geom="area", fill="blue", alpha=0.2)+
   stat_function(fun = limitRange(dnorm, -2, 2),
