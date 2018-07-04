@@ -17,7 +17,7 @@
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/04/2018-07-04/</guid>
-      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔</description>
+      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ##</description>
     </item>
     
     <item>

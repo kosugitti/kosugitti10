@@ -18,6 +18,7 @@ menu: ''
 <!--more-->
 
 ```{r}
+set.seed(20180704)
 library(tidyverse)
 # 母集団のサイズ
 N <- 100
