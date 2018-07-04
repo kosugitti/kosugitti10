@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>標準正規分布を描く</title>
+      <link>/2018/06/30/2018-06-30/</link>
+      <pubDate>Sat, 30 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/30/2018-06-30/</guid>
+      <description>標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) limitRange &amp;lt;- function(fun, min, max) { function(x) { y &amp;lt;- fun(x) y[x &amp;lt; min | x &amp;gt; max] &amp;lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&amp;quot;area&amp;quot;, fill=&amp;quot;blue&amp;quot;, alpha=0.2)+ stat_function(fun = limitRange(dnorm, -2, 2), geom=&amp;quot;area&amp;quot;,</description>
+    </item>
+    
+    <item>
       <title>標本平均の平均が母平均に一致することを表す例</title>
       <link>/2018/06/29/2018-06-29a/</link>
       <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
