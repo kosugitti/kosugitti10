@@ -6,10 +6,19 @@
     <description>Recent content on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>t分布の描画</title>
+      <link>/2018/07/06/t/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/06/t/</guid>
+      <description>ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 自由度18のt分布における棄却域と，t(18)=2.79</description>
+    </item>
     
     <item>
       <title>不偏分散と標本分散の比較</title>
@@ -17,7 +26,7 @@
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/04/2018-07-04/</guid>
-      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ##</description>
+      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────────</description>
     </item>
     
     <item>
@@ -53,7 +62,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26c/</guid>
-      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0</description>
+      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1</description>
     </item>
     
     <item>
@@ -62,7 +71,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26d/</guid>
-      <description>共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ##</description>
+      <description>共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ───────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ##</description>
     </item>
     
     <item>
