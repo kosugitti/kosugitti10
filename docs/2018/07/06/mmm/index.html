@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>t分布の描画 &middot; Kosugitti Labo ver.10</title>
+    <title>三つの代表値がずれる &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.43" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../../../../2018/07/06/t/"/>
+    <link rel="canonical" href="../../../../2018/07/06/mmm/"/>
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -20,10 +20,10 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="t分布の描画" />
-<meta property="og:description" content="ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 自由度18のt分布における棄却域と，t(18)=2.79" />
+    <meta property="og:title" content="三つの代表値がずれる" />
+<meta property="og:description" content="左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。 このことを正規分布とカイ二乗分布で図示しまし" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/07/06/t/" />
+<meta property="og:url" content="/2018/07/06/mmm/" />
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="t分布の描画">
-<meta itemprop="description" content="ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 自由度18のt分布における棄却域と，t(18)=2.79">
+<meta itemprop="name" content="三つの代表値がずれる">
+<meta itemprop="description" content="左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。 このことを正規分布とカイ二乗分布で図示しまし">
 
 
 <meta itemprop="datePublished" content="2018-07-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="317">
+<meta itemprop="wordCount" content="258">
 
 
 
 <meta itemprop="keywords" content="R," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="t分布の描画"/>
-<meta name="twitter:description" content="ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 自由度18のt分布における棄却域と，t(18)=2.79"/>
+<meta name="twitter:title" content="三つの代表値がずれる"/>
+<meta name="twitter:description" content="左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。 このことを正規分布とカイ二乗分布で図示しまし"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../../../../2018/07/06/t/">
+    <a href="../../../../2018/07/06/mmm/">
     <h1 class="article-title" itemprop="name">
-        t分布の描画
+        三つの代表値がずれる
     </h1>
     </a>
     <div class="article-meta">
@@ -335,7 +335,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            317
+            258
             words
             &middot;
             1
@@ -373,10 +373,9 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。</p>
+            <p>左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。</p>
+<p>このことを正規分布とカイ二乗分布で図示しました。</p>
 <!--more-->
-<div id="18tt182.794p" class="section level2">
-<h2>自由度18のt分布における棄却域と，t(18)=2.794のp値</h2>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ─ Attaching packages ──────────────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
@@ -386,8 +385,7 @@
 <pre><code>## ─ Conflicts ───────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code># t分布の描画 ------------------------------------------------------------------
-library(gridExtra)</code></pre>
+<pre class="r"><code>library(gridExtra)</code></pre>
 <pre><code>## 
 ##  次のパッケージを付け加えます: &#39;gridExtra&#39;</code></pre>
 <pre><code>##  以下のオブジェクトは &#39;package:dplyr&#39; からマスクされています: 
@@ -395,29 +393,29 @@ library(gridExtra)</code></pre>
 ##      combine</code></pre>
 <pre class="r"><code>old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
 
-q &lt;- qt(c(0.025,0.975),df=18)
-ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab(&quot;&quot;)+
-  geom_ribbon(data=data.frame(X=x&lt;-seq(q[1],q[2],len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)+
-  geom_ribbon(data=data.frame(X=x&lt;-seq(2.794003,5,len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),fill=&quot;red&quot;,alpha=0.8)</code></pre>
-<p><img src="../../../../post/2018-07-06-t_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-</div>
-<div class="section level2">
-<h2>片側と両側の違い</h2>
-<pre class="r"><code># 片側と両側
-p1 &lt;- ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab(&quot;&quot;)+
-  geom_ribbon(data=data.frame(X=x&lt;-seq(q[1],q[2],len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)
+g1 &lt;- ggplot(data=data.frame(X=c(-4,4)), aes(x=X)) + 
+  xlab(&quot;&quot;)+ylab(&quot;&quot;) + 
+  stat_function(fun = dnorm, args=list(mean=0,sd=1)) +
+  geom_vline(xintercept = 0)
 
-p2 &lt;- ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab(&quot;&quot;)+
-  geom_ribbon(data=data.frame(X=x&lt;-seq(-5,qt(0.95,df=18),len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)
-  
+DF &lt;- 10
 
-grid.arrange(p1, p2, ncol = 1)</code></pre>
-<p><img src="../../../../post/2018-07-06-t_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
+g2 &lt;- ggplot(data=data.frame(X=c(0,40)), aes(x=X)) + 
+  xlab(&quot;&quot;)+ylab(&quot;&quot;) + 
+  stat_function(fun = dchisq,args=list(df=DF)) + 
+  # 平均値
+  geom_vline(xintercept=DF) + 
+  # 最頻値
+  geom_vline(xintercept=DF-2) +
+  # 中央値
+  geom_vline(xintercept=DF-(2/3)+(4/(27*DF))-(8/(729*DF^2)))
+
+grid.arrange(g1, g2, ncol = 1)</code></pre>
+<p><img src="../../../../post/2018-07-06-MMM_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/07/06/t/" data-id="671285f29643820d3e8197a684d49da6" class="article-share-link">
+    <a data-url="/2018/07/06/mmm/" data-id="65dfec2ca55e9441e6b8fcd0d63c0ede" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -494,14 +492,21 @@ grid.arrange(p1, p2, ncol = 1)</code></pre>
     
 <nav id="article-nav">
     
-    <a href="../../../../2018/07/06/mmm/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../../2018/07/04/2018-07-04/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">三つの代表値がずれる</div>
+      <div class="article-nav-title">不偏分散と標本分散の比較</div>
     </a>
     
 
+    
+    <a href="../../../../2018/07/06/t/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">t分布の描画</div>
+    </a>
     
 </nav>
 
