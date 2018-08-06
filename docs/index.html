@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.43" />
+    <meta name="generator" content="Hugo 0.46" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-07-06T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-08-07T00:00:00&#43;00:00"/>
 
 
 
@@ -220,7 +220,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        12
+        13
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -318,6 +318,129 @@
         </a>
 
         <header class="article-header">
+    <a href="./2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/">
+    <h1 class="article-title" itemprop="name">
+        山口大学教育学部・集中講義準備のコード
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-08-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-07</time>
+            &middot;
+            162
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                授業履修前に次のコードを実行して準備しておいてください。 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdoma
+            </p>
+            <p class="article-more-link">
+                <a href="./2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="/2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" data-id="360e51e59035574c0d4228bf11a9cf7c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
     <a href="./2018/07/06/t/">
     <h1 class="article-title" itemprop="name">
         t分布の描画
@@ -330,7 +453,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            317
+            308
             words
             &middot;
             1
@@ -471,7 +594,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            258
+            249
             words
             &middot;
             1
@@ -612,7 +735,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
             &middot;
-            409
+            400
             words
             &middot;
             1
@@ -651,7 +774,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────── tidyverse 1.2.1
+                不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0
             </p>
             <p class="article-more-link">
                 <a href="./2018/07/04/2018-07-04/">
@@ -894,7 +1017,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            733
+            724
             words
             &middot;
             2
@@ -1158,7 +1281,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            343
+            334
             words
             &middot;
             1
@@ -1197,7 +1320,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ──────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔
+                任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/26/2018-06-26c/">
@@ -1299,7 +1422,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            202
+            193
             words
             &middot;
             1
@@ -1338,7 +1461,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ──────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr
+                共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/26/2018-06-26d/">
@@ -1563,155 +1686,6 @@
     </div>
 </article>
 
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="./2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/">
-    <h1 class="article-title" itemprop="name">
-        基礎心理学会のフォーラムでお話しして来ました
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-06-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-04</time>
-            &middot;
-            465
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="./categories/news">news</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="./tags/r">R</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="./tags/bayes">bayes</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="./tags/psychology">psychology</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                【平成30年度第1回フォーラム】時代は変わる─再現可能性問題から基礎心理学のパラダイムシフトへ─ にて話題提供して来ました。 再現可能性の問題は
-            </p>
-            <p class="article-more-link">
-                <a href="./2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="/2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/" data-id="45b41c915e6809dc4e3067dc29444f52" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
 
 <nav id="page-nav">
 
@@ -1736,6 +1710,25 @@
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="./2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="./2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" class="title">山口大学教育学部・集中講義準備のコード</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-08-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-07</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -1837,32 +1830,6 @@
                     <p class="item-title"><a href="./2018/06/30/2018-06-30/" class="title">標準正規分布を描く</a></p>
                     <p class="item-date">
                         <time datetime="2018-06-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-30</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="./2018/06/29/2018-06-29a/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="./categories/notes">
-                        Notes
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="./2018/06/29/2018-06-29a/" class="title">標本平均の平均が母平均に一致することを表す例</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
                     </p>
                 </div>
             </li>

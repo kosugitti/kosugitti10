@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>任意の相関係数の散布図を描く &middot; Kosugitti Labo ver.10</title>
+    <title>山口大学教育学部・集中講義準備のコード &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.46" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../../../../2018/06/26/2018-06-26c/"/>
+    <link rel="canonical" href="../../../../2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/"/>
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -20,16 +20,16 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="任意の相関係数の散布図を描く" />
-<meta property="og:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts" />
+    <meta property="og:title" content="山口大学教育学部・集中講義準備のコード" />
+<meta property="og:description" content="授業履修前に次のコードを実行して準備しておいてください。 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdoma" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/06/26/2018-06-26c/" />
+<meta property="og:url" content="/2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" />
 
 
 
-<meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-08-07T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-08-07T00:00:00&#43;00:00"/>
 
 
 
@@ -43,21 +43,21 @@
 
     
     
-<meta itemprop="name" content="任意の相関係数の散布図を描く">
-<meta itemprop="description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts">
+<meta itemprop="name" content="山口大学教育学部・集中講義準備のコード">
+<meta itemprop="description" content="授業履修前に次のコードを実行して準備しておいてください。 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdoma">
 
 
-<meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="334">
+<meta itemprop="datePublished" content="2018-08-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="162">
 
 
 
-<meta itemprop="keywords" content="R," />
+<meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="任意の相関係数の散布図を描く"/>
-<meta name="twitter:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.1 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## ─ Conflicts"/>
+<meta name="twitter:title" content="山口大学教育学部・集中講義準備のコード"/>
+<meta name="twitter:description" content="授業履修前に次のコードを実行して準備しておいてください。 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdoma"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -323,9 +323,9 @@
         
 
         <header class="article-header">
-    <a href="../../../../2018/06/26/2018-06-26c/">
+    <a href="../../../../2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/">
     <h1 class="article-title" itemprop="name">
-        任意の相関係数の散布図を描く
+        山口大学教育学部・集中講義準備のコード
     </h1>
     </a>
     <div class="article-meta">
@@ -333,9 +333,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
+            <time datetime="2018-08-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-07</time>
             &middot;
-            334
+            162
             words
             &middot;
             1
@@ -345,78 +345,30 @@
         
             
             
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
-                
-                
-            </div>
-            
         
 
         
             
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="../../../../tags/r">R</a>
-                
-                
-            </div>
             
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>任意の相関係数をもつ散布図を描くコード。
-<!--more--></p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────── tidyverse 1.2.1 ─</code></pre>
-<pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
-## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
-## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ───────────── tidyverse_conflicts() ─
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code># マカーの呪文
-old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
-set.seed(20180524)
-# 散布図 -----------------------------------------
-library(MASS)</code></pre>
-<pre><code>## 
-##  次のパッケージを付け加えます: &#39;MASS&#39;</code></pre>
-<pre><code>##  以下のオブジェクトは &#39;package:dplyr&#39; からマスクされています: 
-## 
-##      select</code></pre>
-<pre class="r"><code>N &lt;- 200
-rho &lt;- 0.8
-mu &lt;- c(165, 26)
-sd1 &lt;- 10
-sd2 &lt;- 2
-cov &lt;- matrix(ncol = 2, nrow = 2)
-cov[1, 1] &lt;- sd1^2
-cov[2, 2] &lt;- sd2^2
-cov[1, 2] &lt;- sd1 * sd2 * rho
-cov[2, 1] &lt;- sd1 * sd2 * rho
-df &lt;- mvrnorm(N, mu, cov, empirical = TRUE)
-tg &lt;- 10
-df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() + 
-  xlim(140, 190) + ylim(22, 30) + xlab(&quot;身長&quot;) + ylab(&quot;靴のサイズ&quot;) + 
-  geom_segment(x = df[tg, 1], xend = df[tg, 1], y = df[tg, 
-    2], yend = 0, lty = 2, color = &quot;blue&quot;) + geom_segment(x = df[tg, 
-  1], xend = 0, y = df[tg, 2], yend = df[tg, 2], lty = 2, colour = &quot;blue&quot;)</code></pre>
-<pre><code>## Warning: Removed 9 rows containing missing values (geom_point).</code></pre>
-<p><img src="../../../../post/2018-06-26C_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+            <p>授業履修前に次のコードを実行して準備しておいてください。</p>
+<!--more-->
+<pre class="r"><code>install.packages(&#39;tidyverse&#39;)
+install.packages(&#39;rstan&#39;)
+install.packages(&#39;bayesplot&#39;)
+install.packages(&#39;summarytools&#39;)
+install.packages(&#39;gridExtra&#39;)
+install.packages(&#39;GGally&#39;)
+install.packages(&#39;loo&#39;)
+source(&#39;http://riseki.php.xdomain.jp/index.php?plugin=attach&amp;refer=ANOVA君&amp;openfile=anovakun_482.txt&#39;,encoding = &#39;CP932&#39;)</code></pre>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/06/26/2018-06-26c/" data-id="0cd3037af45b396401e22788eae1c9da" class="article-share-link">
+    <a data-url="/2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" data-id="360e51e59035574c0d4228bf11a9cf7c" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -493,21 +445,14 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
     
 <nav id="article-nav">
     
-    <a href="../../../../2018/06/26/2018-06-26d/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../../2018/07/06/t/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">共分散（相関）の説明に使えそうな図</div>
+      <div class="article-nav-title">t分布の描画</div>
     </a>
     
 
-    
-    <a href="../../../../2018/06/29/2018-06-29b/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">標準正規分布のテイルを塗りつぶす</div>
-    </a>
     
 </nav>
 
