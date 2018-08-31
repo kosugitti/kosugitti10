@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>標本平均の平均が母平均に一致することを表す例 &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.46" />
+    <meta name="generator" content="Hugo 0.48" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -23,24 +23,8 @@
     <meta property="og:title" content="標本平均の平均が母平均に一致することを表す例" />
 <meta property="og:description" content="「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。 100個のデータを作って「これを母集団とする」と" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/06/29/2018-06-29a/" />
-
-
-
-<meta property="article:published_time" content="2018-06-29T00:00:00&#43;00:00"/>
-
+<meta property="og:url" content="/2018/06/29/2018-06-29a/" /><meta property="article:published_time" content="2018-06-29T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-06-29T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
     
     
 <meta itemprop="name" content="標本平均の平均が母平均に一致することを表す例">
@@ -49,7 +33,7 @@
 
 <meta itemprop="datePublished" content="2018-06-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="724">
+<meta itemprop="wordCount" content="748">
 
 
 
@@ -335,7 +319,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            724
+            748
             words
             &middot;
             2
@@ -384,12 +368,12 @@
 <p>これって誰得？と思うような図の書き方ですが，参考までに。</p>
 <!--more-->
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ─ Attaching packages ─────────────────────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
 ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ───────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ───────────────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(ggrepel)
@@ -830,7 +814,7 @@ tapply(samp.df$s,samp.df$V1,mean)</code></pre>
 </footer>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

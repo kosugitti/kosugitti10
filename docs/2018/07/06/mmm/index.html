@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>三つの代表値がずれる &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.46" />
+    <meta name="generator" content="Hugo 0.48" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -23,24 +23,8 @@
     <meta property="og:title" content="三つの代表値がずれる" />
 <meta property="og:description" content="左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。 このことを正規分布とカイ二乗分布で図示しまし" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/07/06/mmm/" />
-
-
-
-<meta property="article:published_time" content="2018-07-06T00:00:00&#43;00:00"/>
-
+<meta property="og:url" content="/2018/07/06/mmm/" /><meta property="article:published_time" content="2018-07-06T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-07-06T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
     
     
 <meta itemprop="name" content="三つの代表値がずれる">
@@ -49,7 +33,7 @@
 
 <meta itemprop="datePublished" content="2018-07-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="249">
+<meta itemprop="wordCount" content="273">
 
 
 
@@ -335,7 +319,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            249
+            273
             words
             &middot;
             1
@@ -377,12 +361,12 @@
 <p>このことを正規分布とカイ二乗分布で図示しました。</p>
 <!--more-->
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ─ Attaching packages ─────────────────────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
 ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ───────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ───────────────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(gridExtra)</code></pre>
@@ -769,7 +753,7 @@ grid.arrange(g1, g2, ncol = 1)</code></pre>
 </footer>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

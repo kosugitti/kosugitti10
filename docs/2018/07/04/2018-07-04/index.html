@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>不偏分散と標本分散の比較 &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.46" />
+    <meta name="generator" content="Hugo 0.48" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -21,35 +21,19 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="不偏分散と標本分散の比較" />
-<meta property="og:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0" />
+<meta property="og:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────────" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/07/04/2018-07-04/" />
-
-
-
-<meta property="article:published_time" content="2018-07-04T00:00:00&#43;00:00"/>
-
+<meta property="og:url" content="/2018/07/04/2018-07-04/" /><meta property="article:published_time" content="2018-07-04T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-07-04T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
     
     
 <meta itemprop="name" content="不偏分散と標本分散の比較">
-<meta itemprop="description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0">
+<meta itemprop="description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────────">
 
 
 <meta itemprop="datePublished" content="2018-07-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="400">
+<meta itemprop="wordCount" content="424">
 
 
 
@@ -57,7 +41,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="不偏分散と標本分散の比較"/>
-<meta name="twitter:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0"/>
+<meta name="twitter:description" content="不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────────"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -335,7 +319,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
             &middot;
-            400
+            424
             words
             &middot;
             1
@@ -377,12 +361,12 @@
 <!--more-->
 <pre class="r"><code>set.seed(20180704)
 library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ─ Attaching packages ─────────────────────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
 ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ───────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ───────────────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code># 母集団のサイズ
@@ -792,7 +776,7 @@ cbind(mm,mm2) %&gt;% transform() %&gt;% mutate(rep=as.numeric(rownames(.))) %&gt
 </footer>
 
 
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
