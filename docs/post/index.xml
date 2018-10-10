@@ -80,7 +80,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26c/</guid>
-      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ──────────────────────────────────────── tidyverse 1.2.1 ─ ## ✔</description>
+      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔</description>
     </item>
     
     <item>

@@ -80,7 +80,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26c/</guid>
-      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ──────────────────────────────────────── tidyverse 1.2.1 ─ ## ✔</description>
+      <description>任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔</description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@
       <pubDate>Sun, 08 Apr 2018 10:50:20 +0900</pubDate>
       
       <guid>/notes/</guid>
-      <description>心理統計の授業で使ったプロットのコード 正規分布のコード 標準正規分布のコード 正規分布の一部を塗りつぶす 散布図のコード 共分散を説明するときの図の</description>
+      <description>日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル 心理学用bibtexスタイルファイル 心理統計の授業で使ったプロット</description>
     </item>
     
     <item>

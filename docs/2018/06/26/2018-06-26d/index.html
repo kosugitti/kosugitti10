@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>共分散（相関）の説明に使えそうな図 &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.49" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -25,6 +25,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2018/06/26/2018-06-26d/" /><meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
+
     
     
 <meta itemprop="name" content="共分散（相関）の説明に使えそうな図">
@@ -33,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="250">
+<meta itemprop="wordCount" content="244">
 
 
 
@@ -319,7 +320,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            250
+            244
             words
             &middot;
             1
@@ -363,12 +364,12 @@
 <h3>準備</h3>
 <pre class="r"><code># 準備
 library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ──────────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
 <pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
 ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ───────────────────────────────────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ────────────────────────────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
