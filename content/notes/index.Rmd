@@ -5,7 +5,7 @@ date: "2018-04-08T10:50:20+09:00"
 
 # 日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル
 
-+ [心理学用bibtexスタイルファイル](https://github.com/kosugitti/jecon-jpa)
++ [心理学用bibtexスタイルファイル](https://github.com/kosugitti/jecon-jpa)(2018.10.21 update!)
 
 # 心理統計の授業で使ったプロットのコード
 

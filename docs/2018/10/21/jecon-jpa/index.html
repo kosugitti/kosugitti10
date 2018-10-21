@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
 <head>
-    <title>標準正規分布を描く &middot; Kosugitti Labo ver.10</title>
+    <title>Jecon-jpa &middot; Kosugitti Labo ver.10</title>
     <meta name="generator" content="Hugo 0.49" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="小杉考司のオンライン研究">
     
     
-    <link rel="canonical" href="../../../../2018/06/30/2018-06-30/"/>
+    <link rel="canonical" href="../../../../2018/10/21/jecon-jpa/"/>
     <link rel="icon" href="../../../../favicon.ico">
     <link rel="apple-touch-icon" href="../../../../apple-touch-icon.png"/>
     <link rel="stylesheet" href="../../../../css/style.css">
@@ -20,29 +20,29 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="標準正規分布を描く" />
-<meta property="og:description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm, -2, 2), geom=&quot;area&quot;," />
+    <meta property="og:title" content="Jecon-jpa" />
+<meta property="og:description" content="心理学用bibtexスタイルファイルをアップデートしました。 中の人の助けを借りて，より正解に近くなりました。 スタイルファイルだけでは対応でき" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/06/30/2018-06-30/" /><meta property="article:published_time" content="2018-06-30T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-06-30T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/2018/10/21/jecon-jpa/" /><meta property="article:published_time" content="2018-10-21T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-21T00:00:00&#43;00:00"/>
 
     
     
-<meta itemprop="name" content="標準正規分布を描く">
-<meta itemprop="description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm, -2, 2), geom=&quot;area&quot;,">
+<meta itemprop="name" content="Jecon-jpa">
+<meta itemprop="description" content="心理学用bibtexスタイルファイルをアップデートしました。 中の人の助けを借りて，より正解に近くなりました。 スタイルファイルだけでは対応でき">
 
 
-<meta itemprop="datePublished" content="2018-06-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-06-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="80">
+<meta itemprop="datePublished" content="2018-10-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="130">
 
 
 
-<meta itemprop="keywords" content="R," />
+<meta itemprop="keywords" content="" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="標準正規分布を描く"/>
-<meta name="twitter:description" content="標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm, -2, 2), geom=&quot;area&quot;,"/>
+<meta name="twitter:title" content="Jecon-jpa"/>
+<meta name="twitter:description" content="心理学用bibtexスタイルファイルをアップデートしました。 中の人の助けを借りて，より正解に近くなりました。 スタイルファイルだけでは対応でき"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -308,9 +308,9 @@
         
 
         <header class="article-header">
-    <a href="../../../../2018/06/30/2018-06-30/">
+    <a href="../../../../2018/10/21/jecon-jpa/">
     <h1 class="article-title" itemprop="name">
-        標準正規分布を描く
+        Jecon-jpa
     </h1>
     </a>
     <div class="article-meta">
@@ -318,9 +318,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2018-06-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-30</time>
+            <time datetime="2018-10-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-10-21</time>
             &middot;
-            80
+            130
             words
             &middot;
             1
@@ -330,57 +330,25 @@
         
             
             
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="../../../../categories/notes">Notes</a>
-                
-                
-            </div>
-            
         
 
         
             
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="../../../../tags/r">R</a>
-                
-                
-            </div>
             
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>標準正規分布を描くコード。領域を塗りつぶします。</p>
+            <p><a href="https://github.com/kosugitti/jecon-jpa">心理学用bibtexスタイルファイル</a>をアップデートしました。</p>
+<p>中の人の助けを借りて，より正解に近くなりました。
+スタイルファイルだけでは対応できないところは，bibファイルで対応するようになっています。
+サンプルを見る場合は，bibファイルも一緒に参照してください。</p>
 <!--more-->
-<pre class="r"><code>library(ggplot2)
-limitRange &lt;- function(fun, min, max) {
-  function(x) {
-    y &lt;- fun(x)
-    y[x &lt; min  |  x &gt; max] &lt;- NA
-    return(y)
-  }
-}
-
-ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) +
-  stat_function(fun = limitRange(dnorm, -1, 1),
-                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
-  stat_function(fun = limitRange(dnorm, -2, 2),
-                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+
-  stat_function(fun = limitRange(dnorm, -3, 3),
-                geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
-<p><img src="../../../../post/2018-06-30_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/06/30/2018-06-30/" data-id="50088fbb55b699edee02a3ab4ee63e7b" class="article-share-link">
+    <a data-url="/2018/10/21/jecon-jpa/" data-id="e190e18387aa4aa1fe53a3e3c49b26a4" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -457,21 +425,14 @@ ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) +
     
 <nav id="article-nav">
     
-    <a href="../../../../2018/06/29/2018-06-29a/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../../../../2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">標本平均の平均が母平均に一致することを表す例</div>
+      <div class="article-nav-title">山口大学教育学部・集中講義準備のコード</div>
     </a>
     
 
-    
-    <a href="../../../../2018/07/04/2018-07-04/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">
-          Newer
-      </strong>
-      <div class="article-nav-title">不偏分散と標本分散の比較</div>
-    </a>
     
 </nav>
 
