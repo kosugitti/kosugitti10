@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>任意の相関係数の散布図を描く &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="任意の相関係数の散布図を描く" />
-<meta property="og:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔" />
+<meta property="og:description" content="任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.7 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2018/06/26/2018-06-26c/" /><meta property="article:published_time" content="2018-06-26T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-06-26T00:00:00&#43;00:00"/>
@@ -29,12 +29,12 @@
     
     
 <meta itemprop="name" content="任意の相関係数の散布図を描く">
-<meta itemprop="description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔">
+<meta itemprop="description" content="任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.7 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔">
 
 
 <meta itemprop="datePublished" content="2018-06-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="385">
+<meta itemprop="wordCount" content="342">
 
 
 
@@ -42,7 +42,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="任意の相関係数の散布図を描く"/>
-<meta name="twitter:description" content="任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔"/>
+<meta name="twitter:description" content="任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.7 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔"/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -213,7 +213,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        14
+        15
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -320,7 +320,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            385
+            342
             words
             &middot;
             1
@@ -358,15 +358,22 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>任意の相関係数をもつ散布図を描くコード。
-<!--more--></p>
+            
+
+
+<p>任意の相関係数をもつ散布図を描くコード。
+
+
+HUGOMORE42
+
+</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
-<pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
-## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+<pre><code>## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 3.1.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.7
+## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ────────────────────────────────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ──────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code># マカーの呪文
@@ -515,6 +522,32 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="../../../../2018/12/01/m1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="../../../../categories/notes">
+                        Notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="../../../../2018/12/01/m1/" class="title">明日のM-1で優勝するのは誰か</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-12-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-01</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="../../../../2018/10/21/jecon-jpa/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -603,32 +636,6 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="../../../../2018/07/04/2018-07-04/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="../../../../categories/notes">
-                        Notes
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="../../../../2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -655,7 +662,7 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">8</span>
+                <span class="category-list-count">9</span>
             </li>
             
         </ul>
@@ -696,7 +703,7 @@ df %&gt;% transform() %&gt;% ggplot(aes(x = X1, y = X2)) + geom_point() +
                 <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>

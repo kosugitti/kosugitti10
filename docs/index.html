@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2018-10-21T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-12-01T00:00:00&#43;00:00"/>
 
     
     
@@ -208,7 +208,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        14
+        15
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -306,6 +306,147 @@
         </a>
 
         <header class="article-header">
+    <a href="./2018/12/01/m1/">
+    <h1 class="article-title" itemprop="name">
+        明日のM-1で優勝するのは誰か
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-12-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-01</time>
+            &middot;
+            5451
+            words
+            &middot;
+            11
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="./categories/notes">Notes</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="./tags/r">R</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                はじめに この記事はStan Advent Calendar2018，12月01日のエントリー記事です。 またこの記事は，昨年のStan Advent Calendar20
+            </p>
+            <p class="article-more-link">
+                <a href="./2018/12/01/m1/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="/2018/12/01/m1/" data-id="ea03c4f630b06e3f396bf7cdec74c43b" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
     <a href="./2018/10/21/jecon-jpa/">
     <h1 class="article-title" itemprop="name">
         Jecon-jpa
@@ -318,7 +459,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-10-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-10-21</time>
             &middot;
-            130
+            131
             words
             &middot;
             1
@@ -441,7 +582,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-08-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-08-07</time>
             &middot;
-            162
+            163
             words
             &middot;
             1
@@ -462,7 +603,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                授業履修前に次のコードを実行して準備しておいてください。 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdoma
+                授業履修前に次のコードを実行して準備しておいてください。 HUGOMORE42 install.packages(&#39;tidyverse&#39;) install.packages(&#39;rstan&#39;) install.packages(&#39;bayesplot&#39;) install.packages(&#39;summarytools&#39;) install.packages(&#39;gridExtra&#39;) install.packages(&#39;GGally&#39;) install.packages(&#39;loo&#39;) source(&#39;http://riseki.php.xdom
             </p>
             <p class="article-more-link">
                 <a href="./2018/08/07/%E5%B1%B1%E5%8F%A3%E5%A4%A7%E5%AD%A6%E6%95%99%E8%82%B2%E5%AD%A6%E9%83%A8%E9%9B%86%E4%B8%AD%E8%AC%9B%E7%BE%A9%E6%BA%96%E5%82%99%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89/">
@@ -564,7 +705,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            359
+            316
             words
             &middot;
             1
@@ -603,7 +744,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 自由度18のt分布における棄却域と，t(18)=2.79
+                ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。 HUGOMORE42 自由度18のt分布における棄却域と，t(18)=2.7
             </p>
             <p class="article-more-link">
                 <a href="./2018/07/06/t/">
@@ -705,7 +846,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-06</time>
             &middot;
-            300
+            257
             words
             &middot;
             1
@@ -846,7 +987,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
             &middot;
-            451
+            408
             words
             &middot;
             1
@@ -885,7 +1026,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ──────────────────
+                不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 HUGOMORE42 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1
             </p>
             <p class="article-more-link">
                 <a href="./2018/07/04/2018-07-04/">
@@ -987,7 +1128,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-30</time>
             &middot;
-            80
+            81
             words
             &middot;
             1
@@ -1026,7 +1167,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                標準正規分布を描くコード。領域を塗りつぶします。 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+ stat_function(fun = limitRange(dnorm, -2, 2), geom=&quot;area&quot;,
+                標準正規分布を描くコード。領域を塗りつぶします。 HUGOMORE42 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)+ stat_function(fun = limitRange(dnorm, -2, 2),
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/30/2018-06-30/">
@@ -1128,7 +1269,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            775
+            732
             words
             &middot;
             2
@@ -1269,7 +1410,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            103
+            104
             words
             &middot;
             1
@@ -1290,7 +1431,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                標準正規分布のテイルを塗りつぶす。 標準偏差+2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun = limitRange(dnorm,
+                標準正規分布のテイルを塗りつぶす。 HUGOMORE42 標準偏差+2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p + stat_function(fun = dnorm) + stat_function(fun =
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/29/2018-06-29b/">
@@ -1392,7 +1533,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
             &middot;
-            385
+            342
             words
             &middot;
             1
@@ -1431,7 +1572,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                任意の相関係数をもつ散布図を描くコード。 library(tidyverse) ## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.0.0 ✔
+                任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.7 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔
             </p>
             <p class="article-more-link">
                 <a href="./2018/06/26/2018-06-26c/">
@@ -1441,147 +1582,6 @@
         </div>
         <footer class="article-footer">
     <a data-url="/2018/06/26/2018-06-26c/" data-id="0cd3037af45b396401e22788eae1c9da" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="./2018/06/26/2018-06-26d/">
-    <h1 class="article-title" itemprop="name">
-        共分散（相関）の説明に使えそうな図
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-06-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-26</time>
-            &middot;
-            244
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="./categories/notes">Notes</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="./tags/r">R</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                共分散や相関係数を説明するのに使えそうな図のセットです。 準備 # 準備 library(tidyverse) ## ─ Attaching packages ────────────────────────────────
-            </p>
-            <p class="article-more-link">
-                <a href="./2018/06/26/2018-06-26d/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="/2018/06/26/2018-06-26d/" data-id="73009a1cf807999cf6effc731f8c4ad6" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -1683,6 +1683,32 @@
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="./2018/12/01/m1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="./categories/notes">
+                        Notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="./2018/12/01/m1/" class="title">明日のM-1で優勝するのは誰か</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-12-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-01</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="./2018/10/21/jecon-jpa/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -1771,32 +1797,6 @@
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="./2018/07/04/2018-07-04/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="./categories/notes">
-                        Notes
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="./2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1823,7 +1823,7 @@
                 <a class="category-list-link" href="./categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">8</span>
+                <span class="category-list-count">9</span>
             </li>
             
         </ul>
@@ -1864,7 +1864,7 @@
                 <a class="category-list-link" href="./tags/r">
                     r
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>

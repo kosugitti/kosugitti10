@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>標本平均の平均が母平均に一致することを表す例 &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-06-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="775">
+<meta itemprop="wordCount" content="732">
 
 
 
@@ -213,7 +213,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        14
+        15
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -320,7 +320,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            775
+            732
             words
             &middot;
             2
@@ -358,7 +358,10 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。</p>
+            
+
+
+<p>「標本平均の平均が母平均に一致する」，これを説明するために，次のような例を示して教えてます。</p>
 <ul>
 <li>100個のデータを作って「これを母集団とする」とします。</li>
 <li>その中からランダムに10個取り出して，標本平均を出します。</li>
@@ -367,14 +370,17 @@
 </ul>
 <p>この説明をするために，100個の母集団を図示し，ランダムに抜き出す10個を色付けして表示，スライドに一枚ずつこの図を貼っていって，標本平均を計算，その平均を計算，というパターンを作ります。</p>
 <p>これって誰得？と思うような図の書き方ですが，参考までに。</p>
-<!--more-->
+
+
+HUGOMORE42
+
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ───────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
-<pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
-## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+<pre><code>## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 3.1.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.7
+## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
 ## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ─ Conflicts ────────────────────────────────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ──────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(ggrepel)
@@ -575,6 +581,32 @@ tapply(samp.df$s,samp.df$V1,mean)</code></pre>
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="../../../../2018/12/01/m1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="../../../../categories/notes">
+                        Notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="../../../../2018/12/01/m1/" class="title">明日のM-1で優勝するのは誰か</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-12-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-01</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="../../../../2018/10/21/jecon-jpa/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -663,32 +695,6 @@ tapply(samp.df$s,samp.df$V1,mean)</code></pre>
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="../../../../2018/07/04/2018-07-04/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="../../../../categories/notes">
-                        Notes
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="../../../../2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -715,7 +721,7 @@ tapply(samp.df$s,samp.df$V1,mean)</code></pre>
                 <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">8</span>
+                <span class="category-list-count">9</span>
             </li>
             
         </ul>
@@ -756,7 +762,7 @@ tapply(samp.df$s,samp.df$V1,mean)</code></pre>
                 <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>

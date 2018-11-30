@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>標準正規分布のテイルを塗りつぶす &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.52" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="標準正規分布のテイルを塗りつぶす" />
-<meta property="og:description" content="標準正規分布のテイルを塗りつぶす。 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm," />
+<meta property="og:description" content="標準正規分布のテイルを塗りつぶす。 HUGOMORE42 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun =" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2018/06/29/2018-06-29b/" /><meta property="article:published_time" content="2018-06-29T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-06-29T00:00:00&#43;00:00"/>
@@ -29,12 +29,12 @@
     
     
 <meta itemprop="name" content="標準正規分布のテイルを塗りつぶす">
-<meta itemprop="description" content="標準正規分布のテイルを塗りつぶす。 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm,">
+<meta itemprop="description" content="標準正規分布のテイルを塗りつぶす。 HUGOMORE42 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun =">
 
 
 <meta itemprop="datePublished" content="2018-06-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-29T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="103">
+<meta itemprop="wordCount" content="104">
 
 
 
@@ -42,7 +42,7 @@
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="標準正規分布のテイルを塗りつぶす"/>
-<meta name="twitter:description" content="標準正規分布のテイルを塗りつぶす。 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm,"/>
+<meta name="twitter:description" content="標準正規分布のテイルを塗りつぶす。 HUGOMORE42 標準偏差&#43;2以上のテイル library(ggplot2) library(gridExtra) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } # p(x&gt;2) p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x)) p &#43; stat_function(fun = dnorm) &#43; stat_function(fun ="/>
 <meta name="twitter:site" content="@kosugitti"/>
 
     
@@ -213,7 +213,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        14
+        15
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -320,7 +320,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-06-29</time>
             &middot;
-            103
+            104
             words
             &middot;
             1
@@ -340,9 +340,15 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>標準正規分布のテイルを塗りつぶす。</p>
-<!--more-->
-<div id="2" class="section level4">
+            
+
+
+<p>標準正規分布のテイルを塗りつぶす。</p>
+
+
+HUGOMORE42
+
+<div id="section" class="section level4">
 <h4>標準偏差+2以上のテイル</h4>
 <pre class="r"><code>library(ggplot2)
 library(gridExtra)
@@ -360,7 +366,7 @@ p + stat_function(fun = dnorm) +
                 geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
 <p><img src="../../../../post/2018-06-29B_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div class="section level4">
+<div id="section-1" class="section level4">
 <h4>1.96の領域</h4>
 <pre class="r"><code># 95%
 p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))
@@ -486,6 +492,32 @@ p + stat_function(fun = dnorm) +
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="../../../../2018/12/01/m1/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="../../../../categories/notes">
+                        Notes
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="../../../../2018/12/01/m1/" class="title">明日のM-1で優勝するのは誰か</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-12-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-12-01</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="../../../../2018/10/21/jecon-jpa/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
@@ -574,32 +606,6 @@ p + stat_function(fun = dnorm) +
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="../../../../2018/07/04/2018-07-04/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="../../../../categories/notes">
-                        Notes
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="../../../../2018/07/04/2018-07-04/" class="title">不偏分散と標本分散の比較</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-07-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-07-04</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -626,7 +632,7 @@ p + stat_function(fun = dnorm) +
                 <a class="category-list-link" href="../../../../categories/notes">
                     notes
                 </a>
-                <span class="category-list-count">8</span>
+                <span class="category-list-count">9</span>
             </li>
             
         </ul>
@@ -667,7 +673,7 @@ p + stat_function(fun = dnorm) +
                 <a class="category-list-link" href="../../../../tags/r">
                     r
                 </a>
-                <span class="category-list-count">9</span>
+                <span class="category-list-count">10</span>
             </li>
             
         </ul>
