@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する</title>
+      <link>/2018/12/04/2018m1judges/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/12/04/2018m1judges/</guid>
+      <description>はじめに この記事はStan Advent Calendar2018，12月04日のエントリー記事です。 12月01日のアドカレで，スーパーマラドーナが優勝す</description>
+    </item>
     
     <item>
       <title>明日のM-1で優勝するのは誰か</title>
@@ -62,7 +71,7 @@
       <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/07/04/2018-07-04/</guid>
-      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 HUGOMORE42 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1</description>
+      <description>不偏分散(\(N-1\)で割る方)が標本分散よりも分散の推定値として良いことを可視化します。 HUGOMORE42 set.seed(20180704) library(tidyverse) ## ─ Attaching packages ─────────────────</description>
     </item>
     
     <item>
@@ -98,7 +107,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26c/</guid>
-      <description>任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.7 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔</description>
+      <description>任意の相関係数をもつ散布図を描くコード。 HUGOMORE42 library(tidyverse) ## ─ Attaching packages ───────────────────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔</description>
     </item>
     
     <item>
@@ -107,7 +116,7 @@
       <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/26/2018-06-26d/</guid>
-      <description>共分散や相関係数を説明するのに使えそうな図のセットです。 HUGOMORE42 準備 # 準備 library(tidyverse) ## ─ Attaching packages ─────────────── tidyverse 1.2.1 ─ ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr</description>
+      <description>共分散や相関係数を説明するのに使えそうな図のセットです。 HUGOMORE42 準備 # 準備 library(tidyverse) ## ─ Attaching packages ───────────────────────────── tidyverse 1.2.1</description>
     </item>
     
     <item>
