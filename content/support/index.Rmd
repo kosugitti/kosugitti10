@@ -12,7 +12,7 @@ date: "2018-04-08T10:50:20+09:00"
 
 ## 近刊のお知らせ
 
-[言葉と数式で理解する多変量解析入門](https://amzn.to/2FVsfgz)
+[Rでらくらく心理統計 RStudio徹底活用](https://amzn.to/2FVsfgz)
 
 通称「言数ブラック」； [言葉と数式で理解する多変量解析入門](https://amzn.to/2L7qKf5)
 
