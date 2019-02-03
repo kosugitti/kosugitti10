@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>標準正規分布を描く &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.53" />
+    <meta name="generator" content="Hugo 0.54.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -23,7 +23,8 @@
     <meta property="og:title" content="標準正規分布を描く" />
 <meta property="og:description" content="標準正規分布を描くコード。領域を塗りつぶします。 HUGOMORE42 library(ggplot2) limitRange &lt;- function(fun, min, max) { function(x) { y &lt;- fun(x) y[x &lt; min | x &gt; max] &lt;- NA return(y) } } ggplot(data.frame(x=c(-4, 4)), aes(x=x)) &#43; stat_function(fun = dnorm) &#43; stat_function(fun = limitRange(dnorm, -1, 1), geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)&#43; stat_function(fun = limitRange(dnorm, -2, 2)," />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/06/30/2018-06-30/" /><meta property="article:published_time" content="2018-06-30T00:00:00&#43;00:00"/>
+<meta property="og:url" content="/2018/06/30/2018-06-30/" />
+<meta property="article:published_time" content="2018-06-30T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-06-30T00:00:00&#43;00:00"/>
 
     
