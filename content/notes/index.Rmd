@@ -18,3 +18,24 @@ date: "2018-04-08T10:50:20+09:00"
 + [不偏分散と標本分散の比較](/2018/07/04/2018-07-04/)
 + [t分布の図](/2018/07/06/t/)
 + [三つの代表値がずれる]
+
+# Macの環境に入れるべきものリスト(自分用メモ)
+
+### HomebrewとHomebrewでいれるもの
++ Homebrew
++ iTerms2
++ RictyフォントとJapanesque配色
++ Atom
++ Typora
++ Mou
++ Calibre
++ pyenv/anaconda
++ Docker
++ Chrome
+
+### Homebrewを使わずに入れるべきもの1
++ MacTeX
++ R
++ RStudio
+  + rstan/tidyverse
+
