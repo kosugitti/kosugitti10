@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Psychology on Kosugitti Labo ver.10</title>
+    <title>psychology on Kosugitti Labo ver.10</title>
     <link>/tags/psychology/</link>
-    <description>Recent content in Psychology on Kosugitti Labo ver.10</description>
+    <description>Recent content in psychology on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/psychology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>双対尺度法についてのノート</title>
+      <link>/2019/06/04/ds/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/04/ds/</guid>
+      <description>
+
+
+&lt;p&gt;双対尺度法についてのノート。少し整理したので再掲します。PDF注意。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>尤度のアニメーション</title>
+      <link>/2019/06/04/likelihood/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/04/likelihood/</guid>
+      <description>
+
+
+&lt;p&gt;平均身長を推定したいとします。ある学級で身長を測定したところ，165cm,173cm,182cmの3人が観測されました。
+標準偏差が10だと仮定し，これらのデータから考えられる尤度&lt;span class=&#34;math inline&#34;&gt;\(L(165,173,182|\mu,10)\)&lt;/span&gt;をイメージするプロットを描画します。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>基礎心理学会のフォーラムでお話しして来ました</title>
@@ -17,7 +44,14 @@
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/06/04/%E5%9F%BA%E7%A4%8E%E5%BF%83%E7%90%86%E5%AD%A6%E4%BC%9A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%A7%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%97%E3%81%A6%E6%9D%A5%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>【平成30年度第1回フォーラム】時代は変わる─再現可能性問題から基礎心理学のパラダイムシフトへ─ にて話題提供して来ました。 再現可能性の問題は</description>
+      <description>
+
+
+&lt;p&gt;【平成30年度第1回フォーラム】時代は変わる─再現可能性問題から基礎心理学のパラダイムシフトへ─ にて話題提供して来ました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;再現可能性の問題は　統計的帰無仮説検定の弱点が悪い形で現れたことが一因だろう。しかしそれはロジックの問題ではなく、我々と統計との付き合い方が問題だったのかもしれない。統計は、我々にとっては方法論でしかなく、そこに努力を費やすぐらいであれば心理学的な問題をもっと考えていたい、というのは心理学者にとって当然の要望である。ただし、残念ながら従来の統計的方法は、生半可な気持ちで手出しをすると失敗しやすいものだった。ベイズ統計学に乗り換えれば、問題のすべてが解決するというものではないが、少なくとも例数設計や多重比較の問題については、そのほうが単純でしかも間違えにくい構造になっている。本講演では、こうしたベイズ統計学の長所を紹介し、新しい流儀の心理統計法との付き合い方を考えていきたい。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>

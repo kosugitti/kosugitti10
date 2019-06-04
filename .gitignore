@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+fit1.Rdata
+fit2.Rdata
+fit2mcmc.Rdata

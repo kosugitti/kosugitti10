@@ -6,25 +6,26 @@
     <description>Recent content in Categories on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>News</title>
-      <link>/categories/news/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <title>Notes</title>
+      <link>/categories/notes/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/news/</guid>
+      <guid>/categories/notes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Notes</title>
-      <link>/categories/notes/</link>
-      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      <title>news</title>
+      <link>/categories/news/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/notes/</guid>
+      <guid>/categories/news/</guid>
       <description></description>
     </item>
     
