@@ -25,10 +25,12 @@ date: "2018-04-08T10:50:20+09:00"
 + Homebrew
 + iTerms2
 + RictyフォントとJapanesque配色
++ Dropbox
 + Atom
 + Typora
 + Mou
 + Calibre
++ Zotero
 + pyenv/anaconda
 + Docker
 + Chrome
@@ -38,4 +40,4 @@ date: "2018-04-08T10:50:20+09:00"
 + R
 + RStudio
   + rstan/tidyverse
-
++ Tweetbot
