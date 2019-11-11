@@ -15,7 +15,7 @@ menu: ''
 
 <p>標準正規分布のテイルを塗りつぶす。</p>
 <!--more-->
-<div id="section" class="section level4">
+<div id="2" class="section level4">
 <h4>標準偏差+2以上のテイル</h4>
 <pre class="r"><code>library(ggplot2)
 library(gridExtra)
@@ -33,7 +33,7 @@ p + stat_function(fun = dnorm) +
                 geom=&quot;area&quot;, fill=&quot;blue&quot;, alpha=0.2)</code></pre>
 <p><img src="/post/2018-06-29B_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div id="section-1" class="section level4">
+<div class="section level4">
 <h4>1.96の領域</h4>
 <pre class="r"><code># 95%
 p &lt;- ggplot(data.frame(x=c(-4, 4)), aes(x=x))

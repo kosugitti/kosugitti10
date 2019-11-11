@@ -2,7 +2,7 @@
 <html lang="ja-jp">
 <head>
     <title>尤度のアニメーション &middot; Kosugitti Labo ver.10</title>
-    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="小杉考司">
@@ -44,7 +44,7 @@
 
 <meta itemprop="datePublished" content="2019-06-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-06-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="596">
+<meta itemprop="wordCount" content="616">
 
 
 
@@ -335,7 +335,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2019-06-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-06-04</time>
             &middot;
-            596
+            616
             words
             &middot;
             2
@@ -373,15 +373,15 @@
 
         <div class="article-entry" itemprop="articleBody">
             <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ─ Attaching packages ─────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
-<pre><code>## ✔ ggplot2 3.1.1     ✔ purrr   0.3.2
-## ✔ tibble  2.1.1     ✔ dplyr   0.8.1
+<pre><code>## ─ Attaching packages ───────────────────────────────────────────── tidyverse 1.2.1 ─</code></pre>
+<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
 ## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
 ## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
-<pre><code>## ─ Conflicts ──────────────────────────────────── tidyverse_conflicts() ─
+<pre><code>## ─ Conflicts ────────────────────────────────────────────── tidyverse_conflicts() ─
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<div id="section" class="section level3">
+<div class="section level3">
 <h3>３つのデータポイントでの尤度</h3>
 <div id="mu170" class="section level4">
 <h4>muが170だとすると？</h4>
@@ -424,7 +424,7 @@ ggplot(data=data.frame(X=c(100,200)),aes(x=X))+
 <p><img src="../../../../post/2019-06-04-likelihood_files/figure-html/likelihood3-1.png" width="672" /></p>
 </div>
 </div>
-<div id="section-1" class="section level3">
+<div class="section level3">
 <h3>平均値を動かすのは平行移動</h3>
 <p>正規分布が平行移動するのアニメーションを作るコードは次の通り。</p>
 <p>animationパッケージとimage magickを別途ご用意ください。</p>
