@@ -1,11 +1,11 @@
-baseurl = "https://kosugitti.github.io/kosugitti10"
+baseurl = "https://kosugitti.github.io/kosugitti10/"
 title = "Kosugitti Labo ver.10"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-120091930-1"
 # Define the number of posts per page
-paginate = 10
+paginate = 20
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus-theme"
 # Comment the themesDir option if you use this theme in production
@@ -34,7 +34,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     disable_mathjax = true # set to true to disable MathJax
 
     # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["Home"]
+    mainSections = [""]
 
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
@@ -50,7 +50,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # E.g.: "Home" appears before all linked posts in the menu
 # and "Tags" / "Categories" after them.
 [[params.menu]]
-    before = true
+    before = false
     label  = "Home"
     link = "home/"
 
@@ -58,6 +58,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     before = false
     label  = "about"
     link   = "about/"
+
+[[params.menu]]
+    before = false
+    label  = "post"
+    link = "post/"
 
 [[params.menu]]
     before = false
