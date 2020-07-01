@@ -1,6 +1,6 @@
 ---
 title: "Support"
-date: "2018-04-08T10:50:20+09:00"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
 ---
 
 ## はじめに

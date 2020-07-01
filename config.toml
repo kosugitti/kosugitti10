@@ -61,6 +61,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[params.menu]]
     before = false
+    label  = "Labo Member"
+    link = "LaboMem/"
+
+[[params.menu]]
+    before = false
     label  = "post"
     link = "post/"
 
