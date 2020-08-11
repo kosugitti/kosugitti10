@@ -48,7 +48,7 @@
       <description>
 
 
-&lt;div class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;はじめに&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/stan&#34;&gt;Stan Advent Calendar2018&lt;/a&gt;，12月04日のエントリー記事です。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://kosugitti.github.io/kosugitti10/2018/12/01/m1/&#34;&gt;12月01日のアドカレ&lt;/a&gt;で，スーパーマラドーナが優勝するぜ！2本目にいける確率は87%だぜ！とか言っておきながら，大いに外してしまったのですが，この教訓を元に新年をベイズ更新するつもりです（あるいはもっといいモデルを誰か書いてくれ！）&lt;/p&gt;
@@ -64,19 +64,19 @@
       <description>
 
 
-&lt;div class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;はじめに&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/stan&#34;&gt;Stan Advent Calendar2018&lt;/a&gt;，12月01日のエントリー記事です。&lt;/p&gt;
 &lt;p&gt;またこの記事は，昨年の&lt;a href=&#34;https://qiita.com/advent-calendar/2017/stan&#34;&gt;Stan Advent Calendar2017&lt;/a&gt;，12月11日の&lt;a href=&#34;http://kosugitti.net/archives/6261&#34;&gt;エントリー記事&lt;/a&gt;の続編でもあり，その後の「いや違うモデルもあるんじゃないか」ということで出てきた二つの記事，&lt;a href=&#34;http://norimune.net/3093&#34;&gt;「最強のM-1漫才師は誰だ」へのチャレンジ&lt;/a&gt;，および「「最強のM-1漫才師は誰だ」シリーズへの挑戦」(&lt;a href=&#34;https://bit.ly/2PCDKie&#34; class=&#34;uri&#34;&gt;https://bit.ly/2PCDKie&lt;/a&gt;) の続編でもあります。&lt;/p&gt;
 &lt;p&gt;昨年のこれらのチャレンジは，&lt;a href=&#34;https://amzn.to/2PAn8I4&#34;&gt;「楽しいベイズモデリング」（北大路書房）&lt;/a&gt;の中にもまとめられていますので，興味のある人はそちらもご覧ください。&lt;/p&gt;
 &lt;p&gt;なお，今回のコード，データは&lt;a href=&#34;https://osf.io/wym5v/&#34;&gt;OSF&lt;/a&gt;にも置いてありますので，私の結論に納得がいかない人はご自身のモデルを書いてモデルフィットにチャレンジしてください！&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;予測しちゃうぞ&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;予測しちゃうぞ&lt;/h2&gt;
 &lt;p&gt;今年もM-1が開催されます。今年も実力派揃いで，この記事を書いている段階(11月下旬)ではまだどんな結果になるのか当然わかりませんから，お笑いファンとしては楽しみで仕方ありません。&lt;/p&gt;
 &lt;p&gt;さて，今年もStanアドカレを楽しくやっていこうと思うのですが，今回もなにかM-1ネタができないかということで，なんと無謀にも放送日前の段階で優勝者を予想しちゃおうということをやります。当たり外れがはっきりしちゃう問題に手を出すなんてねえ。自分のStan力，ベイズ力への信頼をかけての勝負です。&lt;/p&gt;
 &lt;p&gt;長くなるので先に結論を。&lt;/p&gt;
-&lt;div id=&#34;-&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;スーパーマラドーナ-と予想します&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;スーパーマラドーナ と予想します！&lt;/h3&gt;
 &lt;p&gt;なんでこんな話になるか，を以下に述べていきます。&lt;/p&gt;
 </description>
