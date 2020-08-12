@@ -12,6 +12,60 @@
     
     
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>略歴 所属学会 行動計量学会 日本心理学会 日本社会心理学会 数理社会学会 中国四国心理学会 九州心理学会 略歴 1976.01.17 大阪府大阪市生まれ 1994.04 関西大学社会学部産業心</description>
+    </item>
+    
+    <item>
+      <title>Labo</title>
+      <link>/labo/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/labo/</guid>
+      <description>研究室メンバー 博士後期課程 越智宏朗 博士前期課程 安藤正和 卒業生 (H19年)2007年4月1日 山口大学教育学部 着任，小杉ゼミ開設 学部 2008/H</description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>/notes/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/notes/</guid>
+      <description>日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル 心理学用bibtexスタイルファイル(2018.10.21 update!) 心理統</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>/support/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/support/</guid>
+      <description>はじめに このページでは，拙著の誤字脱字等，修正情報などを記録しています。 編集に際しては，何度も丁寧に校正しているつもりではありますが，どうし</description>
+    </item>
+    
+    <item>
+      <title>Works</title>
+      <link>/works/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/works/</guid>
+      <description>著書 藤井美和・小杉考司・李政元(編著)(2005).福祉・心理・看護のテキストマイニング入門中央法規. 小杉考司(2006).心理–論理と態度</description>
+    </item>
+    
+    <item>
+      <title>YUEP</title>
+      <link>/yuep/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/yuep/</guid>
+      <description>山口大学教育心理・読書会 YUEP読書会は，心理学を学ぶ上でより広い視野，観点から対象を捉えることができるように，心理学だけでなく哲学，認知科</description>
+    </item>
+    
+    <item>
       <title>過去のノートをサルベージしました</title>
       <link>/2019/08/21/%E9%81%8E%E5%8E%BB%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88%E3%82%92%E3%82%B5%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B8%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
       <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
@@ -277,75 +331,21 @@
     </item>
     
     <item>
-      <title>こちらにサイトを引っ越しました</title>
-      <link>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
-      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
-      <description>異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>略歴 所属学会 行動計量学会 日本心理学会 日本社会心理学会 数理社会学会 中国四国心理学会 九州心理学会 略歴 1976.01.17 大阪府大阪市生まれ 1994.04 関西大学社会学部産業心</description>
-    </item>
-    
-    <item>
       <title>Home</title>
       <link>/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/home/</guid>
       <description>ようこそコスギコウジのオンライン研究室へ 基本情報 氏名 小杉考司 KOSUGI，Koji 所属・職名 専修大学人間科学部 教授 学位・資格 博士（社会学），</description>
     </item>
     
     <item>
-      <title>Labo</title>
-      <link>/labo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>こちらにサイトを引っ越しました</title>
+      <link>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/labo/</guid>
-      <description>研究室メンバー 博士後期課程 越智宏朗 博士前期課程 安藤正和 卒業生 (H19年)2007年4月1日 山口大学教育学部 着任，小杉ゼミ開設 学部 2008/H</description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/notes/</guid>
-      <description>日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル 心理学用bibtexスタイルファイル(2018.10.21 update!) 心理統</description>
-    </item>
-    
-    <item>
-      <title>Support</title>
-      <link>/support/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/support/</guid>
-      <description>はじめに このページでは，拙著の誤字脱字等，修正情報などを記録しています。 編集に際しては，何度も丁寧に校正しているつもりではありますが，どうし</description>
-    </item>
-    
-    <item>
-      <title>Works</title>
-      <link>/works/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/works/</guid>
-      <description>著書 藤井美和・小杉考司・李政元(編著)(2005).福祉・心理・看護のテキストマイニング入門中央法規. 小杉考司(2006).心理–論理と態度</description>
-    </item>
-    
-    <item>
-      <title>YUEP</title>
-      <link>/yuep/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/yuep/</guid>
-      <description>山口大学教育心理・読書会 YUEP読書会は，心理学を学ぶ上でより広い視野，観点から対象を捉えることができるように，心理学だけでなく哲学，認知科</description>
+      <guid>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</guid>
+      <description>異動に伴い，サイトもこちらに引っ越しました。 以前のサイトは個人的なブログ用として残しておくつもりですが，これからはこちらで情報をアップデート</description>
     </item>
     
   </channel>

@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/labo/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/notes/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/support/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/works/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/yuep/</loc>
+    <lastmod>2020-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2019-08-21T00:00:00+00:00</lastmod>
   </url>
@@ -138,36 +168,13 @@
   </url>
   
   <url>
-    <loc>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</loc>
+    <loc>/home/</loc>
     <lastmod>2018-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/home/</loc>
-  </url>
-  
-  <url>
-    <loc>/labo/</loc>
-  </url>
-  
-  <url>
-    <loc>/notes/</loc>
-  </url>
-  
-  <url>
-    <loc>/support/</loc>
-  </url>
-  
-  <url>
-    <loc>/works/</loc>
-  </url>
-  
-  <url>
-    <loc>/yuep/</loc>
+    <loc>/2018/04/08/%E3%81%93%E3%81%A1%E3%82%89%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%BC%95%E3%81%A3%E8%B6%8A%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/</loc>
+    <lastmod>2018-04-08T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

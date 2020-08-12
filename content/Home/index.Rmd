@@ -1,8 +1,8 @@
 ---
 title: "Home"
-date: "`r format(Sys.time(), '%Y/%m/%d')`"
+author: Kosugitti
+date: '2018-04-08'
 ---
-
 # ようこそコスギコウジのオンライン研究室へ
 
 ## 基本情報

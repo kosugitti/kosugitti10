@@ -1,6 +1,6 @@
 ---
 title: "Notes"
-date: "`r format(Sys.time(), '%Y/%m/%d')`"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 ---
 
 # 日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル

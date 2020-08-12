@@ -23,7 +23,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # Tell me who you are
     author = "小杉考司"
     bio = "専修大学人間科学部"
-    location = "神奈川県"
+    location = "君の心の中"
     site_description = "小杉考司のオンライン研究"
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     avatar = "css/images/avatar2.png"
@@ -34,10 +34,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     disable_mathjax = true # set to true to disable MathJax
 
     # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = [""]
+    mainSections = ["home/index.html"]
 
     # Format dates with Go's time formatting
-    date_format = "2006-01-02"
+    date_format = "2006, Jan 2, Mon."
 
     # Add custom assets with their paths relative to the static folder
 	custom_css = []
@@ -56,17 +56,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[params.menu]]
     before = false
-    label  = "about"
+    label  = "About"
     link   = "about/"
 
 [[params.menu]]
     before = false
-    label  = "Labo Member"
+    label  = "Labo"
     link = "labo/"
 
 [[params.menu]]
     before = false
-    label  = "post"
+    label  = "Post"
     link = "post/"
 
 [[params.menu]]

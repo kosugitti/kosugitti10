@@ -217,6 +217,9 @@ m1 %&gt;% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE
   # 審査員の最初の7人を今年の人たちに
   mutate(演者 = fct_relevel(.$演者,finalist),
          審査員 = fct_relevel(.$審査員,judge ))-&gt; m1.long2018</code></pre>
+<pre><code>## Warning: Problem with `mutate()` input `演者`.
+## x Unknown levels in `f`: 敗者復活
+## ℹ Input `演者` is `fct_relevel(.$演者, finalist)`.</code></pre>
 <pre><code>## Warning: Unknown levels in `f`: 敗者復活</code></pre>
 <p>そして推定。</p>
 <p>さて，今年の演者の能力推定値です。
