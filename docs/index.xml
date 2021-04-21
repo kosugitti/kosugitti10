@@ -6,7 +6,20 @@
     <description>Recent content on Kosugitti Labo ver.10</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Works</title>
+      <link>/works/</link>
+      <pubDate>Tue, 09 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/works/</guid>
+      <description>著書 藤井美和・小杉考司・李政元(編著)(2005).福祉・心理・看護のテキストマイニング入門中央法規. 小杉考司(2006).心理–論理と態度</description>
+    </item>
+    
     <item>
       <title>KOC2020をCORRESP</title>
       <link>/2020/09/27/koc2020-corresp/</link>
@@ -64,15 +77,6 @@
       
       <guid>/support/</guid>
       <description>はじめに このページでは，拙著の誤字脱字等，修正情報などを記録しています。 編集に際しては，何度も丁寧に校正しているつもりではありますが，どうし</description>
-    </item>
-    
-    <item>
-      <title>Works</title>
-      <link>/works/</link>
-      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/works/</guid>
-      <description>著書 藤井美和・小杉考司・李政元(編著)(2005).福祉・心理・看護のテキストマイニング入門中央法規. 小杉考司(2006).心理–論理と態度</description>
     </item>
     
     <item>
