@@ -3,7 +3,7 @@ library(blogdown)
 # theme  = "digitalcraftsman/hugo-icarus-theme")
 
 serve_site()
-#build_site()
+build_site()
 
 
 
