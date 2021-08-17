@@ -34,7 +34,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     disable_mathjax = true # set to true to disable MathJax
 
     # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["home/index.html"]
+    mainSections = []
 
     # Format dates with Go's time formatting
     date_format = "2006, Jan 2, Mon."
@@ -49,7 +49,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #
 # E.g.: "Home" appears before all linked posts in the menu
 # and "Tags" / "Categories" after them.
-[[params.menu]]
+#[[params.menu]]
     before = false
     label  = "Home"
     link = "home/"
