@@ -14,10 +14,10 @@ navbar:
       href: YUEP.html
     - text: "blog"
       href: https://kosugitti.net/
-      
+
 output:
   html_document:
-    theme: cosmo
+    theme: jekyll-theme-minimal
     highlight: textmate
     toc: true
     toc_float:
