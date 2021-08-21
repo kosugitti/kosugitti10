@@ -1,0 +1,275 @@
+---
+title: "明日のM-1で優勝するのは誰か"
+author: ''
+date: '2018-12-01'
+slug: m1
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+## はじめに
+
+この記事は[Stan Advent Calendar2018](https://qiita.com/advent-calendar/2018/stan)，12月01日のエントリー記事です。
+
+またこの記事は，昨年の[Stan Advent Calendar2017](https://qiita.com/advent-calendar/2017/stan)，12月11日の[エントリー記事](http://kosugitti.net/archives/6261)の続編でもあり，その後の「いや違うモデルもあるんじゃないか」ということで出てきた二つの記事，[「最強のM-1漫才師は誰だ」へのチャレンジ](http://norimune.net/3093)，および「「最強のM-1漫才師は誰だ」シリーズへの挑戦」(https://bit.ly/2PCDKie) の続編でもあります。
+
+昨年のこれらのチャレンジは，[「楽しいベイズモデリング」（北大路書房）](https://amzn.to/2PAn8I4)の中にもまとめられていますので，興味のある人はそちらもご覧ください。
+
+なお，今回のコード，データは[OSF](https://osf.io/wym5v/)にも置いてありますので，私の結論に納得がいかない人はご自身のモデルを書いてモデルフィットにチャレンジしてください！
+
+## 予測しちゃうぞ
+
+今年もM-1が開催されます。今年も実力派揃いで，この記事を書いている段階(11月下旬)ではまだどんな結果になるのか当然わかりませんから，お笑いファンとしては楽しみで仕方ありません。
+
+さて，今年もStanアドカレを楽しくやっていこうと思うのですが，今回もなにかM-1ネタができないかということで，なんと無謀にも放送日前の段階で優勝者を予想しちゃおうということをやります。当たり外れがはっきりしちゃう問題に手を出すなんてねえ。自分のStan力，ベイズ力への信頼をかけての勝負です。
+
+長くなるので先に結論を。
+
+### スーパーマラドーナ と予想します！
+
+なんでこんな話になるか，を以下に述べていきます。
+
+
+<!--more-->
+```{r,echo=FALSE,include=FALSE}
+# 分析パッケージを読み込みます。
+library(tidyverse)
+## Macユーザの呪文です
+old = theme_set(theme_gray(base_family="HiraKakuProN-W3"))
+# rstanも読み込みます
+library(rstan)
+rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+load("fit1.Rdata")
+load("fit2.Rdata")
+load("fit2mcmc.Rdata")
+```
+
+
+
+## モデルを考える
+
+さて，現段階でわかっているのは演者と審査員の名前だけです。演者の中には昨年度までに出たことがある人もいれば，M-1初登場の人もいます。基本的に「お笑い力」が採点に反映されると考えていますが，初登場の人はどれぐらいのお笑い力があるかわかりません。そこで何か推定のためのヒントが必要になります。
+
+今回私が考えたのは，「決勝戦に出るぐらいなので，実力伯仲，皆ある程度の能力があって，良い目がでるといいな」ということがひとつ。もう一つは，「M-1は出番の順番によって当たり外れがあるんじゃないか」ということです。昨年度から，演じる順番は当日くじで決めることになっており，今の段階では誰が何番手になるかもわかりませんが，全体的に5,6番目ぐらいに舞台に立てる人が有利なんじゃないかと思っています。その辺を加味してモデリングしていきます。
+
+まず最初の「みんなある程度の能力がある」という前提から，個々の演者の能力$\theta_i$は平均$\mu$,標準偏差$\sigma$の正規分布に従うというモデルを考えます。
+
+$$\theta_i \sim N(\mu,\sigma^2)$$
+
+加えて，順番$k$の効果$\tau_k$が加わったのがその日の面白さ$\theta_i+\tau_k$です。この$\tau_k$は相対的な効果なので，$\sum_{k=1}^{10} \tau_k=0$という制約をかけておくことに注意です。
+
+そして評定者$r$による評価のブレが加わる(小杉,2017)という考えをここでも採用して，順番$k$の演者$i$のスコア$Y_{ik}$は，
+
+$$Y_{ik} \sim N(\theta_i + \tau_k, \phi_r)$$
+
+とします。
+
+さて，最近は審査員も増えてきました。色々な人がいると思いますが，基本はお笑いをわかっている人ということで，「お笑いをわかっている人群」のなかから選ばれていると考え，$$ \phi_r \sim cauchy(\phi_\mu,5)$$という階層モデルを考えます。
+
+
+これを元に作ったStanコードが次のようになります。
+```{r, echo=FALSE, eval=TRUE}
+paste(readLines("m1ord.stan"), collapse = "\n") %>% cat()
+```
+
+## 推定１；昨年度までのデータに合わせてみる
+
+まずデータなのですが，去年まで使っていたデータには演じた順番の情報がありませんので，それを追加した新しいデータセットを作成しました。
+
+```{r rowdata}
+# ファイルを読み込みます
+m1 <- read_csv("M1scoreOrd.csv",na=".")
+# データを縦長にします
+m1 %>% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE) %>% 
+  # 欠損値を削除します
+  na.omit %>% 
+  # 2018年度のデータはまだ使わないです
+  dplyr::filter(年代!=18) %>% 
+  # factor型にします
+  mutate(演者 = factor(演者)) -> m1.long
+```
+
+### 推定
+
+以上のデータを次のコードで推定しました。
+```{r stan1,eval=F}
+dataset <- list(L = nrow(m1.long),
+                P = max(as.numeric(m1.long$演者)),
+                R = max(as.numeric(m1.long$審査員)),
+                Pid = as.numeric(m1.long$演者),
+                Ord = m1.long$ネタ順,
+                Rid = as.numeric(m1.long$審査員),
+                Y = m1.long$val)
+model1 <- stan_model('m1ord.stan')
+fit1 <- sampling(model1,dataset)
+```
+
+## 結果；順序の効果はどれぐらいあるのか
+
+推定の結果を次に示します。
+
+```{r order}
+print(fit1,pars=c("mu","tau"))
+plot(fit1,pars="tau")
+```
+
+ここからわかるのは，芸人さんの基本的な実力は平均87.70，標準偏差3.3ぐらいで分布しているということ。
+順序の効果は，やはり1，2，3，4番手はスコアがマイナスになる傾向があり，5，6，8，9番手あたりがプラスになるということ。同じ実力なら9番手になるのがいいですね，なんてことがわかります。95%確信区間で考えたら-3.91から+3.34ぐらいまであります。大きければ6点は違うんですよね。実力の平均点87.71と合わせて考えると，これが順序効果で83.8から91.05ぐらいまで変わる可能性はあるわけです。際どい勝負の時は，審査員が結構鍵を握っています。
+
+## 推定２；予測
+
+さて，ここまでは既存のデータを使った当てはめです。今回狙うのは「明日優勝するのは誰か」というところです。幸い11/24に審査員が発表されました。新顔の審査員さんもいらっしゃいますが，半数ぐらいは従来の審査員なので，その方々がどの程度ぶれる人なのかは推定できそうです。わからないのは，「新顔の演者の実力」，「新顔の審査員の評価のブレ」，「演者の順番」です。
+
+ベイズ推定では，これら未知のデータはパラメータとして，推定対象にすることで予測ができます。
+早速やっていきましょう。
+
+データの中には，2018年度の審査員，演者のデータは含めていますが，順番がわからないので，順番は全て1番に統一しました。点数はわからないのですが，Stanは欠損値を受け付けませんので，999点というありえない数字を入れました。コードの中で，999点なら推定対象とする，という条件分岐を行うことで対応します。
+
+コードはこちらになります。
+
+```{r, echo=FALSE, eval=TRUE}
+paste(readLines("m1ord2018pred.stan"), collapse = "\n") %>% cat()
+```
+
+これにデータを加えて分析を始めます。
+データの与え方は次の通り。
+```{r 2018Est}
+# 今年のファイナリスト，審査員をfactor型の前に出すために準備
+finalist <- c("和牛","霜降り明星","ゆにばーす","見取り図",
+                          "かまいたち","スーパーマラドーナ","ジャルジャル",
+                          "トム・ブラウン","ギャロップ","敗者復活")
+judge <- c("オール巨人","上沼恵美子","富澤たけし","立川志らく",
+                           "塙宣之","中川礼二","松本人志")
+# データの加工。まずは縦長に
+m1 %>% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE) %>% 
+  # 欠損値を削除します
+  na.omit %>% 
+  # factor型にします
+  mutate(演者 = factor(演者)) %>% 
+  # 演者の最初の10人を今年の人たちに
+  # 審査員の最初の7人を今年の人たちに
+  mutate(演者 = fct_relevel(.$演者,finalist),
+         審査員 = fct_relevel(.$審査員,judge ))-> m1.long2018
+``` 
+
+そして推定。
+```{r stan2,echo=FALSE,message=FALSE,cache=TRUE,eval=F}
+# Stanに与えるデータセット
+dataset <- list(L = nrow(m1.long2018),
+                P = max(as.numeric(m1.long2018$演者)),
+                R = max(as.numeric(m1.long2018$審査員)),
+                Pid = as.numeric(m1.long2018$演者),
+                Ord = m1.long2018$ネタ順,
+                Rid = as.numeric(m1.long2018$審査員),
+                Y = m1.long2018$val)
+# サンプリング
+model2 <- stan_model('m1ord2018pred.stan')
+# 予測なので慎重に100,000サンプルを取る
+fit2 <- sampling(model2,dataset,iter=40000,warmup=15000)
+# MCMCサンプルを抜き出してデータフレームに。以下の加工で使います。
+fit2.mcmc <- rstan::extract(fit2) %>% data.frame
+```
+
+さて，今年の演者の能力推定値です。
+バーは95%確信区間，M-1初参戦の新参者は敗者復活一つに代表させました。
+
+```{r scoreing}
+fit2.mcmc %>% dplyr::select(starts_with("missY.")) %>% 
+  # 10組の予想される平均点
+ transmute(Y1=dplyr::select(.,starts_with("missY.1.")) %>% apply(.,1,mean),
+           Y2=dplyr::select(.,starts_with("missY.2.")) %>% apply(.,1,mean),
+           Y3=dplyr::select(.,starts_with("missY.3.")) %>% apply(.,1,mean),
+           Y4=dplyr::select(.,starts_with("missY.4.")) %>% apply(.,1,mean),
+           Y5=dplyr::select(.,starts_with("missY.5.")) %>% apply(.,1,mean),
+           Y6=dplyr::select(.,starts_with("missY.6.")) %>% apply(.,1,mean),
+           Y7=dplyr::select(.,starts_with("missY.7.")) %>% apply(.,1,mean),
+           Y8=dplyr::select(.,starts_with("missY.8.")) %>% apply(.,1,mean),
+           Y9=dplyr::select(.,starts_with("missY.9.")) %>% apply(.,1,mean),
+           Y10=dplyr::select(.,starts_with("missY.10.")) %>% apply(.,1,mean)) %>% 
+  # 名前をつける
+  setNames(finalist) %>% 
+  # 初のファイナリストは冗長な情報なのでカットし，敗者復活の人で代替。
+  dplyr::select(和牛,ゆにばーす,かまいたち,スーパーマラドーナ,ジャルジャル,敗者復活) %>% 
+  # 縦長にして要約する
+  tidyr::gather(key,val,factor_key=TRUE) %>% group_by(key) %>% 
+  summarise(EAP=mean(val),MAP=median(val),
+            U95=quantile(val,0.975),L95=quantile(val,0.025)) %>% print %>%  
+  ggplot(aes(x=key,y=MAP,color=key))+geom_point() +xlab("演者")+
+  geom_errorbar(aes(ymax=U95,ymin=L95,width=0.3))+ylim(50,100)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
+
+これをみると，新参者はやはり推定の幅が広くなっていますね。実力があるのはスーパーマラドーナ，ついでかまいたちというところでしょうか。和牛，ゆにばーす，かまいたちの三組は実力がかなり揃っており，ジャルジャルが少し上で，トップがスーパーマラドーナなのです。
+
+## 上位3組に入る確率
+
+さて，ここでのスコアは審査員が100点満点でつけるスコア。これで上位三組に入れば，あとは2本目のネタをやり，そのあとは審査員が名前を投票するというシステムが慣例でした。
+
+このデータで予測できるのは，この決勝戦の1回戦まで。2回戦に進めるかどうかが肝要です。ということで，スコアの値よりもTOP3に入れるのかどうかを検証すること，が重要でしょう。
+
+ということで，MCMCサンプル毎に順位をつけ，TOP3に入れるかどうかを検証してみました。
+
+```{r top3}
+fit2.mcmc %>% dplyr::select(starts_with("missY.")) %>% 
+  # 10組の予想される得点
+ transmute(Y1=dplyr::select(.,starts_with("missY.1.")) %>% apply(.,1,sum),
+           Y2=dplyr::select(.,starts_with("missY.2.")) %>% apply(.,1,sum),
+           Y3=dplyr::select(.,starts_with("missY.3.")) %>% apply(.,1,sum),
+           Y4=dplyr::select(.,starts_with("missY.4.")) %>% apply(.,1,sum),
+           Y5=dplyr::select(.,starts_with("missY.5.")) %>% apply(.,1,sum),
+           Y6=dplyr::select(.,starts_with("missY.6.")) %>% apply(.,1,sum),
+           Y7=dplyr::select(.,starts_with("missY.7.")) %>% apply(.,1,sum),
+           Y8=dplyr::select(.,starts_with("missY.8.")) %>% apply(.,1,sum),
+           Y9=dplyr::select(.,starts_with("missY.9.")) %>% apply(.,1,sum),
+           Y10=dplyr::select(.,starts_with("missY.10.")) %>% apply(.,1,sum)) %>% 
+  # 名前をつける
+  setNames(finalist) %>% 
+  # iter番号を付与
+  tibble::rownames_to_column() %>% 
+  # 縦長に
+  tidyr::gather(key,val,-rowname) %>% 
+  # iterごとにグループ化
+  group_by(rowname) %>% 
+  # 順序 RANK関数は昇順なので最大値+1から引いて逆転させる
+  mutate(RANK=11-rank(val)) %>%
+  # ungroup
+  ungroup(rowname) %>% 
+  # 二本目ができるかどうか
+  mutate(FINAL= ifelse(RANK<=3,TRUE,FALSE),
+         TOP1 = ifelse(RANK==1,TRUE,FALSE),
+         TOP2 = ifelse(RANK==2,TRUE,FALSE),
+         TOP3 = ifelse(RANK==3,TRUE,FALSE)) %>% 
+  # 演者ごとにグループ化
+  group_by(key) %>% 
+  # 決勝に行ける確率
+  summarise(FRatio=sum(FINAL)/100000,
+            TOP1ratio=sum(TOP1)/100000,
+            TOP2ratio=sum(TOP2)/100000,
+            TOP3ratio=sum(TOP3)/100000) %>% 
+  dplyr::arrange(desc(FRatio)) %>% print %>% 
+  # 図にする
+  ggplot(aes(x=key,y=FRatio,fill=key))+geom_bar(stat='identity')+
+  xlab("演者")+ylab("2回戦に進める確率")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+``` 
+
+結果を見ると，スーパーマラドーナは87%の確率で決勝2本目に行けます！強いぞ！ついでジャルジャル，和牛ですが，3/10＝0.3を少し上回る程度，かまいたち以下は偶然レベルでしか決勝には残れないという結果です。
+
+これをみると，実力が少し抜きん出ているのはスーパーマラドーナなのです。
+ちなみにTOP通過する確率がTOP1ratioですが，これでもスーパーマラドーナが50％越え。抜きん出ています。
+
+これまでの傾向，今年の審査員との組み合わせなどを考えると，今年は*スーパーマラドーナ*でしょう！
+
+もっとも勝負は水物。実力も僅差ですし，新しい審査員がどういう評価をするかもわかりません。
+この予想が当たるにせよ外れるにせよ，今年の結果が出た後で，また情報をアップートしていこうとおもいます。
+それがベイズのいいところだものね。
+
+
+Enjoy Bayesian Modeling & Merry Christmas!

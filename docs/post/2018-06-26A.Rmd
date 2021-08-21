@@ -1,0 +1,39 @@
+---
+title: 正規分布の図を描く
+author: ''
+date: '2018-06-26'
+slug: 2018-06-26A
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+
+標準偏差の違う正規分布を色々描いてみる。
+
+<!--more-->
+
+```{r}
+library(ggplot2)
+library(gridExtra)
+old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+p1 <- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 90, sd = 8), 
+    color = "red") + xlab("") + ylab("英語") + geom_segment(aes(x = 86, 
+  xend = 86, y = 0, yend = dnorm(86, 90, 8)), lty = 2)
+p2 <- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 53, sd = 10), 
+    color = "blue") + xlab("") + ylab("国語") + geom_segment(aes(x = 67, 
+  xend = 67, y = 0, yend = dnorm(67, 53, 10)), lty = 2)
+p3 <- ggplot(data = data.frame(X = c(0, 100)), aes(x = X)) + 
+  stat_function(fun = dnorm, args = list(mean = 30, sd = 5), 
+    color = "green") + xlab("") + ylab("数学") + geom_segment(aes(x = 44, 
+  xend = 44, y = 0, yend = dnorm(44, 30, 5)), lty = 2)
+# まとめて1枚に出力
+grid.arrange(p1, p2, p3, ncol = 1)
+```{r}

@@ -1,0 +1,73 @@
+---
+title: 共分散（相関）の説明に使えそうな図
+author: ''
+date: '2018-06-26'
+slug: 2018-06-26D
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+
+
+<p>共分散や相関係数を説明するのに使えそうな図のセットです。</p>
+<!--more-->
+<div id="準備" class="section level3">
+<h3>準備</h3>
+<pre class="r"><code># 準備
+library(tidyverse)</code></pre>
+<pre><code>## ─ Attaching packages ────────────────────────────────────────────────── tidyverse 1.3.0 ─</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.1
+## ✓ tidyr   1.1.1     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ─ Conflicts ─────────────────────────────────────────────────── tidyverse_conflicts() ─
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>old = theme_set(theme_gray(base_family = &quot;HiraKakuProN-W3&quot;))
+set.seed(20180524)
+
+# データ
+x &lt;- c(10,20,30,40,50)
+y &lt;- c(20,10,40,30,50)
+df &lt;- transform(cbind(x,y))
+g1 &lt;- ggplot(df,aes(x=x,y=y))+geom_point()
+g1</code></pre>
+<p><img src="/post/2018-06-26D_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="平均偏差のプロット" class="section level3">
+<h3>平均偏差のプロット</h3>
+<pre class="r"><code>g2 &lt;- g1 +  geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[2],xend=30,y=y[2],yend=y[2],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[3],xend=30,y=y[3],yend=y[3],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[4],xend=30,y=y[4],yend=y[4],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color=&#39;blue&#39;)
+g2</code></pre>
+<p><img src="/post/2018-06-26D_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>g3 &lt;- g1 + geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[2],xend=x[2],y=y[2],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[3],xend=x[3],y=y[3],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[4],xend=x[4],y=y[4],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color=&#39;brown&#39;)
+g3</code></pre>
+<p><img src="/post/2018-06-26D_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+</div>
+<div id="両方の偏差を重ねて描く" class="section level3">
+<h3>両方の偏差を重ねて描く</h3>
+<pre class="r"><code>g4 &lt;- g1 + geom_vline(xintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=30,y=y[1],yend=y[1],lty=2,color=&#39;blue&#39;)+
+  geom_segment(x=x[5],xend=30,y=y[5],yend=y[5],lty=2,color=&#39;blue&#39;) + 
+  geom_hline(yintercept = 30,lty=2)+
+  geom_segment(x=x[1],xend=x[1],y=y[1],yend=30,lty=2,color=&#39;brown&#39;)+
+  geom_segment(x=x[5],xend=x[5],y=y[5],yend=30,lty=2,color=&#39;brown&#39;)
+
+g4</code></pre>
+<p><img src="/post/2018-06-26D_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>

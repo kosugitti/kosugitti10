@@ -1,0 +1,44 @@
+---
+title: 三つの代表値がずれる
+author: ''
+date: '2018-07-06'
+slug: MMM
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+左右対称で単峰な分布であれば，平均値，中央値，最頻値は一致しますが，歪んでいると三つはズレます。
+
+このことを正規分布とカイ二乗分布で図示しました。
+
+<!--more-->
+```{r}
+library(tidyverse)
+library(gridExtra)
+old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+
+g1 <- ggplot(data=data.frame(X=c(-4,4)), aes(x=X)) + 
+  xlab("")+ylab("") + 
+  stat_function(fun = dnorm, args=list(mean=0,sd=1)) +
+  geom_vline(xintercept = 0)
+
+DF <- 10
+
+g2 <- ggplot(data=data.frame(X=c(0,40)), aes(x=X)) + 
+  xlab("")+ylab("") + 
+  stat_function(fun = dchisq,args=list(df=DF)) + 
+  # 平均値
+  geom_vline(xintercept=DF) + 
+  # 最頻値
+  geom_vline(xintercept=DF-2) +
+  # 中央値
+  geom_vline(xintercept=DF-(2/3)+(4/(27*DF))-(8/(729*DF^2)))
+
+grid.arrange(g1, g2, ncol = 1)
+```

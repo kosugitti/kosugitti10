@@ -1,0 +1,46 @@
+---
+title: t分布の描画
+author: ''
+date: '2018-07-06'
+slug: t
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+ある自由度のt分布とその棄却域，p値の塗りつぶし，片側と両側の違いを比較した図です。
+
+<!--more-->
+
+## 自由度18のt分布における棄却域と，t(18)=2.794のp値
+
+```{r}
+library(tidyverse)
+# t分布の描画 ------------------------------------------------------------------
+library(gridExtra)
+old = theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+
+q <- qt(c(0.025,0.975),df=18)
+ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab("")+
+  geom_ribbon(data=data.frame(X=x<-seq(q[1],q[2],len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)+
+  geom_ribbon(data=data.frame(X=x<-seq(2.794003,5,len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),fill="red",alpha=0.8)
+```
+
+## 片側と両側の違い
+
+```{r}
+# 片側と両側
+p1 <- ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab("")+
+  geom_ribbon(data=data.frame(X=x<-seq(q[1],q[2],len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)
+
+p2 <- ggplot(data = data.frame(X = c(-5, 5)), aes(x = X)) + stat_function(fun = dt, args = list(df = 18))+xlab("")+
+  geom_ribbon(data=data.frame(X=x<-seq(-5,qt(0.95,df=18),len=101), Y=dt(x,df=18)), aes(x=X, ymin=0, ymax=Y),alpha=0.3)
+  
+
+grid.arrange(p1, p2, ncol = 1)
+```

@@ -1,0 +1,27 @@
+name: "Kosugitti Labo Ver.10b"
+navbar: 
+  title: "Kosugitti Labo Ver.10b"
+  left:
+    - text: "Works"
+      href: lesson1.html
+    - text: "Notes"
+      href: lesson1.html
+    - text: "Supports"
+      href: lesson1.html
+    - text: "Labo members"
+      href: lesson2.html
+    - text: "YUEP"
+      href: lesson2.html
+    - text: "blog"
+      href: lesson2.html
+      
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    toc: true
+    toc_float:
+      collapse: false
+    df_print: "kable"
+    css: site_style.css
+output_dir: "docs"

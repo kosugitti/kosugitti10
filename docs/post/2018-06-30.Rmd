@@ -1,0 +1,37 @@
+---
+title: 標準正規分布を描く
+author: ''
+date: '2018-06-30'
+slug: '2018-06-30'
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+標準正規分布を描くコード。領域を塗りつぶします。
+
+<!--more-->
+
+```{r}
+library(ggplot2)
+limitRange <- function(fun, min, max) {
+  function(x) {
+    y <- fun(x)
+    y[x < min  |  x > max] <- NA
+    return(y)
+  }
+}
+
+ggplot(data.frame(x=c(-4, 4)), aes(x=x)) + stat_function(fun = dnorm) +
+  stat_function(fun = limitRange(dnorm, -1, 1),
+                geom="area", fill="blue", alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -2, 2),
+                geom="area", fill="blue", alpha=0.2)+
+  stat_function(fun = limitRange(dnorm, -3, 3),
+                geom="area", fill="blue", alpha=0.2)
+```

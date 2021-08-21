@@ -1,0 +1,71 @@
+---
+title: KOC2020をCORRESP
+author: ''
+date: '2020-09-27'
+slug: koc2020-corresp
+categories: []
+tags: []
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+最近数量化III類を見直してましてね。やっぱあれ使い勝手いいなと思ったりして。
+昨日放送されたキングオブコントの評定値を使って分析をしてみようと思っています。
+
+<!--more-->
+
+まずはデータを。今回は実際の審査員に加えて，私や妻子が一緒に参加してくれたので，彼女らのデータも入っています。ただ，下の子は決勝を見てないので，欠損値になりました。
+
+とりあえずデータはこんな感じ。
+
+```{r}
+library(tidyverse)
+library(ggrepel)
+library(MASS)
+dat <- c(
+  78, 75, 80, 90, 92, 80, 80, 93, 80, 92, 95, 83, 95,
+  90, 88, 90, 94, 95, 92, 90, 92, 92, 92, 92, 95, 93,
+  90, 90, 88, 93, 97, 91, 87, 91, 90, 91, 93, 95, 94,
+  89, 91, 90, 92, 94, 91, 89, 92, 93, 92, 95, 91, 92,
+  90, 91, 90, 89, 96, 91, 87, 86, 92, 88, 90, 90, 90,
+  86, 85, 88, 90, 95, 92, 87, 93, 94, 91, 93, 92, 95,
+  83, 86, 87, 95, 95, 84, 82, 89, 94, 95, 94, 84, 90,
+  80, 87, 87, 93, 85, 83, 88, 93, 83, 95, 95, 86, 94,
+  80, 90, 73, 95, 80, 80, 87, 95, 85, 98, NA, NA, NA
+) %>%
+  matrix(nrow = 13) %>%
+  transform() %>%
+  dplyr::mutate(player = c(
+    "滝音", "GAG", "ロングコートダディ", "空気階段",
+    "ジャルジャル", "ザ・ギース", "うるとらブギーズ",
+    "ニッポンの社長", "ニューヨーク", "ジャングルポケット",
+    "空気階段2nd", "ニューヨーク2nd", "ジャングルポケット2nd"
+  )) %>%
+  dplyr::rename(
+    "kosugitti" = X1,
+    "設楽" = X2,
+    "日村" = X3,
+    "大竹" = X4,
+    "三村" = X5,
+    "松本" = X6,
+    "妻" = X7,
+    "子1" = X8,
+    "子2" = X9
+  ) %>% na.omit %>% print
+
+```
+
+分析してみます。欠損値の入った決勝は除外しようかな。
+```{r}
+dat %>% dplyr::select(-player)  %>% corresp(nf=2) -> result.cr
+result.cr$cscore %>% as.data.frame %>% rownames_to_column("label") %>% dplyr::mutate(type=1) -> tmp1
+result.cr$rscore %>% as.data.frame %>% dplyr::mutate(label = dat$player) %>% dplyr::mutate(type=2)-> tmp2
+bind_rows(tmp1,tmp2) %>% 
+  dplyr::mutate(type = factor(type,labels=c("rater","player"))) %>% print %>% 
+  ggplot() + aes(x=V1,y=V2,color=type,label=label)+geom_point()+geom_text_repel(family="HiraKakuProN-W3")
+
+
+
+```
+

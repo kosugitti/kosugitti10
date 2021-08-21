@@ -1,0 +1,31 @@
+---
+title: 過去のノートをサルベージしました
+author: kosugitti
+date: '2019-08-21'
+slug: ''
+categories:
+  - Notes
+tags:
+  - R
+  - psychology
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+過去のノートをサルベージ。少し手を加えて，再現可能なRコードをつけたものもあります。
+
+詳しくはNotesのコーナーへ。
+
+<!--more-->
+
+内容はこちら。
+
++ [エルミート行列の固有値分解アルゴリズム](../../../../notes/QR.pdf)
++ [正方行列の固有値分解--コスブラックP.167式9.2の補遺](../../../../notes/Reigen.pdf)
++ [順序尺度の相関係数(ポリコリック相関係数)について](../../../../notes/polychoricNote.pdf)
++ [確率分布についてのノート](../../../../notes/prob.pdf)
++ [テキストデータを扱う多変量解析について](../../../../notes/textMV.pdf)
++ [なぜ不偏分散はN-1で割るのかについて](../../../../notes/whyN_1.pdf)
++ [双対尺度法についてのノート](../../../../notes/DS2019.pdf)
