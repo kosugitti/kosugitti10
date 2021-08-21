@@ -1,0 +1,63 @@
+---
+title: "Notes"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+---
+
+# 記事
+
++ [KOC2020をCORRESP](items/2020-09-27-koc2020-corresp.html)
++ [明日のM-1で優勝するのは誰か](items/2018-12-01-2018m1gp.html)
++ [『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する](items/2018M1judges.html)
+
+# 心理統計の授業で使ったプロットのコード
+
++ [正規分布のコード](notes/2018-06-26A.html)
++ [標準正規分布のコード](notes/2018-06-30.html)
++ [正規分布の一部を塗りつぶす](notes/2018-06-29b.html)
++ [散布図のコード](notes/2018-06-26c.html)
++ [共分散を説明するときの図のコード](notes/2018-06-26d.html)
++ [標本平均の平均が母平均に一致する説明に使う図版](ntoes/2018-06-29a.html)
++ [不偏分散と標本分散の比較](ntoes/2018-07-04.html)
++ [t分布の図](notes/2018-07-06-t.html)
++ [三つの代表値がずれる](notes/2018-07-06-MMM.html)
+
+# 過去の研究ノート(PDF)
+
++ [エルミート行列の固有値分解アルゴリズム](notes/QR.pdf)
++ [正方行列の固有値分解--コスブラックP.167式9.2の補遺](notes/Reigen.pdf)
++ [順序尺度の相関係数(ポリコリック相関係数)について](notes/polychoricNote.pdf)
++ [確率分布についてのノート](notes/prob.pdf)
++ [テキストデータを扱う多変量解析について](notes/textMV.pdf)
++ [なぜ不偏分散はN-1で割るのかについて](notes/whyN_1.pdf)
++ [双対尺度法についてのノート](notes/DS2019.pdf)
+
+
+# 日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル
+
++ [心理学用bibtexスタイルファイル](https://github.com/kosugitti/jecon-jpa)(2018.10.21 update!)
+
+
+# Macの環境に入れるべきものリスト(自分用メモ)
+
+### HomebrewとHomebrewでいれるもの
++ Homebrew
++ iTerms2
++ RictyフォントとJapanesque配色
++ Dropbox
++ Atom
++ Typora
++ Calibre
++ Zotero
++ pyenv/anaconda
++ Docker
++ Chrome
+
+### Homebrewを使わずに入れるべきもの1
++ MacTeX
++ R
++ RStudio
+  + rstan/tidyverse
++ Tweetbot
++ mi
+  + textools for mi
++ Parallels

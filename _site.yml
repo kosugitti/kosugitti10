@@ -3,17 +3,17 @@ navbar:
   title: "Kosugitti Labo Ver.10b"
   left:
     - text: "Works"
-      href: lesson1.html
+      href: works.html
     - text: "Notes"
-      href: lesson1.html
-    - text: "Supports"
-      href: lesson1.html
+      href: notes.html
+    - text: "Support"
+      href: support.html
     - text: "Labo members"
-      href: lesson2.html
+      href: laboMem.html
     - text: "YUEP"
-      href: lesson2.html
+      href: YUEP.html
     - text: "blog"
-      href: lesson2.html
+      href: https://kosugitti.net/
       
 output:
   html_document:

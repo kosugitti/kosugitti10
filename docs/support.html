@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2021-08-21" />
+
+<title>Support</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="site_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Kosugitti Labo Ver.10b</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="works.html">Works</a>
+</li>
+<li>
+  <a href="notes.html">Notes</a>
+</li>
+<li>
+  <a href="support.html">Support</a>
+</li>
+<li>
+  <a href="laboMem.html">Labo members</a>
+</li>
+<li>
+  <a href="YUEP.html">YUEP</a>
+</li>
+<li>
+  <a href="https://kosugitti.net/">blog</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Support</h1>
+<h4 class="date">2021-08-21</h4>
+
+</div>
+
+
+<div id="はじめに" class="section level2">
+<h2>はじめに</h2>
+<p>このページでは，拙著の誤字脱字等，修正情報などを記録しています。</p>
+<p>編集に際しては，何度も丁寧に校正しているつもりではありますが，どうしても完璧なものができませんで，ご迷惑をおかけしておりますことをお詫びいたします。</p>
+</div>
+<div id="データの提供" class="section level2">
+<h2>データの提供</h2>
+<div id="rでらくらく心理統計-rstudio徹底活用" class="section level3">
+<h3><a href="https://amzn.to/2FVsfgz">Rでらくらく心理統計 RStudio徹底活用</a></h3>
+<p>この本に関するRコードをまとめたのが<a href="support/RRstudio_kosugitti.zip">こちら</a>になります。 本書の中でRを使って描かれた図表についても，圧縮ファイルに含まれていますコードを実行していただければ再現できます。</p>
+</div>
+</div>
+<div id="訂正一覧" class="section level2">
+<h2>訂正一覧</h2>
+<div id="研究論文を読み解くための多変量解析入門-基礎篇-重回帰分析からメタ分析まで" class="section level3">
+<h3><a href="https://amzn.to/2HuFD9s">研究論文を読み解くための多変量解析入門 基礎篇: 重回帰分析からメタ分析まで</a></h3>
+<ul>
+<li>P.150
+<ul>
+<li>誤）「-0.967という回帰係数は14.2°でＭＤＳ第二軸と交わっている。-0.952は14.7°で交わっている。」</li>
+<li>正）「-0.967という回帰係数は<strong>14.7°</strong>でＭＤＳ第二軸と交わっている。-0.952は<strong>17.8°</strong>で交わっている。」</li>
+</ul></li>
+</ul>
+</div>
+<div id="研究論文を読み解くための多変量解析入門-応用篇-semから生存分析まで" class="section level3">
+<h3><a href="https://amzn.to/2qru235">研究論文を読み解くための多変量解析入門 応用篇: SEMから生存分析まで</a></h3>
+</div>
+<div id="言葉と数式で理解する多変量解析入門httpsamzn.to2k5aina" class="section level3">
+<h3>言葉と数式で理解する多変量解析入門(<a href="https://amzn.to/2K5aiNa" class="uri">https://amzn.to/2K5aiNa</a>)</h3>
+<ul>
+<li><p>P.56 Rでの線形回帰係数を求める関数</p></li>
+<li><p>誤) 最尤法でのフィッティングを求める関数lm</p></li>
+<li><p>正) 最尤法でのフィッティングを求める関数glm</p></li>
+</ul>
+<p>Rでのlm関数は，内部でlm.fit関数を呼び出しており，これは最小二乗法で推定値を求めているようです。最尤法で求めたい場合は，glm関数を使い，family=‘gaussian’ オプションをつけることになります。推定値は同じ結果になりますので，以後の解説に間違いはありません。</p>
+<div id="初版に含まれる誤表記と修正は以下の通りです" class="section level4">
+<h4>初版に含まれる誤表記と修正は以下の通りです</h4>
+<ul>
+<li><p>P. 28 1行目</p>
+<ul>
+<li>誤) 標準化することで，間隔尺度水準のデータに0点が与えられることになり，比率尺度水準の値として扱うことが可能になるということです。</li>
+<li>正) 標準化することで，間隔尺度水準のデータ同士の原点が揃うことになり，量的なデータとして扱いやすくなるということです。</li>
+</ul></li>
+<li><p>P.29　表2.7　相関係数表</p>
+<ul>
+<li>誤)英語の列の相関係数が「0.000」</li>
+<li>正)計算できないので，ゼロではなく，何も書くべきではありませんでした。</li>
+</ul></li>
+<li><p>P. 41 図3.3 因子分析系の基準の説明</p>
+<ul>
+<li>誤) 共変動を手がかりに，なるべく小数の</li>
+<li>正) 共変動を手がかりに，なるべく少数の</li>
+</ul></li>
+<li><p>P. 53 式4.6</p>
+<ul>
+<li>誤)a=s_{xy}/s_{x}^2 = r_{xy}*s_x/s_y</li>
+<li>正)a=s_{xy}/s_{x}^2 = r_{xy}*s_y/s_x</li>
+</ul></li>
+<li><p>P.61 図4.8</p>
+<ul>
+<li>正）<img src="support/bubun_kai.png" alt="正しい図" /></li>
+</ul></li>
+<li><p>P.69 引用文献に脱字</p>
+<ul>
+<li>誤) 南風原朝和(2002) 理統計学の基礎</li>
+<li>正) 南風原朝和(2002) 心理統計学の基礎</li>
+</ul></li>
+<li><p>P.93 SMCの説明4行め</p>
+<ul>
+<li>誤) 相関(重相関)を共通性として用いる</li>
+<li>正) 相関(重相関)係数の二乗を共通性として用いる</li>
+</ul></li>
+<li><p>P.97 13行め</p>
+<ul>
+<li>誤) 一方で，各座標軸に対し水平におろした座標</li>
+<li>正) 一方で，各座標軸に対し垂直におろした座標</li>
+</ul></li>
+<li><p>P.117 脚注5</p>
+<ul>
+<li>誤) 例えばサイコロの目が1か2である確率は・・・</li>
+<li>正) 例えばサイコロの目が1回目に1がでて，2回目に2がでる確率は・・・</li>
+</ul></li>
+<li><p>P.138 7.4一般化線型モデルの4行目</p>
+<ul>
+<li>誤) どちらでもgeneralとgenerarizeの違いでしか・・・</li>
+<li>正) どちらでもgeneralとgenerarizedの違いでしか・・・</li>
+</ul></li>
+<li><p>P.178 図9.7</p>
+<ul>
+<li>正)図の赤色のところが変更点です。 <img src="p178figure9_7.png" alt="正しい図" /></li>
+</ul></li>
+<li><p>P.179 一行目の数式</p>
+<ul>
+<li>誤) <img src="support/eq_wrong.png" alt="間違った式" /></li>
+<li>正) <img src="support/eq_correct.png" alt="修正した式" /></li>
+</ul></li>
+<li><p>221ページ 表11.9</p>
+<ul>
+<li>正) 血圧の列，「普通」と「低い」のラベルの位置が逆</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="豊田秀樹編たのしいベイズモデリングp.6878-第7章心の旅が始まる観光のイメージの世代間比較" class="section level3">
+<h3>豊田秀樹（編）「たのしいベイズモデリング」P.68–78 第7章，心の旅が始まる–観光のイメージの世代間比較–</h3>
+<ul>
+<li>P.68 7.1 個人差多次元尺度構成法 2行目
+<ul>
+<li>誤) もちろんすべて言葉で表説明できるものでもない</li>
+<li>正) もちろん全て言葉で説明できるものでもない</li>
+</ul></li>
+<li>P.70 L.15
+<ul>
+<li>誤) 一方，Bは左右方向を縮小し(<span class="math inline">\(w_{B2}&lt;1\)</span>)，上下方向を拡大している(<span class="math inline">\(w_{B1}&gt;1\)</span>)</li>
+<li>正) 一方，Bは左右方向を縮小し(<span class="math inline">\(w_{B1}&lt;1\)</span>)，上下方向を拡大している(<span class="math inline">\(w_{B2}&gt;1\)</span>)</li>
+</ul></li>
+<li>P.73 表7.2 グループごとの回答者数
+<ul>
+<li>MとFのラベルが逆</li>
+</ul></li>
+<li>P.73 L.3
+<ul>
+<li>誤) 男性をF，女性をMと記号化している。20Fは20代男性，30Mは30大女性を意味する。</li>
+<li>正) 男性をM，女性をFと記号化している。20Mは20代男性，30Fは30大女性を意味する。</li>
+</ul></li>
+<li>P.75 表7.3 回答群ごとの次元の重み
+<ul>
+<li>MとFのラベルが逆</li>
+</ul></li>
+</ul>
+</div>
+<div id="ソシオン理論入門心と社会の基礎科学" class="section level3">
+<h3>ソシオン理論入門―心と社会の基礎科学</h3>
+<p><a href="https://amzn.to/2qseZqF">ソシオン理論入門―心と社会の基礎科学</a>は2006年4月，北大路書房より出版されました。</p>
+<div id="p.1-ジェイムズ心理学より" class="section level5">
+<h5>P.1 　ジェイムズ「心理学」より</h5>
+<ul>
+<li>誤）人が持っているもっとも特異な社会的自我は，彼が愛する物の心の中にあるものである。</li>
+<li>正）人が持っているもっとも特異な社会的自我は，彼が愛する<strong>者</strong>の心の中にあるものである。</li>
+</ul>
+</div>
+</div>
+<div id="社会調査士のための多変量解析法" class="section level3">
+<h3>社会調査士のための多変量解析法</h3>
+<p><a href="https://amzn.to/2HmpN39">社会調査士のための多変量解析法</a>は2007年5月，北大路書房より出版されました。</p>
+<ul>
+<li>P.87 式[9.15]　共通性<span class="math inline">\(h^2\)</span>の領域が<span class="math inline">\(d_j^2\)</span>まで含んでいるが，正しくは<span class="math inline">\(a_{jm}^2\)</span>まで。</li>
+<li>P.104 平均値ベクトル<span class="math inline">\(m\)</span> の式中，<span class="math inline">\(x&#39;\)</span>は，正しくは<span class="math inline">\(X&#39;\)</span>.</li>
+<li>P.109 図11.4で第一固有値の伸縮方向が(1,-2)になっているが，正しくは(1,1)方向。</li>
+<li>P.125 T技法とS技法の説明が逆になっています。回答者間相関から(回答者)因子を出すのがS技法，時点間相関から(時間)因子を出すのがT技法</li>
+</ul>
+</div>
+</div>
+<div id="m-plusとrによる構造方程式モデリング入門" class="section level2">
+<h2>M-plusとRによる構造方程式モデリング入門</h2>
+<p><a href="https://amzn.to/2HvoDQx">M-plusとRによる構造方程式モデリング入門</a>は2014年1月に北大路書房より出版されました。</p>
+<p>この本につきましては，<a href="https://sites.google.com/site/mplusandr/">専用のサポートサイト</a> にて対応します。</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
