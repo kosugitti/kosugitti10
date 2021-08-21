@@ -14,14 +14,3 @@ navbar:
       href: YUEP.html
     - text: "blog"
       href: https://kosugitti.net/
-
-output:
-  html_document:
-    theme: jekyll-theme-minimal
-    highlight: textmate
-    toc: true
-    toc_float:
-      collapse: false
-    df_print: "kable"
-    css: site_style.css
-output_dir: "docs"
