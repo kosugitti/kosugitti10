@@ -15,9 +15,10 @@ navbar:
     - text: "blog"
       href: https://kosugitti.net/
 
+
 output:
   html_document:
-    theme: jekyll-theme-minimal
+    theme: darkly
     highlight: textmate
     toc: true
     toc_float:
