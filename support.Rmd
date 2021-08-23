@@ -1,6 +1,5 @@
 ---
 title: "Support"
-date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 ---
 
 ## はじめに

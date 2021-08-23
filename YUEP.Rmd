@@ -1,6 +1,5 @@
 ---
 title: "YUEP"
-date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 ---
 
 # 山口大学教育心理・読書会

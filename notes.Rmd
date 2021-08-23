@@ -1,6 +1,5 @@
 ---
 title: "Notes"
-date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 ---
 
 # 記事

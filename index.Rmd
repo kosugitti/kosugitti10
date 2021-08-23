@@ -1,8 +1,8 @@
 ---
 title: "Kosugitti Labo Ver.10b"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 output: html_document
 ---
-# HomePage
 
 ## 基本情報
 

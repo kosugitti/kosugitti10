@@ -1,6 +1,5 @@
 ---
 title: "Labo"
-date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 ---
 
 ## 研究室メンバー
