@@ -402,24 +402,20 @@ div.tocify {
 <li>iTerms2</li>
 <li>RictyフォントとJapanesque配色</li>
 <li>Dropbox</li>
-<li>Atom</li>
-<li>Typora</li>
+<li>VScode</li>
 <li>Calibre</li>
 <li>Zotero</li>
-<li>pyenv/anaconda</li>
 <li>Docker</li>
 <li>Chrome</li>
-</ul>
-</div>
-<div id="homebrewを使わずに入れるべきもの1" class="section level3">
-<h3>Homebrewを使わずに入れるべきもの1</h3>
-<ul>
 <li>MacTeX</li>
 <li>R</li>
-<li>RStudio
+<li>RStudio</li>
+<li>zoom</li>
+</ul>
+</div>
+<div id="homebrewを使わずに入れるべきもの" class="section level3">
+<h3>Homebrewを使わずに入れるべきもの</h3>
 <ul>
-<li>rstan/tidyverse</li>
-</ul></li>
 <li>Tweetbot</li>
 <li>mi
 <ul>
@@ -427,6 +423,40 @@ div.tocify {
 </ul></li>
 <li>Parallels</li>
 </ul>
+</div>
+<div id="r環境のスタートアップに" class="section level3">
+<h3>R環境のスタートアップに</h3>
+<pre class="r"><code>install.packages(&quot;pacman&quot;)
+library(pacman)
+pacman::p_install(c(
+    rstan,
+    bayesplot,
+    bridgesampling,
+    brms,
+    coda,
+    GPArotation,
+    loo,
+    psych,
+    rstanarm,
+    rstantools,
+    shinystan,
+    summarytools,
+    tidybayes,
+    tidyverse,
+    tidymodels,
+    doRNG,
+    lavaan,
+    blavaan,
+    formattable,
+    devtools,
+    ctv))
+
+ctv::install.views(&quot;Psychometrics&quot;)
+devtools::install_github(&quot;hoxo-m/pforeach&quot;)
+install.packages(&quot;remotes&quot;)
+remotes::install_github(&quot;ykunisato/senshuRmd&quot;)
+remotes::install_github(&quot;ykunisato/eln4Rmd&quot;)
+remotes::install_github(&quot;ykunisato/jpaRmd&quot;)</code></pre>
 </div>
 </div>
 

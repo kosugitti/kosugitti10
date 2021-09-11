@@ -43,20 +43,57 @@ title: "Notes"
 + iTerms2
 + RictyフォントとJapanesque配色
 + Dropbox
-+ Atom
-+ Typora
++ VScode
 + Calibre
 + Zotero
-+ pyenv/anaconda
 + Docker
 + Chrome
-
-### Homebrewを使わずに入れるべきもの1
 + MacTeX
 + R
 + RStudio
-  + rstan/tidyverse
++ zoom
+
+### Homebrewを使わずに入れるべきもの
 + Tweetbot
 + mi
   + textools for mi
 + Parallels
+
+
+### R環境のスタートアップに
+
+```{r eval=FALSE}
+install.packages("pacman")
+library(pacman)
+pacman::p_install(c(
+    rstan,
+    bayesplot,
+	bridgesampling,
+	brms,
+	coda,
+	GPArotation,
+    loo,
+    psych,
+    rstanarm,
+	rstantools,
+	shinystan,
+	summarytools,
+	tidybayes,
+	tidyverse,
+	tidymodels,
+	doRNG,
+	lavaan,
+	blavaan,
+	formattable,
+	devtools,
+	ctv))
+
+ctv::install.views("Psychometrics")
+devtools::install_github("hoxo-m/pforeach")
+install.packages("remotes")
+remotes::install_github("ykunisato/senshuRmd")
+remotes::install_github("ykunisato/eln4Rmd")
+remotes::install_github("ykunisato/jpaRmd")
+
+```
+
