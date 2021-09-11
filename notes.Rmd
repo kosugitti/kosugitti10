@@ -41,7 +41,7 @@ title: "Notes"
 ### HomebrewとHomebrewでいれるもの
 + Homebrew
 + iTerms2
-+ RictyフォントとJapanesque配色
++ (Rictyフォントと配色)[https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc]
 + Dropbox
 + VScode
 + Calibre
