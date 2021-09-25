@@ -48,6 +48,7 @@ title: "Works"
 15. Trafimow David, Amrhein Valentin, Areshenkoff Corson N., Barrera-Causil Carlos J., Beh Eric J., Bilgiç Yusuf K., Bono Roser, Bradley Michael T., Briggs William M., Cepeda-Freyre Héctor A., Chaigneau Sergio E., Ciocca Daniel R., Correa Juan C., Cousineau Denis, de Boer Michiel R., Dhar Subhra S., Dolgov Igor, Gómez-Benito Juana, Grendar Marian, Grice James W., Guerrero-Gimenez Martin E., Gutiérrez Andrés, Huedo-Medina Tania B., Jaffe Klaus, Janyan Armina, Karimnezhad Ali, Korner-Nievergelt Fränzi, Kosugi Koji, Lachmair Martin, Ledesma Rubén D., Limongi Roberto, Liuzza Marco T., Lombardo Rosaria, Marks Michael J., Meinlschmidt Gunther, Nalborczyk Ladislas, Nguyen Hung T., Ospina Raydonal, Perezgonzalez Jose D., Pfister Roland, Rahona Juan J., Rodríguez-Medina David A., Romão Xavier, Ruiz-Fernández Susana, Suarez Isabel, Tegethoff Marion, Tejo Mauricio, van de Schoot Rens, Vankov Ivan I., Velasco-Forero Santiago, Wang Tonghui, Yamada Yuki, Zoppino Felipe C. M., Marmolejo-Ramos Fernando (2018) Manipulating the Alpha Level Cannot Cure Significance Testing,*Frontiers in Psychology*,9,699,DOI=10.3389/fpsyg.2018.00699
 16. Yonemitsu, F., Sasaki, K., Gobara, A., Kosugi, K., & Yamada, Y. (2018). ‘‘Close, and ye shall find’’: eye closure during thinking enhances creativity. Palgrave Communications, 4(1), 80.
 17. 林幸史・小杉考司(2018) 過去の旅行経験から見た観光地イメージ,社会心理学研究,**34**(1),38-46.
+18. 山南 春奈・長島 愛・中村 潤・田中 奈津子・小杉考司(2021)男性版顔立ちマップの開発と眉による印象演出の効果,日本顔学会誌,in press.
 
 ## 学術論文（査読なし）
 
@@ -219,6 +220,7 @@ title: "Works"
 131. Hiroaki Ochi and Koji Kosugi,Advantages of TERGM compared to Siena.,The 2020 edition of the annual joint meeting of the Society for Mathematical Psychology and the International Conference on Cognitive Modeling,2020.07.20,Virtual.
 132. 安藤正和・小杉考司,値引きとポイント付与の統計モデリング--潜在クラスモデルを用いた傾向分析--,2020.09.01--09.04,早稲田大学富山キャンパス(東京都新宿区).オンライン開催.
 133. 小杉考司,対人関係の力動的変化のモデリング,2020.09.01--09.04,早稲田大学富山キャンパス(東京都新宿区).オンライン開催.
+134. 越智宏明・小杉考司,最後通牒ゲームにおける分配行動に第三者の存在が与える影響,社会心理学会,2021.08.26,帝京大学.オンライン開催.
 
 ## 外部資金
 
