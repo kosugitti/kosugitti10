@@ -157,7 +157,7 @@ m1 %>% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE) %
 ``` 
 
 そして推定。
-```{r stan2,echo=FALSE,message=FALSE,cache=TRUE,eval=F}
+```{r stan2}
 # Stanに与えるデータセット
 dataset <- list(L = nrow(m1.long2018),
                 P = max(as.numeric(m1.long2018$演者)),
