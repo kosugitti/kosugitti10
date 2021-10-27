@@ -13,8 +13,8 @@
 
 <title>Notes</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -366,13 +366,14 @@ div.tocify {
 <ul>
 <li><a href="notes/2018-06-26A.html">正規分布のコード</a></li>
 <li><a href="notes/2018-06-30.html">標準正規分布のコード</a></li>
-<li><a href="notes/2018-06-29b.html">正規分布の一部を塗りつぶす</a></li>
-<li><a href="notes/2018-06-26c.html">散布図のコード</a></li>
-<li><a href="notes/2018-06-26d.html">共分散を説明するときの図のコード</a></li>
-<li><a href="ntoes/2018-06-29a.html">標本平均の平均が母平均に一致する説明に使う図版</a></li>
+<li><a href="notes/2018-06-29B.html">正規分布の一部を塗りつぶす</a></li>
+<li><a href="notes/2018-06-26C.html">散布図のコード</a></li>
+<li><a href="notes/2018-06-26D.html">共分散を説明するときの図のコード</a></li>
+<li><a href="ntoes/2018-06-29A.html">標本平均の平均が母平均に一致する説明に使う図版</a></li>
 <li><a href="ntoes/2018-07-04.html">不偏分散と標本分散の比較</a></li>
 <li><a href="notes/2018-07-06-t.html">t分布の図</a></li>
 <li><a href="notes/2018-07-06-MMM.html">三つの代表値がずれる</a></li>
+<li><a href="notes/2021-10-27.html">多変量正規分布の図を書く</a></li>
 </ul>
 </div>
 <div id="過去の研究ノートpdf" class="section level1">
@@ -498,6 +499,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

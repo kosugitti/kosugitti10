@@ -1,0 +1,44 @@
+---
+title: "多変量正規分布の図を書く"
+date: '2021-10-27'
+slug: 2021-10-27
+categories:
+  - Notes
+tags:
+  - R
+banner: ''
+description: ''
+images: []
+menu: ''
+---
+
+多次元正規分布の説明用。プロットする乱数データと，等高線を書くデータは分けて用意するところがポイント。
+
+<!--more-->
+
+```{r}
+library(tidyverse)
+library(MASS)
+library(mvtnorm)
+
+mu <- c(0, 0)
+rho <- 0.5
+sds <- c(1, 1)
+SIG <- diag(sds) %*% matrix(c(1, rho, rho, 1), ncol = 2) %*% diag(sds)
+X <- mvrnorm(200, mu, SIG) %>%
+  transform() %>%
+  as_tibble() %>%
+  mutate(z = purrr::map2_dbl(X1, X2, .f = ~ dmvnorm(c(.x, .y), mean = mu, sigma = SIG)))
+
+data.grid <- expand.grid(s.1 = seq(-3, 3, length.out = 200), s.2 = seq(-3, 3, length.out = 200))
+q.samp <- cbind(data.grid, prob = mvtnorm::dmvnorm(data.grid, mean = mu, sigma = SIG))
+g1 <- ggplot(q.samp, aes(x = s.1, y = s.2)) +
+  geom_contour(aes(z = prob)) +
+  geom_point(data = X, aes(x = X1, y = X2)) +
+  xlab("X1") +
+  ylab("X2") +
+  coord_fixed(xlim = c(-3, 3), ylim = c(-3, 3), ratio = 1)
+g1
+
+```
+
