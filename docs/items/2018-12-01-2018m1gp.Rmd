@@ -37,11 +37,11 @@ menu: ''
 
 
 <!--more-->
-```{r}
+```{r,echo=FALSE,include=FALSE}
 # 分析パッケージを読み込みます。
 library(tidyverse)
 ## Macユーザの呪文です
-old <- theme_set(theme_gray(base_family = "HiraKakuProN-W3"))
+old = theme_set(theme_gray(base_family="HiraKakuProN-W3"))
 # rstanも読み込みます
 library(rstan)
 rstan_options(auto_write = TRUE)
@@ -82,13 +82,13 @@ paste(readLines("m1ord.stan"), collapse = "\n") %>% cat()
 
 ```{r rowdata}
 # ファイルを読み込みます
-m1 <- read_csv("M1scoreOrd.csv", na = ".")
+m1 <- read_csv("M1scoreOrd.csv",na=".")
 # データを縦長にします
-m1 %>% tidyr::gather(審査員, val, -年代, -演者, -ネタ順, factor_key = TRUE) %>%
+m1 %>% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE) %>% 
   # 欠損値を削除します
-  na.omit() %>%
+  na.omit %>% 
   # 2018年度のデータはまだ使わないです
-  dplyr::filter(年代 != 18) %>%
+  dplyr::filter(年代!=18) %>% 
   # factor型にします
   mutate(演者 = factor(演者)) -> m1.long
 ```
@@ -97,17 +97,15 @@ m1 %>% tidyr::gather(審査員, val, -年代, -演者, -ネタ順, factor_key = 
 
 以上のデータを次のコードで推定しました。
 ```{r stan1}
-dataset <- list(
-  L = nrow(m1.long),
-  P = max(as.numeric(m1.long$演者)),
-  R = max(as.numeric(m1.long$審査員)),
-  Pid = as.numeric(m1.long$演者),
-  Ord = m1.long$ネタ順,
-  Rid = as.numeric(m1.long$審査員),
-  Y = m1.long$val
-)
-model1 <- stan_model("m1ord.stan")
-fit1 <- sampling(model1, dataset)
+dataset <- list(L = nrow(m1.long),
+                P = max(as.numeric(m1.long$演者)),
+                R = max(as.numeric(m1.long$審査員)),
+                Pid = as.numeric(m1.long$演者),
+                Ord = m1.long$ネタ順,
+                Rid = as.numeric(m1.long$審査員),
+                Y = m1.long$val)
+model1 <- stan_model('m1ord.stan')
+fit1 <- sampling(model1,dataset)
 ```
 
 ## 結果；順序の効果はどれぐらいあるのか
@@ -115,8 +113,8 @@ fit1 <- sampling(model1, dataset)
 推定の結果を次に示します。
 
 ```{r order}
-print(fit1, pars = c("mu", "tau"))
-plot(fit1, pars = "tau")
+print(fit1,pars=c("mu","tau"))
+plot(fit1,pars="tau")
 ```
 
 ここからわかるのは，芸人さんの基本的な実力は平均87.70，標準偏差3.3ぐらいで分布しているということ。
@@ -141,86 +139,68 @@ paste(readLines("m1ord2018pred.stan"), collapse = "\n") %>% cat()
 データの与え方は次の通り。
 ```{r 2018Est}
 # 今年のファイナリスト，審査員をfactor型の前に出すために準備
-finalist <- c(
-  "和牛", "霜降り明星", "ゆにばーす", "見取り図",
-  "かまいたち", "スーパーマラドーナ", "ジャルジャル",
-  "トム・ブラウン", "ギャロップ", "敗者復活"
-)
-judge <- c(
-  "オール巨人", "上沼恵美子", "富澤たけし", "立川志らく",
-  "塙宣之", "中川礼二", "松本人志"
-)
+finalist <- c("和牛","霜降り明星","ゆにばーす","見取り図",
+                          "かまいたち","スーパーマラドーナ","ジャルジャル",
+                          "トム・ブラウン","ギャロップ","敗者復活")
+judge <- c("オール巨人","上沼恵美子","富澤たけし","立川志らく",
+                           "塙宣之","中川礼二","松本人志")
 # データの加工。まずは縦長に
-m1 %>% tidyr::gather(審査員, val, -年代, -演者, -ネタ順, factor_key = TRUE) %>%
+m1 %>% tidyr::gather(審査員,val,-年代,-演者,-ネタ順,factor_key=TRUE) %>% 
   # 欠損値を削除します
-  na.omit() %>%
+  na.omit %>% 
   # factor型にします
-  mutate(演者 = factor(演者)) %>%
+  mutate(演者 = factor(演者)) %>% 
   # 演者の最初の10人を今年の人たちに
   # 審査員の最初の7人を今年の人たちに
-  mutate(
-    演者 = fct_relevel(.$演者, finalist),
-    審査員 = fct_relevel(.$審査員, judge)
-  ) -> m1.long2018
+  mutate(演者 = fct_relevel(.$演者,finalist),
+         審査員 = fct_relevel(.$審査員,judge ))-> m1.long2018
 ``` 
 
 そして推定。
-```{r}
+```{r stan2}
 # Stanに与えるデータセット
-dataset <- list(
-  L = nrow(m1.long2018),
-  P = max(as.numeric(m1.long2018$演者)),
-  R = max(as.numeric(m1.long2018$審査員)),
-  Pid = as.numeric(m1.long2018$演者),
-  Ord = m1.long2018$ネタ順,
-  Rid = as.numeric(m1.long2018$審査員),
-  Y = m1.long2018$val
-)
+dataset <- list(L = nrow(m1.long2018),
+                P = max(as.numeric(m1.long2018$演者)),
+                R = max(as.numeric(m1.long2018$審査員)),
+                Pid = as.numeric(m1.long2018$演者),
+                Ord = m1.long2018$ネタ順,
+                Rid = as.numeric(m1.long2018$審査員),
+                Y = m1.long2018$val)
 # サンプリング
-model2 <- stan_model("m1ord2018pred.stan")
+model2 <- stan_model('m1ord2018pred.stan')
 # 予測なので慎重に100,000サンプルを取る
-fit2 <- sampling(model2, dataset, iter = 40000, warmup = 15000)
+fit2 <- sampling(model2,dataset,iter=40000,warmup=15000)
 # MCMCサンプルを抜き出してデータフレームに。以下の加工で使います。
-fit2.mcmc <- rstan::extract(fit2) %>% data.frame()
+fit2.mcmc <- rstan::extract(fit2) %>% data.frame
 ```
 
 さて，今年の演者の能力推定値です。
 バーは95%確信区間，M-1初参戦の新参者は敗者復活一つに代表させました。
 
 ```{r scoreing}
-fit2.mcmc %>%
-  dplyr::select(starts_with("missY.")) %>%
+fit2.mcmc %>% dplyr::select(starts_with("missY.")) %>% 
   # 10組の予想される平均点
-  transmute(
-    Y1 = dplyr::select(., starts_with("missY.1.")) %>% apply(., 1, mean),
-    Y2 = dplyr::select(., starts_with("missY.2.")) %>% apply(., 1, mean),
-    Y3 = dplyr::select(., starts_with("missY.3.")) %>% apply(., 1, mean),
-    Y4 = dplyr::select(., starts_with("missY.4.")) %>% apply(., 1, mean),
-    Y5 = dplyr::select(., starts_with("missY.5.")) %>% apply(., 1, mean),
-    Y6 = dplyr::select(., starts_with("missY.6.")) %>% apply(., 1, mean),
-    Y7 = dplyr::select(., starts_with("missY.7.")) %>% apply(., 1, mean),
-    Y8 = dplyr::select(., starts_with("missY.8.")) %>% apply(., 1, mean),
-    Y9 = dplyr::select(., starts_with("missY.9.")) %>% apply(., 1, mean),
-    Y10 = dplyr::select(., starts_with("missY.10.")) %>% apply(., 1, mean)
-  ) %>%
+ transmute(Y1=dplyr::select(.,starts_with("missY.1.")) %>% apply(.,1,mean),
+           Y2=dplyr::select(.,starts_with("missY.2.")) %>% apply(.,1,mean),
+           Y3=dplyr::select(.,starts_with("missY.3.")) %>% apply(.,1,mean),
+           Y4=dplyr::select(.,starts_with("missY.4.")) %>% apply(.,1,mean),
+           Y5=dplyr::select(.,starts_with("missY.5.")) %>% apply(.,1,mean),
+           Y6=dplyr::select(.,starts_with("missY.6.")) %>% apply(.,1,mean),
+           Y7=dplyr::select(.,starts_with("missY.7.")) %>% apply(.,1,mean),
+           Y8=dplyr::select(.,starts_with("missY.8.")) %>% apply(.,1,mean),
+           Y9=dplyr::select(.,starts_with("missY.9.")) %>% apply(.,1,mean),
+           Y10=dplyr::select(.,starts_with("missY.10.")) %>% apply(.,1,mean)) %>% 
   # 名前をつける
-  setNames(finalist) %>%
+  setNames(finalist) %>% 
   # 初のファイナリストは冗長な情報なのでカットし，敗者復活の人で代替。
-  dplyr::select(和牛, ゆにばーす, かまいたち, スーパーマラドーナ, ジャルジャル, 敗者復活) %>%
+  dplyr::select(和牛,ゆにばーす,かまいたち,スーパーマラドーナ,ジャルジャル,敗者復活) %>% 
   # 縦長にして要約する
-  tidyr::gather(key, val, factor_key = TRUE) %>%
-  group_by(key) %>%
-  summarise(
-    EAP = mean(val), MAP = median(val),
-    U95 = quantile(val, 0.975), L95 = quantile(val, 0.025)
-  ) -> plotdata
-
-ggplot(data = plotdata, aes(x = key, y = MAP, ymax = U95, ymin = L95, color = key)) +
-  geom_boxplot() +
-  geom_errorbar(width = .3) +
-  xlab("演者") +
-  ylim(50, 100) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  tidyr::gather(key,val,factor_key=TRUE) %>% group_by(key) %>% 
+  summarise(EAP=mean(val),MAP=median(val),
+            U95=quantile(val,0.975),L95=quantile(val,0.025)) %>% print %>%  
+  ggplot(aes(x=key,y=MAP,color=key))+geom_point() +xlab("演者")+
+  geom_errorbar(aes(ymax=U95,ymin=L95,width=0.3))+ylim(50,100)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
 ```
 
 これをみると，新参者はやはり推定の幅が広くなっていますね。実力があるのはスーパーマラドーナ，ついでかまいたちというところでしょうか。和牛，ゆにばーす，かまいたちの三組は実力がかなり揃っており，ジャルジャルが少し上で，トップがスーパーマラドーナなのです。
@@ -234,57 +214,47 @@ ggplot(data = plotdata, aes(x = key, y = MAP, ymax = U95, ymin = L95, color = ke
 ということで，MCMCサンプル毎に順位をつけ，TOP3に入れるかどうかを検証してみました。
 
 ```{r top3}
-fit2.mcmc %>%
-  dplyr::select(starts_with("missY.")) %>%
+fit2.mcmc %>% dplyr::select(starts_with("missY.")) %>% 
   # 10組の予想される得点
-  transmute(
-    Y1 = dplyr::select(., starts_with("missY.1.")) %>% apply(., 1, sum),
-    Y2 = dplyr::select(., starts_with("missY.2.")) %>% apply(., 1, sum),
-    Y3 = dplyr::select(., starts_with("missY.3.")) %>% apply(., 1, sum),
-    Y4 = dplyr::select(., starts_with("missY.4.")) %>% apply(., 1, sum),
-    Y5 = dplyr::select(., starts_with("missY.5.")) %>% apply(., 1, sum),
-    Y6 = dplyr::select(., starts_with("missY.6.")) %>% apply(., 1, sum),
-    Y7 = dplyr::select(., starts_with("missY.7.")) %>% apply(., 1, sum),
-    Y8 = dplyr::select(., starts_with("missY.8.")) %>% apply(., 1, sum),
-    Y9 = dplyr::select(., starts_with("missY.9.")) %>% apply(., 1, sum),
-    Y10 = dplyr::select(., starts_with("missY.10.")) %>% apply(., 1, sum)
-  ) %>%
+ transmute(Y1=dplyr::select(.,starts_with("missY.1.")) %>% apply(.,1,sum),
+           Y2=dplyr::select(.,starts_with("missY.2.")) %>% apply(.,1,sum),
+           Y3=dplyr::select(.,starts_with("missY.3.")) %>% apply(.,1,sum),
+           Y4=dplyr::select(.,starts_with("missY.4.")) %>% apply(.,1,sum),
+           Y5=dplyr::select(.,starts_with("missY.5.")) %>% apply(.,1,sum),
+           Y6=dplyr::select(.,starts_with("missY.6.")) %>% apply(.,1,sum),
+           Y7=dplyr::select(.,starts_with("missY.7.")) %>% apply(.,1,sum),
+           Y8=dplyr::select(.,starts_with("missY.8.")) %>% apply(.,1,sum),
+           Y9=dplyr::select(.,starts_with("missY.9.")) %>% apply(.,1,sum),
+           Y10=dplyr::select(.,starts_with("missY.10.")) %>% apply(.,1,sum)) %>% 
   # 名前をつける
-  setNames(finalist) %>%
+  setNames(finalist) %>% 
   # iter番号を付与
-  tibble::rownames_to_column() %>%
+  tibble::rownames_to_column() %>% 
   # 縦長に
-  tidyr::gather(key, val, -rowname) %>%
+  tidyr::gather(key,val,-rowname) %>% 
   # iterごとにグループ化
-  group_by(rowname) %>%
+  group_by(rowname) %>% 
   # 順序 RANK関数は昇順なので最大値+1から引いて逆転させる
-  mutate(RANK = 11 - rank(val)) %>%
+  mutate(RANK=11-rank(val)) %>%
   # ungroup
-  ungroup(rowname) %>%
+  ungroup(rowname) %>% 
   # 二本目ができるかどうか
-  mutate(
-    FINAL = ifelse(RANK <= 3, TRUE, FALSE),
-    TOP1 = ifelse(RANK == 1, TRUE, FALSE),
-    TOP2 = ifelse(RANK == 2, TRUE, FALSE),
-    TOP3 = ifelse(RANK == 3, TRUE, FALSE)
-  ) %>%
+  mutate(FINAL= ifelse(RANK<=3,TRUE,FALSE),
+         TOP1 = ifelse(RANK==1,TRUE,FALSE),
+         TOP2 = ifelse(RANK==2,TRUE,FALSE),
+         TOP3 = ifelse(RANK==3,TRUE,FALSE)) %>% 
   # 演者ごとにグループ化
-  group_by(key) %>%
+  group_by(key) %>% 
   # 決勝に行ける確率
-  summarise(
-    FRatio = sum(FINAL) / 100000,
-    TOP1ratio = sum(TOP1) / 100000,
-    TOP2ratio = sum(TOP2) / 100000,
-    TOP3ratio = sum(TOP3) / 100000
-  ) %>%
-  dplyr::arrange(desc(FRatio)) %>%
-  print() %>%
+  summarise(FRatio=sum(FINAL)/100000,
+            TOP1ratio=sum(TOP1)/100000,
+            TOP2ratio=sum(TOP2)/100000,
+            TOP3ratio=sum(TOP3)/100000) %>% 
+  dplyr::arrange(desc(FRatio)) %>% print %>% 
   # 図にする
-  ggplot(aes(x = key, y = FRatio, fill = key)) +
-  geom_bar(stat = "identity") +
-  xlab("演者") +
-  ylab("2回戦に進める確率") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  ggplot(aes(x=key,y=FRatio,fill=key))+geom_bar(stat='identity')+
+  xlab("演者")+ylab("2回戦に進める確率")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
 ``` 
 
 結果を見ると，スーパーマラドーナは87%の確率で決勝2本目に行けます！強いぞ！ついでジャルジャル，和牛ですが，3/10＝0.3を少し上回る程度，かまいたち以下は偶然レベルでしか決勝には残れないという結果です。
