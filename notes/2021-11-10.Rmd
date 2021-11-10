@@ -123,6 +123,7 @@ dat1 %>%
   rename(
     Num = 背番号,
     Games = 試合,
+    AtBats = 打数,
     Hit = 安打,
     HR = 本塁打,
     Win = 勝利,
@@ -132,7 +133,7 @@ dat1 %>%
   ) %>%
   # 使いやすい変数だけセレクト。全体的にはもっといっぱいあります。
   dplyr::select(
-    Name, team, salary, bloodType, Games,
+    Name, team, salary, bloodType, Games, AtBats,
     position, height, weight,
     Hit, HR, Win, Lose, Save, Hold
   ) -> baseball
