@@ -130,6 +130,7 @@ dat1 %>%
     Save = セーブ,
     Hold = ホールド
   ) %>%
+  # 使いやすい変数だけセレクト。全体的にはもっといっぱいあります。
   dplyr::select(
     Name, team, salary, bloodType, Games,
     position, height, weight,
