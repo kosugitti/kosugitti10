@@ -113,7 +113,7 @@ dat1 %>%
     "Tigers" = "t", "Carp" = "c", "Giants" = "g", "DeNA" = "yb",
     "Dragons" = "d", "Swallows" = "s", "Softbank" = "h", "Lions" = "l",
     "Eagles" = "e", "Orix" = "bs", "Fighters" = "f", "Lotte" = "m"
-  )) %>% 
+  )) %>%
   rename(
     セーブ = セlブ,
     ホールド = ホlルド
@@ -121,7 +121,8 @@ dat1 %>%
   # 基本情報がない選手は削除
   filter(!is.na(salary)) %>%
   rename(
-    UniformNum = 背番号,
+    Num = 背番号,
+    Games = 試合,
     Hit = 安打,
     HR = 本塁打,
     Win = 勝利,
@@ -129,9 +130,11 @@ dat1 %>%
     Save = セーブ,
     Hold = ホールド
   ) %>%
-  dplyr::select(Name, team, salary, bloodType,
-                position, height, weight, 
-                Hit, HR, Win, Lose, Save, Hold) -> baseball
+  dplyr::select(
+    Name, team, salary, bloodType, Games,
+    position, height, weight,
+    Hit, HR, Win, Lose, Save, Hold
+  ) -> baseball
 ```
 
 出来上がりはこんな形です。
