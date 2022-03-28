@@ -13,7 +13,7 @@
 
 <title>Labo</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
 
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -309,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -355,21 +359,19 @@ div.tocify {
 
 <div id="研究室メンバー" class="section level2">
 <h2>研究室メンバー</h2>
-<div id="博士後期課程" class="section level3">
-<h3>博士後期課程</h3>
-<ul>
-<li>越智宏朗</li>
-</ul>
-</div>
-<div id="博士前期課程" class="section level3">
-<h3>博士前期課程</h3>
-<ul>
-<li><a href="https://masakazoo.github.io/andoRoid/">安藤正和</a></li>
-</ul>
-</div>
+<!---
+### 博士後期課程
+
++ 越智宏朗
+
+
+### 博士前期課程
+
+--->
 <div id="卒業生" class="section level3">
 <h3>卒業生</h3>
-<div id="h19年2007年4月1日-山口大学教育学部-着任小杉ゼミ開設" class="section level4">
+<div id="h19年2007年4月1日-山口大学教育学部-着任小杉ゼミ開設"
+class="section level4">
 <h4>(H19年)2007年4月1日　山口大学教育学部　着任，小杉ゼミ開設</h4>
 <div id="学部" class="section level5">
 <h5>学部</h5>
@@ -402,7 +404,8 @@ div.tocify {
 </ul>
 </div>
 </div>
-<div id="h302018年4月1日-専修大学人間科学部-着任小杉ゼミ移設" class="section level4">
+<div id="h302018年4月1日-専修大学人間科学部-着任小杉ゼミ移設"
+class="section level4">
 <h4>(H30)2018年4月1日　専修大学人間科学部　着任,小杉ゼミ移設</h4>
 <div id="学部-1" class="section level5">
 <h5>学部</h5>
@@ -410,14 +413,18 @@ div.tocify {
 <li>2019/H31年卒　市原拓海(19)</li>
 <li>2020/R2年卒　安藤正和(20)・川村莉奈(21)</li>
 <li>2021/R3年卒　梶原　睦美(22)・真島　宏明(23)・寺田　慎之介(24)</li>
-<li>2022/R4年卒　山崎 明輝(25)・粕谷 麻子(26)</li>
-<li>2023/R5年卒　今井 怜(27)・清水 龍人(28)・竹本 周平(29)・芦口 竜斗(30)・寺内 悠祐(31)</li>
+<li>2022/R4年卒　山崎 明輝(25)・粕谷 麻子(26) <!---
++ 2023/R5年卒　今井 怜(27)・清水 龍人(28)・竹本 周平(29)・芦口 竜斗(30)・寺内 悠祐(31) 
++ 2024/R6年卒　小林美月(32)・谷口龍治郎(33)・野中遼太郎(34)・上村大地(35)・寒河江皓(36)
+---></li>
 </ul>
 </div>
 <div id="大学院-1" class="section level5">
 <h5>大学院</h5>
 <ul>
-<li>2020/R2年修了　池田孝恒(-8)</li>
+<li>2020/R02年修了　池田孝恒(-8)</li>
+<li>2022/R04年修了　<a
+href="https://masakazoo.github.io/andoRoid/">安藤正和(-9)</a></li>
 </ul>
 </div>
 </div>
