@@ -13,7 +13,7 @@
 
 <title>Notes</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
 
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -309,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -356,9 +360,12 @@ div.tocify {
 <div id="記事" class="section level1">
 <h1>記事</h1>
 <ul>
-<li><a href="items/2020-09-27-koc2020-corresp.html">KOC2020をCORRESP</a></li>
-<li><a href="items/2018-12-01-2018m1gp.html">明日のM-1で優勝するのは誰か</a></li>
-<li><a href="items/2018M1judges.html">『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する</a></li>
+<li><a
+href="items/2020-09-27-koc2020-corresp.html">KOC2020をCORRESP</a></li>
+<li><a
+href="items/2018-12-01-2018m1gp.html">明日のM-1で優勝するのは誰か</a></li>
+<li><a
+href="items/2018M1judges.html">『M-1グランプリ』上沼恵美子さんの採点は本当に偏っていたのかを検証する</a></li>
 </ul>
 </div>
 <div id="心理統計テキストに用いられたコード" class="section level1">
@@ -368,41 +375,55 @@ div.tocify {
 <li><a href="notes/2018-06-30.html">標準正規分布のコード</a></li>
 <li><a href="notes/2018-06-29B.html">正規分布の一部を塗りつぶす</a></li>
 <li><a href="notes/2018-06-26C.html">散布図のコード</a></li>
-<li><a href="notes/2018-06-26D.html">共分散を説明するときの図のコード</a></li>
-<li><a href="ntoes/2018-06-29A.html">標本平均の平均が母平均に一致する説明に使う図版</a></li>
+<li><a
+href="notes/2018-06-26D.html">共分散を説明するときの図のコード</a></li>
+<li><a
+href="ntoes/2018-06-29A.html">標本平均の平均が母平均に一致する説明に使う図版</a></li>
 <li><a href="ntoes/2018-07-04.html">不偏分散と標本分散の比較</a></li>
 <li><a href="notes/2018-07-06-t.html">t分布の図</a></li>
 <li><a href="notes/2018-07-06-MMM.html">三つの代表値がずれる</a></li>
 <li><a href="notes/2021-10-27.html">多変量正規分布の図を書く</a></li>
-<li><a href="notes/2021-11-10.html">野球選手のデータをスクレイピング</a></li>
+<li><a
+href="notes/2021-11-10.html">野球選手のデータをスクレイピング</a></li>
 </ul>
 </div>
 <div id="過去の研究ノートpdf" class="section level1">
 <h1>過去の研究ノート(PDF)</h1>
 <ul>
-<li><a href="notes/QR.pdf">エルミート行列の固有値分解アルゴリズム</a></li>
-<li><a href="notes/Reigen.pdf">正方行列の固有値分解–コスブラックP.167式9.2の補遺</a></li>
-<li><a href="notes/polychoricNote.pdf">順序尺度の相関係数(ポリコリック相関係数)について</a></li>
+<li><a
+href="notes/QR.pdf">エルミート行列の固有値分解アルゴリズム</a></li>
+<li><a
+href="notes/Reigen.pdf">正方行列の固有値分解–コスブラックP.167式9.2の補遺</a></li>
+<li><a
+href="notes/polychoricNote.pdf">順序尺度の相関係数(ポリコリック相関係数)について</a></li>
 <li><a href="notes/prob.pdf">確率分布についてのノート</a></li>
-<li><a href="notes/textMV.pdf">テキストデータを扱う多変量解析について</a></li>
-<li><a href="notes/whyN_1.pdf">なぜ不偏分散はN-1で割るのかについて</a></li>
+<li><a
+href="notes/textMV.pdf">テキストデータを扱う多変量解析について</a></li>
+<li><a
+href="notes/whyN_1.pdf">なぜ不偏分散はN-1で割るのかについて</a></li>
 <li><a href="notes/DS2019.pdf">双対尺度法についてのノート</a></li>
 </ul>
 </div>
-<div id="日本心理学会執筆投稿の手引きに準拠したbibtexのスタイルファイル" class="section level1">
+<div id="日本心理学会執筆投稿の手引きに準拠したbibtexのスタイルファイル"
+class="section level1">
 <h1>日本心理学会「執筆・投稿の手引き」に準拠したBibtexのスタイルファイル</h1>
 <ul>
-<li><a href="https://github.com/kosugitti/jecon-jpa">心理学用bibtexスタイルファイル</a>(2018.10.21 update!)</li>
+<li><a
+href="https://github.com/kosugitti/jecon-jpa">心理学用bibtexスタイルファイル</a>(2018.10.21
+update!)</li>
 </ul>
 </div>
-<div id="macの環境に入れるべきものリスト自分用メモ" class="section level1">
+<div id="macの環境に入れるべきものリスト自分用メモ"
+class="section level1">
 <h1>Macの環境に入れるべきものリスト(自分用メモ)</h1>
 <div id="homebrewとhomebrewでいれるもの" class="section level3">
 <h3>HomebrewとHomebrewでいれるもの</h3>
 <ul>
 <li>Homebrew</li>
 <li>iTerms2</li>
-<li>(Rictyフォントと配色)[<a href="https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc" class="uri">https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc</a>]</li>
+<li>(Rictyフォントと配色)[<a
+href="https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc"
+class="uri">https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc</a>]</li>
 <li>Dropbox</li>
 <li>VScode</li>
 <li>Calibre</li>

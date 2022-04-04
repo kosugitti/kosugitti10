@@ -13,7 +13,7 @@
 
 <title>Support</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
 
@@ -84,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -309,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -361,14 +365,21 @@ div.tocify {
 <div id="データの提供" class="section level2">
 <h2>データの提供</h2>
 <div id="rでらくらく心理統計-rstudio徹底活用" class="section level3">
-<h3><a href="https://amzn.to/2FVsfgz">Rでらくらく心理統計 RStudio徹底活用</a></h3>
-<p>この本に関するRコードをまとめたのが<a href="support/RRstudio_kosugitti.zip">こちら</a>になります。 本書の中でRを使って描かれた図表についても，圧縮ファイルに含まれていますコードを実行していただければ再現できます。</p>
+<h3><a href="https://amzn.to/2FVsfgz">Rでらくらく心理統計
+RStudio徹底活用</a></h3>
+<p>この本に関するRコードをまとめたのが<a
+href="support/RRstudio_kosugitti.zip">こちら</a>になります。
+本書の中でRを使って描かれた図表についても，圧縮ファイルに含まれていますコードを実行していただければ再現できます。</p>
 </div>
 </div>
 <div id="訂正一覧" class="section level2">
 <h2>訂正一覧</h2>
-<div id="研究論文を読み解くための多変量解析入門-基礎篇-重回帰分析からメタ分析まで" class="section level3">
-<h3><a href="https://amzn.to/2HuFD9s">研究論文を読み解くための多変量解析入門 基礎篇: 重回帰分析からメタ分析まで</a></h3>
+<div
+id="研究論文を読み解くための多変量解析入門-基礎篇-重回帰分析からメタ分析まで"
+class="section level3">
+<h3><a
+href="https://amzn.to/2HuFD9s">研究論文を読み解くための多変量解析入門
+基礎篇: 重回帰分析からメタ分析まで</a></h3>
 <ul>
 <li>P.150
 <ul>
@@ -377,24 +388,34 @@ div.tocify {
 </ul></li>
 </ul>
 </div>
-<div id="研究論文を読み解くための多変量解析入門-応用篇-semから生存分析まで" class="section level3">
-<h3><a href="https://amzn.to/2qru235">研究論文を読み解くための多変量解析入門 応用篇: SEMから生存分析まで</a></h3>
+<div
+id="研究論文を読み解くための多変量解析入門-応用篇-semから生存分析まで"
+class="section level3">
+<h3><a
+href="https://amzn.to/2qru235">研究論文を読み解くための多変量解析入門
+応用篇: SEMから生存分析まで</a></h3>
 </div>
-<div id="言葉と数式で理解する多変量解析入門httpsamzn.to2k5aina" class="section level3">
-<h3>言葉と数式で理解する多変量解析入門(<a href="https://amzn.to/2K5aiNa" class="uri">https://amzn.to/2K5aiNa</a>)</h3>
+<div id="言葉と数式で理解する多変量解析入門httpsamzn.to2k5aina"
+class="section level3">
+<h3>言葉と数式で理解する多変量解析入門(<a href="https://amzn.to/2K5aiNa"
+class="uri">https://amzn.to/2K5aiNa</a>)</h3>
 <ul>
 <li><p>P.56 Rでの線形回帰係数を求める関数</p></li>
 <li><p>誤) 最尤法でのフィッティングを求める関数lm</p></li>
 <li><p>正) 最尤法でのフィッティングを求める関数glm</p></li>
 </ul>
-<p>Rでのlm関数は，内部でlm.fit関数を呼び出しており，これは最小二乗法で推定値を求めているようです。最尤法で求めたい場合は，glm関数を使い，family=‘gaussian’ オプションをつけることになります。推定値は同じ結果になりますので，以後の解説に間違いはありません。</p>
-<div id="初版に含まれる誤表記と修正は以下の通りです" class="section level4">
+<p>Rでのlm関数は，内部でlm.fit関数を呼び出しており，これは最小二乗法で推定値を求めているようです。最尤法で求めたい場合は，glm関数を使い，family=‘gaussian’
+オプションをつけることになります。推定値は同じ結果になりますので，以後の解説に間違いはありません。</p>
+<div id="初版に含まれる誤表記と修正は以下の通りです"
+class="section level4">
 <h4>初版に含まれる誤表記と修正は以下の通りです</h4>
 <ul>
 <li><p>P. 28 1行目</p>
 <ul>
-<li>誤) 標準化することで，間隔尺度水準のデータに0点が与えられることになり，比率尺度水準の値として扱うことが可能になるということです。</li>
-<li>正) 標準化することで，間隔尺度水準のデータ同士の原点が揃うことになり，量的なデータとして扱いやすくなるということです。</li>
+<li>誤)
+標準化することで，間隔尺度水準のデータに0点が与えられることになり，比率尺度水準の値として扱うことが可能になるということです。</li>
+<li>正)
+標準化することで，間隔尺度水準のデータ同士の原点が揃うことになり，量的なデータとして扱いやすくなるということです。</li>
 </ul></li>
 <li><p>P.29　表2.7　相関係数表</p>
 <ul>
@@ -433,7 +454,8 @@ div.tocify {
 <li><p>P.117 脚注5</p>
 <ul>
 <li>誤) 例えばサイコロの目が1か2である確率は・・・</li>
-<li>正) 例えばサイコロの目が1回目に1がでて，2回目に2がでる確率は・・・</li>
+<li>正)
+例えばサイコロの目が1回目に1がでて，2回目に2がでる確率は・・・</li>
 </ul></li>
 <li><p>P.138 7.4一般化線型モデルの4行目</p>
 <ul>
@@ -442,7 +464,8 @@ div.tocify {
 </ul></li>
 <li><p>P.178 図9.7</p>
 <ul>
-<li>正)図の赤色のところが変更点です。 <img src="p178figure9_7.png" alt="正しい図" /></li>
+<li>正)図の赤色のところが変更点です。 <img src="p178figure9_7.png"
+alt="正しい図" /></li>
 </ul></li>
 <li><p>P.179 一行目の数式</p>
 <ul>
@@ -456,8 +479,11 @@ div.tocify {
 </ul>
 </div>
 </div>
-<div id="豊田秀樹編たのしいベイズモデリングp.6878-第7章心の旅が始まる観光のイメージの世代間比較" class="section level3">
-<h3>豊田秀樹（編）「たのしいベイズモデリング」P.68–78 第7章，心の旅が始まる–観光のイメージの世代間比較–</h3>
+<div
+id="豊田秀樹編たのしいベイズモデリングp.6878-第7章心の旅が始まる観光のイメージの世代間比較"
+class="section level3">
+<h3>豊田秀樹（編）「たのしいベイズモデリング」P.68–78
+第7章，心の旅が始まる–観光のイメージの世代間比較–</h3>
 <ul>
 <li>P.68 7.1 個人差多次元尺度構成法 2行目
 <ul>
@@ -466,8 +492,12 @@ div.tocify {
 </ul></li>
 <li>P.70 L.15
 <ul>
-<li>誤) 一方，Bは左右方向を縮小し(<span class="math inline">\(w_{B2}&lt;1\)</span>)，上下方向を拡大している(<span class="math inline">\(w_{B1}&gt;1\)</span>)</li>
-<li>正) 一方，Bは左右方向を縮小し(<span class="math inline">\(w_{B1}&lt;1\)</span>)，上下方向を拡大している(<span class="math inline">\(w_{B2}&gt;1\)</span>)</li>
+<li>誤) 一方，Bは左右方向を縮小し(<span
+class="math inline">\(w_{B2}&lt;1\)</span>)，上下方向を拡大している(<span
+class="math inline">\(w_{B1}&gt;1\)</span>)</li>
+<li>正) 一方，Bは左右方向を縮小し(<span
+class="math inline">\(w_{B1}&lt;1\)</span>)，上下方向を拡大している(<span
+class="math inline">\(w_{B2}&gt;1\)</span>)</li>
 </ul></li>
 <li>P.73 表7.2 グループごとの回答者数
 <ul>
@@ -475,8 +505,10 @@ div.tocify {
 </ul></li>
 <li>P.73 L.3
 <ul>
-<li>誤) 男性をF，女性をMと記号化している。20Fは20代男性，30Mは30大女性を意味する。</li>
-<li>正) 男性をM，女性をFと記号化している。20Mは20代男性，30Fは30大女性を意味する。</li>
+<li>誤)
+男性をF，女性をMと記号化している。20Fは20代男性，30Mは30大女性を意味する。</li>
+<li>正)
+男性をM，女性をFと記号化している。20Mは20代男性，30Fは30大女性を意味する。</li>
 </ul></li>
 <li>P.75 表7.3 回答群ごとの次元の重み
 <ul>
@@ -486,7 +518,8 @@ div.tocify {
 </div>
 <div id="ソシオン理論入門心と社会の基礎科学" class="section level3">
 <h3>ソシオン理論入門―心と社会の基礎科学</h3>
-<p><a href="https://amzn.to/2qseZqF">ソシオン理論入門―心と社会の基礎科学</a>は2006年4月，北大路書房より出版されました。</p>
+<p><a
+href="https://amzn.to/2qseZqF">ソシオン理論入門―心と社会の基礎科学</a>は2006年4月，北大路書房より出版されました。</p>
 <div id="p.1-ジェイムズ心理学より" class="section level5">
 <h5>P.1 　ジェイムズ「心理学」より</h5>
 <ul>
@@ -497,19 +530,31 @@ div.tocify {
 </div>
 <div id="社会調査士のための多変量解析法" class="section level3">
 <h3>社会調査士のための多変量解析法</h3>
-<p><a href="https://amzn.to/2HmpN39">社会調査士のための多変量解析法</a>は2007年5月，北大路書房より出版されました。</p>
+<p><a
+href="https://amzn.to/2HmpN39">社会調査士のための多変量解析法</a>は2007年5月，北大路書房より出版されました。</p>
 <ul>
-<li>P.87 式[9.15]　共通性<span class="math inline">\(h^2\)</span>の領域が<span class="math inline">\(d_j^2\)</span>まで含んでいるが，正しくは<span class="math inline">\(a_{jm}^2\)</span>まで。</li>
-<li>P.104 平均値ベクトル<span class="math inline">\(m\)</span> の式中，<span class="math inline">\(x&#39;\)</span>は，正しくは<span class="math inline">\(X&#39;\)</span>.</li>
-<li>P.109 図11.4で第一固有値の伸縮方向が(1,-2)になっているが，正しくは(1,1)方向。</li>
-<li>P.125 T技法とS技法の説明が逆になっています。回答者間相関から(回答者)因子を出すのがS技法，時点間相関から(時間)因子を出すのがT技法</li>
+<li>P.87 式[9.15]　共通性<span
+class="math inline">\(h^2\)</span>の領域が<span
+class="math inline">\(d_j^2\)</span>まで含んでいるが，正しくは<span
+class="math inline">\(a_{jm}^2\)</span>まで。</li>
+<li>P.104 平均値ベクトル<span class="math inline">\(m\)</span>
+の式中，<span class="math inline">\(x&#39;\)</span>は，正しくは<span
+class="math inline">\(X&#39;\)</span>.</li>
+<li>P.109
+図11.4で第一固有値の伸縮方向が(1,-2)になっているが，正しくは(1,1)方向。</li>
+<li>P.125
+T技法とS技法の説明が逆になっています。回答者間相関から(回答者)因子を出すのがS技法，時点間相関から(時間)因子を出すのがT技法</li>
 </ul>
 </div>
 </div>
-<div id="m-plusとrによる構造方程式モデリング入門" class="section level2">
+<div id="m-plusとrによる構造方程式モデリング入門"
+class="section level2">
 <h2>M-plusとRによる構造方程式モデリング入門</h2>
-<p><a href="https://amzn.to/2HvoDQx">M-plusとRによる構造方程式モデリング入門</a>は2014年1月に北大路書房より出版されました。</p>
-<p>この本につきましては，<a href="https://sites.google.com/site/mplusandr/">専用のサポートサイト</a> にて対応します。</p>
+<p><a
+href="https://amzn.to/2HvoDQx">M-plusとRによる構造方程式モデリング入門</a>は2014年1月に北大路書房より出版されました。</p>
+<p>この本につきましては，<a
+href="https://sites.google.com/site/mplusandr/">専用のサポートサイト</a>
+にて対応します。</p>
 </div>
 
 
