@@ -41,9 +41,17 @@ title: "Notes"
 # Macの環境に入れるべきものリスト(自分用メモ)
 
 ### HomebrewとHomebrewでいれるもの
+
 + Homebrew
+
+```{r eval=FALSE}
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+  
 + iTerms2
 + (Rictyフォントと配色)[https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc]
++ (BIZ UDフォント)[https://github.com/yuru7/udev-gothic/releases]
 + Dropbox
 + VScode
 + Calibre
@@ -54,6 +62,11 @@ title: "Notes"
 + R
 + RStudio
 + zoom
+
+```{r eval=FALSE}
+brew install iterm2 
+```
+
 
 ### Homebrewを使わずに入れるべきもの
 + Tweetbot
