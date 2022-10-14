@@ -55,6 +55,8 @@ title: "Notes"
 + 1password
 + Dropbox
 + visual-studio-code
++ mimestream
++ fantastical
 + Docker
 + Chrome
 + MacTeX
@@ -81,7 +83,7 @@ title: "Notes"
 ```{r eval=FALSE}
 install.packages("pacman")
 library(pacman)
-pacman::p_install(c(
+pacman::p_load(
     rstan,
     bayesplot,
 	bridgesampling,
@@ -102,7 +104,7 @@ pacman::p_install(c(
 	blavaan,
 	formattable,
 	devtools,
-	ctv))
+	ctv)
 
 ctv::install.views("Psychometrics")
 devtools::install_github("hoxo-m/pforeach")

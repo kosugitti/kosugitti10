@@ -433,6 +433,8 @@ class="uri">https://github.com/yuru7/udev-gothic/releases</a>]</li>
 <li>1password</li>
 <li>Dropbox</li>
 <li>visual-studio-code</li>
+<li>mimestream</li>
+<li>fantastical</li>
 <li>Docker</li>
 <li>Chrome</li>
 <li>MacTeX</li>
@@ -462,7 +464,7 @@ class="uri">https://github.com/yuru7/udev-gothic/releases</a>]</li>
 <h3>R環境のスタートアップに</h3>
 <pre class="r"><code>install.packages(&quot;pacman&quot;)
 library(pacman)
-pacman::p_install(c(
+pacman::p_load(
     rstan,
     bayesplot,
     bridgesampling,
@@ -483,7 +485,7 @@ pacman::p_install(c(
     blavaan,
     formattable,
     devtools,
-    ctv))
+    ctv)
 
 ctv::install.views(&quot;Psychometrics&quot;)
 devtools::install_github(&quot;hoxo-m/pforeach&quot;)
