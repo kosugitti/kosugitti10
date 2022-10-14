@@ -52,20 +52,21 @@ title: "Notes"
 + iTerms2
 + (Rictyフォントと配色)[https://qiita.com/toralab_mitsui/items/76abf3a0f37f7ffffacc]
 + (BIZ UDフォント)[https://github.com/yuru7/udev-gothic/releases]
++ 1password
 + Dropbox
-+ VScode
-+ Calibre
-+ Zotero
++ visual-studio-code
 + Docker
 + Chrome
 + MacTeX
 + R
 + RStudio
 + zoom
-
-```{r eval=FALSE}
-brew install iterm2 
-```
++ rambox
++ PathFinder
++ Acrobat
++ cleanMyMac
++ Calibre
++ Zotero
 
 
 ### Homebrewを使わずに入れるべきもの
