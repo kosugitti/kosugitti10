@@ -58,7 +58,7 @@ title: "Notes"
 + mimestream
 + fantastical
 + Docker
-+ Chrome
++ google-chrome
 + MacTeX
 + R
 + RStudio
