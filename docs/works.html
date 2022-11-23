@@ -13,7 +13,7 @@
 
 <title>Works</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
@@ -145,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -178,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -187,16 +191,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -597,10 +594,10 @@ Psychology,2014.7.11,France,Paris des congress.</li>
 <li>Mao KAMAATA,Takuya OKAMOTO and Koji E. Kosugi,Scaling for individual
 relations and visualizing samll group process(1),International Congress
 of Applied Psychology,2014.7.12,France,Paris des congress.</li>
-<li>,Mao,KAMATA and Takuya Okamoto,Scaling for individual relations and
-visualizing samll group process(2)-Visualizing social interactions and
-psychological attitudes, International Congress of Applied
-Psychology,2014.7.12,France,Paris des congress.</li>
+<li>Koji,E.Kosugi,Mao,KAMATA and Takuya Okamoto,Scaling for individual
+relations and visualizing samll group process(2)-Visualizing social
+interactions and psychological attitudes, International Congress of
+Applied Psychology,2014.7.12,France,Paris des congress.</li>
 <li>林幸史・小杉考司.旅行経験による旅行者の類型化とその特徴,日本社会心理学会,2014.07.27,北海道大学(北海道札幌市)</li>
 <li>小杉考司・林幸史(2014).多層データの三次元モデルについて,日本行動計量学会,2014.09.03,東北大学(宮城県仙台市)</li>
 <li>小杉考司・林幸史(2014).旅行経験による旅行者の類型と地理的イメージの違い,日本グループ・ダイナミックス学会,2014.09.07,東洋大学(東京都文京区)</li>
