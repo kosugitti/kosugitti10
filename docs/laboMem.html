@@ -13,7 +13,7 @@
 
 <title>Labo</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/darkly.min.css" rel="stylesheet" />
@@ -145,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -178,8 +182,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -187,16 +191,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -414,8 +411,8 @@ class="section level4">
 <li>2020/R2年卒　安藤正和(20)・川村莉奈(21)</li>
 <li>2021/R3年卒　梶原　睦美(22)・真島　宏明(23)・寺田　慎之介(24)</li>
 <li>2022/R4年卒　山崎 明輝(25)・粕谷 麻子(26) <!---
-+ 2023/R5年卒　今井 怜(27)・清水 龍人(28)・竹本 周平(29)・芦口 竜斗(30)・寺内 悠祐(31) 
-+ 2024/R6年卒　小林美月(32)・谷口龍治郎(33)・野中遼太郎(34)・上村大地(35)・寒河江皓(36)
++ 2023/R5年卒　今井 怜(27)・竹本 周平(29)・芦口 竜斗(30)・寺内 悠祐(31) 
++ 2024/R6年卒　小林美月(32)・谷口龍治郎(33)・上村大地(35)・寒河江皓(36)
 ---></li>
 </ul>
 </div>
