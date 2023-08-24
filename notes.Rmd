@@ -2,6 +2,19 @@
 title: "Notes"
 ---
 
+# R package
+
++ [Exametrika](https://kosugitti.github.io/Exametrika/)
+
+# 授業テキスト
+
++ 心理学データ解析基礎(心理学統計法)  / [PDF](https://kosugitti.github.io/psychometrtics_syllabus/Dkiso1_book.pdf) / [KindleDirect](https://amzn.to/3QRV6WL)
++ 心理学データ解析応用 / [PDF](https://kosugitti.github.io/psychometrtics_syllabus/Dkiso2_book.pdf) / [KindleDirect](https://amzn.to/47H95F5)
++ 心理学者のための線形代数 / [PDF](https://kosugitti.github.io/psychometrtics_syllabus/LABC.pdf)
++ 心理教育測定法 / [PDF](https://kosugitti.github.io/psychometrtics_syllabus/Scaling.pdf)
+
+詳しくはこちら > [心理統計教育教材](https://kosugitti.github.io/psychometrtics_syllabus/)
+
 # 記事
 
 + [KOC2020をCORRESP](items/2020-09-27-koc2020-corresp.html)

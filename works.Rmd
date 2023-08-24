@@ -13,6 +13,7 @@ title: "Works"
 7.  小杉考司・押江隆(2014).R チュートリアルセミナーテキスト.<http://goo.gl/BL5i8f>
 8.  小杉考司(2018) 言葉と数式で理解する多変量解析入門, 北大路書房.
 9.  小杉考司(2019) R でらくらく心理統計 RStudio 徹底活用, 講談社.
+10. 小杉考司・紀ノ定保礼・清水裕士(2023).数値シミュレーションで読み解く統計のしくみ〜Rでためしてわかる心理統計,技術評論社
 
 ## 翻訳書
 
@@ -47,8 +48,11 @@ title: "Works"
 14. 永野駿太・木本茉莉奈・小杉考司・小野史典(2018)透明性の錯覚に与える解の既知性の影響,行動計量学,**88**(1),59--.66
 15. Trafimow David, Amrhein Valentin, Areshenkoff Corson N., Barrera-Causil Carlos J., Beh Eric J., Bilgiç Yusuf K., Bono Roser, Bradley Michael T., Briggs William M., Cepeda-Freyre Héctor A., Chaigneau Sergio E., Ciocca Daniel R., Correa Juan C., Cousineau Denis, de Boer Michiel R., Dhar Subhra S., Dolgov Igor, Gómez-Benito Juana, Grendar Marian, Grice James W., Guerrero-Gimenez Martin E., Gutiérrez Andrés, Huedo-Medina Tania B., Jaffe Klaus, Janyan Armina, Karimnezhad Ali, Korner-Nievergelt Fränzi, Kosugi Koji, Lachmair Martin, Ledesma Rubén D., Limongi Roberto, Liuzza Marco T., Lombardo Rosaria, Marks Michael J., Meinlschmidt Gunther, Nalborczyk Ladislas, Nguyen Hung T., Ospina Raydonal, Perezgonzalez Jose D., Pfister Roland, Rahona Juan J., Rodríguez-Medina David A., Romão Xavier, Ruiz-Fernández Susana, Suarez Isabel, Tegethoff Marion, Tejo Mauricio, van de Schoot Rens, Vankov Ivan I., Velasco-Forero Santiago, Wang Tonghui, Yamada Yuki, Zoppino Felipe C. M., Marmolejo-Ramos Fernando (2018) Manipulating the Alpha Level Cannot Cure Significance Testing,_Frontiers in Psychology_,9,699,DOI=10.3389/fpsyg.2018.00699
 16. Yonemitsu, F., Sasaki, K., Gobara, A., Kosugi, K., & Yamada, Y. (2018). ‘‘Close, and ye shall find’’: eye closure during thinking enhances creativity. Palgrave Communications, 4(1), 80.
-17. 林幸史・小杉考司(2018) 過去の旅行経験から見た観光地イメージ,社会心理学研究,**34**(1),38-46.
-18. 山南 春奈・長島 愛・中村 潤・田中 奈津子・小杉考司(2021)男性版顔立ちマップの開発と眉による印象演出の効果,日本顔学会誌,in press.
+17. 小杉考司(2019).学習管理システムのアクセス記録から学業成績を予測する,専修人間科学論集心理学編,**9**(1),1--7.
+18. 林幸史・小杉考司(2018) 過去の旅行経験から見た観光地イメージ,社会心理学研究,**34**(1),38-46.
+19. 山南 春奈・長島 愛・中村 潤・田中 奈津子・小杉考司(2021)男性版顔立ちマップの開発と眉による印象演出の効果,日本顔学会誌,in press.
+20. 小杉考司(2023)心理尺度の開発と利用における問題の所在,専修人間科学論集心理学編,**13**(1),39--49.
+
 
 ## 学術論文（査読なし）
 
@@ -246,6 +250,7 @@ title: "Works"
 10. (研究代表者)川崎徳子,(2015.4-2018.3).「生活経験に基づいた実践的道徳教育」を導く教育環境モデルの開発と検証,研究課題番号 15K01756,科学研究費補助金(基盤(C)).
 11. (研究代表者)福田廣,(2017.4-2021.3).嗜好性に対する統制感の錯覚モデルと錯覚是正プログラムの開発,研究課題番号 17K04432,科学研究費補助金(基盤(C)).
 12. (研究代表者)林幸史,(2017.4-2021.3).旅行キャリア発達のための熟達化過程の解明とキャリア対応型観光支援システムの開発,研究課題番号 17H02254,科学研究費補助金(基盤(B)).
+13. (研究代表者)澤幸祐,(2023.4-2026.3).表象力学の再興：随伴性判断における刺激表象と強化の力学的関係の解明,研究課題番号23K03018,科学研究費補助金(基盤(C)).
 
 ## 寄稿
 
@@ -287,6 +292,9 @@ title: "Works"
 32. 行動計量学会チュートリアルセミナー,私ならこう教える！そしてこう学び直す！―統計教育の根本問題,2021.08.30(杏林大学 井の頭キャンパス/オンライン開催)
 33. 日本心理学会チュートリアルセミナー,再現可能な日本語論文執筆入門:jpaRmd で実現する再現可能で低コストな日本語論文執筆のはじめの一歩,2021.09.06(オンライン開催)
 34. 日本運動生理学会教育講演,統計的推論と判断のこれまでとこれから,2022.08.26(北海道教育大学岩見沢校，ハイブリッド開催)
+35. 心理科学研究会・春の研究集会イブニングレクチャー,心理学者のためのベイズ統計入門,2023.04.23(和洋女子大学)(オンライン)
+36. 日本心理学会チュートリアルセミナー，数値シミュレーションで読み解く統計の仕組み--ためしてわかる心理統計2023.9.16(神戸国際会議場，ハイブリッド開催)
+37. 日本心理学会チュートリアルセミナー，心理ネットワークアプローチ入門--縦断データ解析を中心に. 2023.9.15--17(神戸国際会議場，ハイブリッド開催)
 
 ## 賞罰
 
