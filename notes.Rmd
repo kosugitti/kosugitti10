@@ -6,6 +6,11 @@ title: "Notes"
 
 + [Exametrika](https://kosugitti.github.io/Exametrika/)
 
+### 研究ノート
+
++ Shojima,K.(2022) [Test Data Engineering](https://amzn.to/42eNArd)の7章，バイクラスタリングにおいて，中華料理店過程(Chinese restaurant process;CRP)をつかった無限関係モデル(Infinite relational model,IRM)が紹介されており，その式導出についての[ノートがこちら](notes/IRM_memo.pdf)。
+
+
 # 授業テキスト
 
 + 心理学データ解析基礎(心理学統計法)  / [PDF](https://kosugitti.github.io/psychometrtics_syllabus/Dkiso1_book.pdf) / [KindleDirect](https://amzn.to/3QRV6WL)
